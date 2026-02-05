@@ -21,7 +21,6 @@
 
 #include <fluent-bit/http_server/flb_http_server.h>
 #include <fluent-bit/flb_http_common.h>
-#include <fluent-bit/flb_signv4_ng.h>
 #include <fluent-bit/flb_snappy.h>
 #include <fluent-bit/flb_gzip.h>
 #include <fluent-bit/flb_zstd.h>

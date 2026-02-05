@@ -1,0 +1,53 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"MONKEY_PLUGIN"
+		],
+		"files" : 
+		[
+			"lib/monkey/plugins/CMakeLists.txt",
+			"lib/monkey/plugins/mandril/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 33,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/monkey/lib/monkey-mandril.so"
+			],
+			"targetId" : "monkey-mandril-shared::@b3173a624f295b76afcd",
+			"targetIndex" : 172,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lib/monkey/plugins/mandril",
+		"source" : "lib/monkey/plugins/mandril"
+	}
+}

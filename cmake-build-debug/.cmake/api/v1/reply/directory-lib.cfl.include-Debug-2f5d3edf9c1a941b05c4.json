@@ -1,0 +1,90 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"lib/cfl/include/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "headers",
+			"destination" : "/usr/local/include/cfl",
+			"paths" : 
+			[
+				"lib/cfl/include/cfl/cfl.h",
+				"lib/cfl/include/cfl/cfl_array.h",
+				"lib/cfl/include/cfl/cfl_checksum.h",
+				"lib/cfl/include/cfl/cfl_compat.h",
+				"lib/cfl/include/cfl/cfl_found.h",
+				"lib/cfl/include/cfl/cfl_hash.h",
+				"lib/cfl/include/cfl/cfl_info.h",
+				"lib/cfl/include/cfl/cfl_kv.h",
+				"lib/cfl/include/cfl/cfl_kvlist.h",
+				"lib/cfl/include/cfl/cfl_list.h",
+				"lib/cfl/include/cfl/cfl_log.h",
+				"lib/cfl/include/cfl/cfl_object.h",
+				"lib/cfl/include/cfl/cfl_sds.h",
+				"lib/cfl/include/cfl/cfl_time.h",
+				"lib/cfl/include/cfl/cfl_variant.h",
+				"lib/cfl/include/cfl/cfl_version.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "headers",
+			"destination" : "/usr/local/include",
+			"paths" : 
+			[
+				"lib/cfl/lib/xxhash/xxh3.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "headers",
+			"destination" : "/usr/local/include",
+			"paths" : 
+			[
+				"lib/cfl/lib/xxhash/xxhash.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lib/cfl/include",
+		"source" : "lib/cfl/include"
+	}
+}

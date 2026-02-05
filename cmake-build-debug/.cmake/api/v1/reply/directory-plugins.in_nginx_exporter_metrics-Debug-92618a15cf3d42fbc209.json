@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "plugins/in_nginx_exporter_metrics",
+		"source" : "plugins/in_nginx_exporter_metrics"
+	}
+}

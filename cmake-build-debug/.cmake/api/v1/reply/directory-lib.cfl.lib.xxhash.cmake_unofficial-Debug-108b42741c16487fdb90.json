@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "lib/cfl/lib/xxhash/cmake_unofficial",
+		"source" : "lib/cfl/lib/xxhash/cmake_unofficial"
+	}
+}

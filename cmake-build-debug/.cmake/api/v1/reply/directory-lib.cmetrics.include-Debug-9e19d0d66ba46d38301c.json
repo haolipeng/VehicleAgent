@@ -1,0 +1,94 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"lib/cmetrics/include/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "headers",
+			"destination" : "/usr/local/include/cmetrics",
+			"paths" : 
+			[
+				"lib/cmetrics/include/cmetrics/cmetrics.h",
+				"lib/cmetrics/include/cmetrics/cmt_atomic.h",
+				"lib/cmetrics/include/cmetrics/cmt_cat.h",
+				"lib/cmetrics/include/cmetrics/cmt_compat.h",
+				"lib/cmetrics/include/cmetrics/cmt_counter.h",
+				"lib/cmetrics/include/cmetrics/cmt_decode_msgpack.h",
+				"lib/cmetrics/include/cmetrics/cmt_decode_opentelemetry.h",
+				"lib/cmetrics/include/cmetrics/cmt_decode_prometheus.h",
+				"lib/cmetrics/include/cmetrics/cmt_decode_prometheus_remote_write.h",
+				"lib/cmetrics/include/cmetrics/cmt_encode_cloudwatch_emf.h",
+				"lib/cmetrics/include/cmetrics/cmt_encode_influx.h",
+				"lib/cmetrics/include/cmetrics/cmt_encode_msgpack.h",
+				"lib/cmetrics/include/cmetrics/cmt_encode_opentelemetry.h",
+				"lib/cmetrics/include/cmetrics/cmt_encode_prometheus.h",
+				"lib/cmetrics/include/cmetrics/cmt_encode_prometheus_remote_write.h",
+				"lib/cmetrics/include/cmetrics/cmt_encode_splunk_hec.h",
+				"lib/cmetrics/include/cmetrics/cmt_encode_text.h",
+				"lib/cmetrics/include/cmetrics/cmt_filter.h",
+				"lib/cmetrics/include/cmetrics/cmt_gauge.h",
+				"lib/cmetrics/include/cmetrics/cmt_histogram.h",
+				"lib/cmetrics/include/cmetrics/cmt_info.h",
+				"lib/cmetrics/include/cmetrics/cmt_label.h",
+				"lib/cmetrics/include/cmetrics/cmt_log.h",
+				"lib/cmetrics/include/cmetrics/cmt_map.h",
+				"lib/cmetrics/include/cmetrics/cmt_math.h",
+				"lib/cmetrics/include/cmetrics/cmt_metric.h",
+				"lib/cmetrics/include/cmetrics/cmt_mpack_utils.h",
+				"lib/cmetrics/include/cmetrics/cmt_mpack_utils_defs.h",
+				"lib/cmetrics/include/cmetrics/cmt_opts.h",
+				"lib/cmetrics/include/cmetrics/cmt_summary.h",
+				"lib/cmetrics/include/cmetrics/cmt_time.h",
+				"lib/cmetrics/include/cmetrics/cmt_untyped.h",
+				"lib/cmetrics/include/cmetrics/cmt_variant_utils.h",
+				"lib/cmetrics/include/cmetrics/cmt_version.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "headers",
+			"destination" : "/usr/local/include/prometheus_remote_write",
+			"paths" : 
+			[
+				"lib/cmetrics/include/prometheus_remote_write/protobuf-c.h",
+				"lib/cmetrics/include/prometheus_remote_write/remote.pb-c.h",
+				"lib/cmetrics/include/prometheus_remote_write/types.pb-c.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lib/cmetrics/include",
+		"source" : "lib/cmetrics/include"
+	}
+}

@@ -1,0 +1,662 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "lib/monkey/bin/api_test"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"add_definitions",
+			"FLB_DEFINITION",
+			"include",
+			"MK_DEFINITION",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"lib/monkey/api/CMakeLists.txt",
+			"cmake/macros.cmake",
+			"CMakeLists.txt",
+			"cmake/platform_feature_checks.cmake",
+			"lib/monkey/CMakeLists.txt",
+			"cmake/headers.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 364,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 297,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 463,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 483,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 499,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 12
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 96,
+				"parent" : 3
+			},
+			{
+				"file" : 3,
+				"parent" : 14
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 7,
+				"parent" : 15
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 16
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 32,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 596,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 19
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 597,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 21
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 133,
+				"parent" : 23
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 115,
+				"parent" : 24
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 166,
+				"parent" : 23
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 115,
+				"parent" : 26
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 189,
+				"parent" : 23
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 115,
+				"parent" : 28
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 215,
+				"parent" : 23
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 115,
+				"parent" : 30
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 201,
+				"parent" : 23
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 115,
+				"parent" : 32
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 533,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 574,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 35
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 280,
+				"parent" : 23
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 279,
+				"parent" : 23
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 278,
+				"parent" : 23
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 277,
+				"parent" : 23
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 276,
+				"parent" : 23
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 275,
+				"parent" : 23
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 274,
+				"parent" : 23
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 273,
+				"parent" : 23
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 389,
+				"parent" : 3
+			},
+			{
+				"file" : 5,
+				"parent" : 45
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 5,
+				"parent" : 46
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 56,
+				"parent" : 46
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 60,
+				"parent" : 46
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -Wall -D__FLB_FILENAME__=__FILE__ -std=gnu99 -Wall -Wextra -D__FILENAME__='\"$$(subst /home/work/clionProject/fluent-bit/,,$$(abspath $$<))\"' -g -fPIE"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "FLB_HAVE_CHUNK_TRACE"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "FLB_HAVE_IN_STORAGE_BACKLOG"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "FLB_HAVE_PARSER"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "FLB_HAVE_RECORD_ACCESSOR"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "FLB_HAVE_STREAM_PROCESSOR"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "FLB_HAVE_SYS_WAIT_H"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "FLB_SYSTEM_LINUX"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "JSMN_PARENT_LINKS"
+				},
+				{
+					"backtrace" : 22,
+					"define" : "JSMN_STRICT"
+				},
+				{
+					"backtrace" : 25,
+					"define" : "MK_HAVE_ACCEPT4"
+				},
+				{
+					"backtrace" : 27,
+					"define" : "MK_HAVE_BACKTRACE"
+				},
+				{
+					"backtrace" : 29,
+					"define" : "MK_HAVE_C_TLS"
+				},
+				{
+					"backtrace" : 31,
+					"define" : "MK_HAVE_REGEX"
+				},
+				{
+					"backtrace" : 33,
+					"define" : "MK_HAVE_VALGRIND"
+				},
+				{
+					"backtrace" : 34,
+					"define" : "MPACK_EXTENSIONS=1"
+				},
+				{
+					"backtrace" : 36,
+					"define" : "NGHTTP2_STATICLIB"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 37,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/monkey/include/monkey"
+				},
+				{
+					"backtrace" : 38,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/monkey/include"
+				},
+				{
+					"backtrace" : 39,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/include/monkey"
+				},
+				{
+					"backtrace" : 40,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/include"
+				},
+				{
+					"backtrace" : 41,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/deps/regex"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/deps/flb_libco"
+				},
+				{
+					"backtrace" : 43,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/deps/rbtree"
+				},
+				{
+					"backtrace" : 44,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/."
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/fluent-otel-proto/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/fluent-otel-proto/proto_c"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cfl/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cfl/lib/xxhash"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/flb_libco"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/rbtree"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/msgpack-c/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/chunkio/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/chunkio/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/luajit-3065c9/src"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/luajit-cmake"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/sqlite-amalgamation-3450200"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/mpack-amalgamation-1.1.1/src"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/miniz"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/onigmo"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/snappy-fef67ac"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cmetrics/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/ctraces/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/c-ares-1.24.0/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/lwrb/lwrb/src/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/c-ares-1.24.0"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/jansson-e23f558/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/cmetrics"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/include"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/nghttp2"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/nghttp2/lib/includes"
+				},
+				{
+					"backtrace" : 47,
+					"path" : "/home/work/clionProject/fluent-bit/lib/nghttp2/lib/includes"
+				},
+				{
+					"backtrace" : 48,
+					"path" : "/home/work/clionProject/fluent-bit/lib/librdkafka-2.3.0/src"
+				},
+				{
+					"backtrace" : 49,
+					"path" : "/home/work/clionProject/fluent-bit/lib/tutf8e/include"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "rbtree::@abb5cfef9606d4421afa"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "regex::@650c991785b42b7b6af5"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "co::@ab2f814b5cc45d620d3e"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "mk_core::@b4e8358a7e7c2e92467d"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "monkey-liana-static::@f36876bf7c1fe94b43b1"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "monkey-core-static::@0f0d8eb0919d3e97ab24"
+		}
+	],
+	"id" : "api_test::@db73d6c272dee1fe946a",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wall -D__FLB_FILENAME__=__FILE__ -std=gnu99 -Wall -Wextra -D__FILENAME__='\"$$(subst /home/work/clionProject/fluent-bit/,,$$(abspath $$<))\"' -g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../library/libmonkey.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../library/libmk_core.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../library/monkey-liana.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../library/librbtree.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../library/libco.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../library/libregex.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "api_test",
+	"nameOnDisk" : "api_test",
+	"paths" : 
+	{
+		"build" : "lib/monkey/api",
+		"source" : "lib/monkey/api"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/monkey/api/test.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

@@ -1,0 +1,439 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "bin/tutf8e-test"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"add_definitions",
+			"FLB_DEFINITION",
+			"include",
+			"include_directories",
+			"set_property"
+		],
+		"files" : 
+		[
+			"lib/tutf8e/CMakeLists.txt",
+			"cmake/macros.cmake",
+			"CMakeLists.txt",
+			"cmake/platform_feature_checks.cmake",
+			"cmake/headers.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 364,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 297,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 463,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 483,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 499,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 12
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 96,
+				"parent" : 3
+			},
+			{
+				"file" : 3,
+				"parent" : 14
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 7,
+				"parent" : 15
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 16
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 32,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 533,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 389,
+				"parent" : 3
+			},
+			{
+				"file" : 4,
+				"parent" : 20
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 5,
+				"parent" : 21
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 56,
+				"parent" : 21
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 60,
+				"parent" : 21
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -Wall -D__FLB_FILENAME__=__FILE__ -Os -Wall -g -fPIE"
+				},
+				{
+					"fragment" : "-std=gnu99"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "FLB_HAVE_CHUNK_TRACE"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "FLB_HAVE_IN_STORAGE_BACKLOG"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "FLB_HAVE_PARSER"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "FLB_HAVE_RECORD_ACCESSOR"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "FLB_HAVE_STREAM_PROCESSOR"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "FLB_HAVE_SYS_WAIT_H"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "FLB_SYSTEM_LINUX"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "MPACK_EXTENSIONS=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/fluent-otel-proto/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/fluent-otel-proto/proto_c"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cfl/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cfl/lib/xxhash"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/flb_libco"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/rbtree"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/msgpack-c/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/chunkio/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/chunkio/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/luajit-3065c9/src"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/luajit-cmake"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/include/monkey"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/sqlite-amalgamation-3450200"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/mpack-amalgamation-1.1.1/src"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/miniz"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/onigmo"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/snappy-fef67ac"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cmetrics/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/ctraces/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/c-ares-1.24.0/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/lwrb/lwrb/src/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/c-ares-1.24.0"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/jansson-e23f558/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/cmetrics"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/monkey/include"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/monkey/include/monkey"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/nghttp2"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/nghttp2/lib/includes"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/work/clionProject/fluent-bit/lib/nghttp2/lib/includes"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/home/work/clionProject/fluent-bit/lib/librdkafka-2.3.0/src"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/home/work/clionProject/fluent-bit/lib/tutf8e/include"
+				}
+			],
+			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					25
+				],
+				"standard" : "99"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "tutf8e::@6c5714744b24755b444f"
+		}
+	],
+	"id" : "tutf8e-test::@6c5714744b24755b444f",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wall -D__FLB_FILENAME__=__FILE__ -Os -Wall -g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../library/libtutf8e.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "tutf8e-test",
+	"nameOnDisk" : "tutf8e-test",
+	"paths" : 
+	{
+		"build" : "lib/tutf8e",
+		"source" : "lib/tutf8e"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/tutf8e/test/test.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

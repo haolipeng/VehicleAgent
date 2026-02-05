@@ -1,0 +1,62 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"lib/ctraces/include/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "headers",
+			"destination" : "/usr/local/include/ctraces",
+			"paths" : 
+			[
+				"lib/ctraces/include/ctraces/ctr_attributes.h",
+				"lib/ctraces/include/ctraces/ctr_compat.h",
+				"lib/ctraces/include/ctraces/ctr_decode_msgpack.h",
+				"lib/ctraces/include/ctraces/ctr_decode_opentelemetry.h",
+				"lib/ctraces/include/ctraces/ctr_encode_msgpack.h",
+				"lib/ctraces/include/ctraces/ctr_encode_opentelemetry.h",
+				"lib/ctraces/include/ctraces/ctr_encode_text.h",
+				"lib/ctraces/include/ctraces/ctr_id.h",
+				"lib/ctraces/include/ctraces/ctr_info.h",
+				"lib/ctraces/include/ctraces/ctr_link.h",
+				"lib/ctraces/include/ctraces/ctr_log.h",
+				"lib/ctraces/include/ctraces/ctr_mpack_utils.h",
+				"lib/ctraces/include/ctraces/ctr_mpack_utils_defs.h",
+				"lib/ctraces/include/ctraces/ctr_random.h",
+				"lib/ctraces/include/ctraces/ctr_resource.h",
+				"lib/ctraces/include/ctraces/ctr_scope.h",
+				"lib/ctraces/include/ctraces/ctr_span.h",
+				"lib/ctraces/include/ctraces/ctr_variant_utils.h",
+				"lib/ctraces/include/ctraces/ctr_version.h",
+				"lib/ctraces/include/ctraces/ctraces.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lib/ctraces/include",
+		"source" : "lib/ctraces/include"
+	}
+}

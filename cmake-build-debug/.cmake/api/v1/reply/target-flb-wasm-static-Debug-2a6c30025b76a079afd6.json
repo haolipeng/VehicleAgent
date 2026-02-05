@@ -1,0 +1,1501 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "library/libflb-wasm-static.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"add_definitions",
+			"include",
+			"FLB_DEFINITION",
+			"FLB_DEFINITION_VAL",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"src/wasm/CMakeLists.txt",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/build-scripts/config_common.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/build-scripts/runtime_lib.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/common/iwasm_common.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/platform/linux/shared_platform.cmake",
+			"src/CMakeLists.txt",
+			"cmake/macros.cmake",
+			"CMakeLists.txt",
+			"cmake/platform_feature_checks.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/aot/iwasm_aot.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/interpreter/iwasm_interp.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/libraries/libc-builtin/libc_builtin.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/libraries/libc-wasi/libc_wasi.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/libraries/lib-pthread/lib_pthread.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/libraries/thread-mgr/thread_mgr.cmake",
+			"cmake/headers.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/platform/common/libc-util/platform_common_libc_util.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/platform/common/posix/platform_api_posix.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/mem-alloc/mem_alloc.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/utils/shared_utils.cmake",
+			"lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/utils/uncommon/shared_uncommon.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 132,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 143,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 119,
+				"parent" : 0
+			},
+			{
+				"file" : 2,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 159,
+				"parent" : 4
+			},
+			{
+				"file" : 1,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 51,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 176,
+				"parent" : 4
+			},
+			{
+				"file" : 3,
+				"parent" : 8
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 9,
+				"parent" : 9
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 8,
+				"parent" : 9
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 174,
+				"parent" : 4
+			},
+			{
+				"file" : 4,
+				"parent" : 12
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 6,
+				"parent" : 13
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 5,
+				"line" : 1,
+				"parent" : 16
+			},
+			{
+				"file" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 1088,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 19
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 894,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 21
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 674,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 23
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 683,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 25
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 364,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 27
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 1074,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 29
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 763,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 31
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 1108,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 33
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 1114,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 35
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 799,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 37
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 715,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 39
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 1099,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 41
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 297,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 43
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 973,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 45
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 843,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 47
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 1040,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 49
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 646,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 51
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 634,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 53
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 463,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 55
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 931,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 57
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 483,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 59
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 1014,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 61
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 695,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 63
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 699,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 65
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 499,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 67
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 728,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 69
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 737,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 71
+			},
+			{
+				"command" : 3,
+				"file" : 7,
+				"line" : 96,
+				"parent" : 18
+			},
+			{
+				"file" : 8,
+				"parent" : 73
+			},
+			{
+				"command" : 4,
+				"file" : 8,
+				"line" : 7,
+				"parent" : 74
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 75
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 787,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 77
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 619,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 79
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 830,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 81
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 1027,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 83
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 751,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 85
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 661,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 87
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 899,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 9,
+				"parent" : 89
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 905,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 9,
+				"parent" : 91
+			},
+			{
+				"command" : 2,
+				"file" : 7,
+				"line" : 32,
+				"parent" : 18
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 596,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 94
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 597,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 96
+			},
+			{
+				"command" : 2,
+				"file" : 7,
+				"line" : 533,
+				"parent" : 18
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 574,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 99
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 273,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 278,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 285,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 78,
+				"parent" : 4
+			},
+			{
+				"file" : 9,
+				"parent" : 104
+			},
+			{
+				"command" : 2,
+				"file" : 9,
+				"line" : 6,
+				"parent" : 105
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 232,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 210,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 64,
+				"parent" : 4
+			},
+			{
+				"file" : 10,
+				"parent" : 109
+			},
+			{
+				"command" : 2,
+				"file" : 10,
+				"line" : 6,
+				"parent" : 110
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 89,
+				"parent" : 4
+			},
+			{
+				"file" : 11,
+				"parent" : 112
+			},
+			{
+				"command" : 2,
+				"file" : 11,
+				"line" : 6,
+				"parent" : 113
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 96,
+				"parent" : 4
+			},
+			{
+				"file" : 12,
+				"parent" : 115
+			},
+			{
+				"command" : 2,
+				"file" : 12,
+				"line" : 6,
+				"parent" : 116
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 110,
+				"parent" : 4
+			},
+			{
+				"file" : 13,
+				"parent" : 118
+			},
+			{
+				"command" : 2,
+				"file" : 13,
+				"line" : 6,
+				"parent" : 119
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 266,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 394,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 220,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 239,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 137,
+				"parent" : 4
+			},
+			{
+				"file" : 14,
+				"parent" : 125
+			},
+			{
+				"command" : 2,
+				"file" : 14,
+				"line" : 6,
+				"parent" : 126
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 360,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 7,
+				"line" : 389,
+				"parent" : 18
+			},
+			{
+				"file" : 15,
+				"parent" : 129
+			},
+			{
+				"command" : 6,
+				"file" : 15,
+				"line" : 5,
+				"parent" : 130
+			},
+			{
+				"command" : 6,
+				"file" : 15,
+				"line" : 56,
+				"parent" : 130
+			},
+			{
+				"command" : 6,
+				"file" : 15,
+				"line" : 60,
+				"parent" : 130
+			},
+			{
+				"command" : 6,
+				"file" : 7,
+				"line" : 990,
+				"parent" : 18
+			},
+			{
+				"command" : 6,
+				"file" : 10,
+				"line" : 8,
+				"parent" : 110
+			},
+			{
+				"command" : 6,
+				"file" : 9,
+				"line" : 8,
+				"parent" : 105
+			},
+			{
+				"command" : 6,
+				"file" : 11,
+				"line" : 8,
+				"parent" : 113
+			},
+			{
+				"command" : 6,
+				"file" : 12,
+				"line" : 8,
+				"parent" : 116
+			},
+			{
+				"command" : 6,
+				"file" : 13,
+				"line" : 12,
+				"parent" : 119
+			},
+			{
+				"command" : 6,
+				"file" : 14,
+				"line" : 8,
+				"parent" : 126
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 161,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 8,
+				"parent" : 13
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 9,
+				"parent" : 13
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 11,
+				"parent" : 13
+			},
+			{
+				"file" : 17,
+				"parent" : 144
+			},
+			{
+				"command" : 3,
+				"file" : 17,
+				"line" : 15,
+				"parent" : 145
+			},
+			{
+				"file" : 16,
+				"parent" : 146
+			},
+			{
+				"command" : 6,
+				"file" : 16,
+				"line" : 6,
+				"parent" : 147
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 175,
+				"parent" : 4
+			},
+			{
+				"file" : 18,
+				"parent" : 149
+			},
+			{
+				"command" : 6,
+				"file" : 18,
+				"line" : 7,
+				"parent" : 150
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 6,
+				"parent" : 9
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 177,
+				"parent" : 4
+			},
+			{
+				"file" : 19,
+				"parent" : 153
+			},
+			{
+				"command" : 6,
+				"file" : 19,
+				"line" : 6,
+				"parent" : 154
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 123,
+				"parent" : 0
+			},
+			{
+				"file" : 20,
+				"parent" : 156
+			},
+			{
+				"command" : 6,
+				"file" : 20,
+				"line" : 6,
+				"parent" : 157
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -Wall -D__FLB_FILENAME__=__FILE__ -Wall -Wformat -Wformat-security -mindirect-branch-register -std=gnu99 -ffunction-sections -fdata-sections                                          -Wall -Wno-unused-parameter -Wno-pedantic -fPIC -g -fPIC"
+				},
+				{
+					"fragment" : "-std=gnu99"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 7,
+					"define" : "BH_DEBUG=1"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "BH_FREE=wasm_runtime_free"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "BH_MALLOC=wasm_runtime_malloc"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "BH_PLATFORM_LINUX"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "BUILD_TARGET_X86_64"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "FLB_CORE=1"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "FLB_HAVE_ACCEPT4"
+				},
+				{
+					"backtrace" : 22,
+					"define" : "FLB_HAVE_ATTRIBUTE_ALLOC_SIZE"
+				},
+				{
+					"backtrace" : 24,
+					"define" : "FLB_HAVE_AWS"
+				},
+				{
+					"backtrace" : 26,
+					"define" : "FLB_HAVE_AWS_CREDENTIAL_PROCESS"
+				},
+				{
+					"backtrace" : 28,
+					"define" : "FLB_HAVE_CHUNK_TRACE"
+				},
+				{
+					"backtrace" : 30,
+					"define" : "FLB_HAVE_C_TLS"
+				},
+				{
+					"backtrace" : 32,
+					"define" : "FLB_HAVE_FORK"
+				},
+				{
+					"backtrace" : 34,
+					"define" : "FLB_HAVE_GETENTROPY"
+				},
+				{
+					"backtrace" : 36,
+					"define" : "FLB_HAVE_GETENTROPY_SYS_RANDOM"
+				},
+				{
+					"backtrace" : 38,
+					"define" : "FLB_HAVE_GMTOFF"
+				},
+				{
+					"backtrace" : 40,
+					"define" : "FLB_HAVE_HTTP_SERVER"
+				},
+				{
+					"backtrace" : 42,
+					"define" : "FLB_HAVE_INOTIFY"
+				},
+				{
+					"backtrace" : 44,
+					"define" : "FLB_HAVE_IN_STORAGE_BACKLOG"
+				},
+				{
+					"backtrace" : 46,
+					"define" : "FLB_HAVE_LIBBACKTRACE"
+				},
+				{
+					"backtrace" : 48,
+					"define" : "FLB_HAVE_LIBYAML"
+				},
+				{
+					"backtrace" : 50,
+					"define" : "FLB_HAVE_LUAJIT"
+				},
+				{
+					"backtrace" : 52,
+					"define" : "FLB_HAVE_METRICS"
+				},
+				{
+					"backtrace" : 54,
+					"define" : "FLB_HAVE_OPENSSL"
+				},
+				{
+					"backtrace" : 56,
+					"define" : "FLB_HAVE_PARSER"
+				},
+				{
+					"backtrace" : 58,
+					"define" : "FLB_HAVE_PROXY_GO"
+				},
+				{
+					"backtrace" : 60,
+					"define" : "FLB_HAVE_RECORD_ACCESSOR"
+				},
+				{
+					"backtrace" : 62,
+					"define" : "FLB_HAVE_REGEX"
+				},
+				{
+					"backtrace" : 64,
+					"define" : "FLB_HAVE_SIGNV4"
+				},
+				{
+					"backtrace" : 66,
+					"define" : "FLB_HAVE_SQLDB"
+				},
+				{
+					"backtrace" : 68,
+					"define" : "FLB_HAVE_STREAM_PROCESSOR"
+				},
+				{
+					"backtrace" : 70,
+					"define" : "FLB_HAVE_SYSTEMD"
+				},
+				{
+					"backtrace" : 72,
+					"define" : "FLB_HAVE_SYSTEMD_SDBUS"
+				},
+				{
+					"backtrace" : 76,
+					"define" : "FLB_HAVE_SYS_WAIT_H"
+				},
+				{
+					"backtrace" : 78,
+					"define" : "FLB_HAVE_TIMESPEC_GET"
+				},
+				{
+					"backtrace" : 80,
+					"define" : "FLB_HAVE_TLS"
+				},
+				{
+					"backtrace" : 82,
+					"define" : "FLB_HAVE_UNIX_SOCKET"
+				},
+				{
+					"backtrace" : 84,
+					"define" : "FLB_HAVE_UTF8_ENCODER"
+				},
+				{
+					"backtrace" : 86,
+					"define" : "FLB_HAVE_VALGRIND"
+				},
+				{
+					"backtrace" : 88,
+					"define" : "FLB_HAVE_WASM"
+				},
+				{
+					"backtrace" : 90,
+					"define" : "FLB_MSGPACK_TO_JSON_INIT_BUFFER_SIZE=2.0"
+				},
+				{
+					"backtrace" : 92,
+					"define" : "FLB_MSGPACK_TO_JSON_REALLOC_BUFFER_SIZE=0.10"
+				},
+				{
+					"backtrace" : 93,
+					"define" : "FLB_SYSTEM_LINUX"
+				},
+				{
+					"backtrace" : 95,
+					"define" : "JSMN_PARENT_LINKS"
+				},
+				{
+					"backtrace" : 97,
+					"define" : "JSMN_STRICT"
+				},
+				{
+					"backtrace" : 98,
+					"define" : "MPACK_EXTENSIONS=1"
+				},
+				{
+					"backtrace" : 100,
+					"define" : "NGHTTP2_STATICLIB"
+				},
+				{
+					"backtrace" : 101,
+					"define" : "WASM_DISABLE_HW_BOUND_CHECK=0"
+				},
+				{
+					"backtrace" : 102,
+					"define" : "WASM_DISABLE_STACK_HW_BOUND_CHECK=0"
+				},
+				{
+					"backtrace" : 103,
+					"define" : "WASM_DISABLE_WAKEUP_BLOCKING_OP=0"
+				},
+				{
+					"backtrace" : 106,
+					"define" : "WASM_ENABLE_AOT=1"
+				},
+				{
+					"backtrace" : 107,
+					"define" : "WASM_ENABLE_BULK_MEMORY=1"
+				},
+				{
+					"backtrace" : 108,
+					"define" : "WASM_ENABLE_FAST_INTERP=1"
+				},
+				{
+					"backtrace" : 111,
+					"define" : "WASM_ENABLE_INTERP=1"
+				},
+				{
+					"backtrace" : 114,
+					"define" : "WASM_ENABLE_LIBC_BUILTIN=1"
+				},
+				{
+					"backtrace" : 117,
+					"define" : "WASM_ENABLE_LIBC_WASI=1"
+				},
+				{
+					"backtrace" : 120,
+					"define" : "WASM_ENABLE_LIB_PTHREAD=1"
+				},
+				{
+					"backtrace" : 121,
+					"define" : "WASM_ENABLE_MINI_LOADER=0"
+				},
+				{
+					"backtrace" : 122,
+					"define" : "WASM_ENABLE_MODULE_INST_CONTEXT=1"
+				},
+				{
+					"backtrace" : 123,
+					"define" : "WASM_ENABLE_MULTI_MODULE=0"
+				},
+				{
+					"backtrace" : 124,
+					"define" : "WASM_ENABLE_SHARED_MEMORY=1"
+				},
+				{
+					"backtrace" : 127,
+					"define" : "WASM_ENABLE_THREAD_MGR=1"
+				},
+				{
+					"backtrace" : 128,
+					"define" : "WASM_GLOBAL_HEAP_SIZE=10485760"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/fluent-otel-proto/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/fluent-otel-proto/proto_c"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cfl/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cfl/lib/xxhash"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/flb_libco"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/rbtree"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/msgpack-c/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/chunkio/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/chunkio/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/luajit-3065c9/src"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/luajit-cmake"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/include/monkey"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/sqlite-amalgamation-3450200"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/mpack-amalgamation-1.1.1/src"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/miniz"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/onigmo"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/snappy-fef67ac"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cmetrics/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/ctraces/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/c-ares-1.24.0/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/lwrb/lwrb/src/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/c-ares-1.24.0"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/jansson-e23f558/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/cmetrics"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/monkey/include"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/monkey/include/monkey"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/nghttp2"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/nghttp2/lib/includes"
+				},
+				{
+					"backtrace" : 131,
+					"path" : "/home/work/clionProject/fluent-bit/lib/nghttp2/lib/includes"
+				},
+				{
+					"backtrace" : 132,
+					"path" : "/home/work/clionProject/fluent-bit/lib/librdkafka-2.3.0/src"
+				},
+				{
+					"backtrace" : 133,
+					"path" : "/home/work/clionProject/fluent-bit/lib/tutf8e/include"
+				},
+				{
+					"backtrace" : 134,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/backtrace-prefix/include"
+				},
+				{
+					"backtrace" : 135,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/interpreter"
+				},
+				{
+					"backtrace" : 136,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/aot"
+				},
+				{
+					"backtrace" : 137,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/libraries/libc-builtin"
+				},
+				{
+					"backtrace" : 138,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/libraries/libc-wasi/sandboxed-system-primitives/include"
+				},
+				{
+					"backtrace" : 138,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/libraries/libc-wasi/sandboxed-system-primitives/src"
+				},
+				{
+					"backtrace" : 139,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/libraries/lib-pthread"
+				},
+				{
+					"backtrace" : 140,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/libraries/thread-mgr"
+				},
+				{
+					"backtrace" : 141,
+					"path" : "/home/work/clionProject/fluent-bit/src/wasm/../../lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/include"
+				},
+				{
+					"backtrace" : 142,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/platform/linux"
+				},
+				{
+					"backtrace" : 143,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/platform/linux/../include"
+				},
+				{
+					"backtrace" : 148,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/platform/common/libc-util"
+				},
+				{
+					"backtrace" : 151,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/mem-alloc"
+				},
+				{
+					"backtrace" : 152,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/iwasm/common"
+				},
+				{
+					"backtrace" : 155,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/utils"
+				},
+				{
+					"backtrace" : 158,
+					"path" : "/home/work/clionProject/fluent-bit/lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/utils/uncommon"
+				}
+			],
+			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "99"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "vmlib-static::@c57854c1be3a994edfef"
+		}
+	],
+	"id" : "flb-wasm-static::@c57854c1be3a994edfef",
+	"name" : "flb-wasm-static",
+	"nameOnDisk" : "libflb-wasm-static.a",
+	"paths" : 
+	{
+		"build" : "src/wasm",
+		"source" : "src/wasm"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/wasm/flb_wasm.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/utils/uncommon/bh_getopt.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/wasm-micro-runtime-WAMR-1.3.0/core/shared/utils/uncommon/bh_read_file.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

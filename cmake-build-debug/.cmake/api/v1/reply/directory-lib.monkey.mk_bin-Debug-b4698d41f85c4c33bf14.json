@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"lib/monkey/mk_bin/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/sbin",
+			"paths" : 
+			[
+				"lib/monkey/bin/monkey"
+			],
+			"targetId" : "monkey-bin::@ff290c4ee9372599dab9",
+			"targetIndex" : 168,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lib/monkey/mk_bin",
+		"source" : "lib/monkey/mk_bin"
+	}
+}

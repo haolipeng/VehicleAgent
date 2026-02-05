@@ -1,0 +1,5387 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5,
+						8,
+						9,
+						10,
+						11,
+						13,
+						14,
+						15,
+						18,
+						21,
+						33,
+						39,
+						43,
+						44,
+						62,
+						63,
+						64,
+						67,
+						68,
+						71,
+						72,
+						193,
+						206
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "lib/cfl",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.cfl-Debug-74595fd58d6b4d5ddf5d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "lib/cfl"
+				},
+				{
+					"build" : "lib/cfl/lib/xxhash/cmake_unofficial",
+					"jsonFile" : "directory-lib.cfl.lib.xxhash.cmake_unofficial-Debug-108b42741c16487fdb90.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "lib/cfl/lib/xxhash/cmake_unofficial",
+					"targetIndexes" : 
+					[
+						195
+					]
+				},
+				{
+					"build" : "lib/cfl/include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.cfl.include-Debug-2f5d3edf9c1a941b05c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "lib/cfl/include"
+				},
+				{
+					"build" : "lib/cfl/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.cfl.src-Debug-549db9957d6e95bd5dc1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "lib/cfl/src",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "lib/fluent-otel-proto",
+					"childIndexes" : 
+					[
+						6,
+						7
+					],
+					"jsonFile" : "directory-lib.fluent-otel-proto-Debug-8b3f393fb4c2a26c88c0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "lib/fluent-otel-proto"
+				},
+				{
+					"build" : "lib/fluent-otel-proto/src",
+					"jsonFile" : "directory-lib.fluent-otel-proto.src-Debug-64230cac3b2bdeaea491.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 3,
+					"source" : "lib/fluent-otel-proto/src",
+					"targetIndexes" : 
+					[
+						148
+					]
+				},
+				{
+					"build" : "lib/fluent-otel-proto/examples",
+					"jsonFile" : "directory-lib.fluent-otel-proto.examples-Debug-ad949716c9b6b9394817.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 3,
+					"source" : "lib/fluent-otel-proto/examples",
+					"targetIndexes" : 
+					[
+						189
+					]
+				},
+				{
+					"build" : "lib/msgpack-c",
+					"jsonFile" : "directory-lib.msgpack-c-Debug-c72b3005ac35aa28c319.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "lib/msgpack-c",
+					"targetIndexes" : 
+					[
+						174
+					]
+				},
+				{
+					"build" : "lib/mpack-amalgamation-1.1.1",
+					"jsonFile" : "directory-lib.mpack-amalgamation-1.1.1-Debug-560120244e19dba09040.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib/mpack-amalgamation-1.1.1",
+					"targetIndexes" : 
+					[
+						173
+					]
+				},
+				{
+					"build" : "lib/miniz",
+					"jsonFile" : "directory-lib.miniz-Debug-e6733c15b868b30223fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "lib/miniz",
+					"targetIndexes" : 
+					[
+						165
+					]
+				},
+				{
+					"build" : "lib/lwrb",
+					"childIndexes" : 
+					[
+						12
+					],
+					"jsonFile" : "directory-lib.lwrb-Debug-b0f772dca87e6be52678.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 6,
+					"source" : "lib/lwrb",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "lib/lwrb/lwrb",
+					"jsonFile" : "directory-lib.lwrb.lwrb-Debug-b141b433cf5b2c71f779.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 6,
+					"source" : "lib/lwrb/lwrb"
+				},
+				{
+					"build" : "lib/tutf8e",
+					"jsonFile" : "directory-lib.tutf8e-Debug-acb5090e7e80513ba354.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 7,
+					"source" : "lib/tutf8e",
+					"targetIndexes" : 
+					[
+						191,
+						192
+					]
+				},
+				{
+					"build" : "lib/snappy-fef67ac",
+					"jsonFile" : "directory-lib.snappy-fef67ac-Debug-a697d0d29d7d10f6edef.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 8,
+					"source" : "lib/snappy-fef67ac",
+					"targetIndexes" : 
+					[
+						186
+					]
+				},
+				{
+					"build" : "lib/cmetrics",
+					"childIndexes" : 
+					[
+						16,
+						17
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.cmetrics-Debug-7eac53f4fbcfb2419876.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 9,
+					"source" : "lib/cmetrics",
+					"targetIndexes" : 
+					[
+						188
+					]
+				},
+				{
+					"build" : "lib/cmetrics/include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.cmetrics.include-Debug-9e19d0d66ba46d38301c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 15,
+					"projectIndex" : 9,
+					"source" : "lib/cmetrics/include"
+				},
+				{
+					"build" : "lib/cmetrics/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.cmetrics.src-Debug-63a84a69d8e18e069239.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 15,
+					"projectIndex" : 9,
+					"source" : "lib/cmetrics/src",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "lib/ctraces",
+					"childIndexes" : 
+					[
+						19,
+						20
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.ctraces-Debug-5f056d1ca847a7baa0e8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 10,
+					"source" : "lib/ctraces"
+				},
+				{
+					"build" : "lib/ctraces/include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.ctraces.include-Debug-f46b2ed5a3a21a9cab26.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 18,
+					"projectIndex" : 10,
+					"source" : "lib/ctraces/include"
+				},
+				{
+					"build" : "lib/ctraces/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.ctraces.src-Debug-889834577c069a860d49.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 18,
+					"projectIndex" : 10,
+					"source" : "lib/ctraces/src",
+					"targetIndexes" : 
+					[
+						16
+					]
+				},
+				{
+					"build" : "lib/nghttp2",
+					"childIndexes" : 
+					[
+						22,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.nghttp2-Debug-b3e661563a683213f628.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2"
+				},
+				{
+					"build" : "lib/nghttp2/lib",
+					"childIndexes" : 
+					[
+						23
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.nghttp2.lib-Debug-7553a9ea1e4cc9a62a74.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2/lib",
+					"targetIndexes" : 
+					[
+						175
+					]
+				},
+				{
+					"build" : "lib/nghttp2/lib/includes",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.nghttp2.lib.includes-Debug-0d8a7a3a53f5448898ef.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2/lib/includes"
+				},
+				{
+					"build" : "lib/nghttp2/third-party",
+					"jsonFile" : "directory-lib.nghttp2.third-party-Debug-32437c5b62b6835bd126.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2/third-party"
+				},
+				{
+					"build" : "lib/nghttp2/src",
+					"jsonFile" : "directory-lib.nghttp2.src-Debug-a95d355fc6a0014d433a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2/src"
+				},
+				{
+					"build" : "lib/nghttp2/examples",
+					"jsonFile" : "directory-lib.nghttp2.examples-Debug-db6d78bbf66ca2c992ba.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2/examples"
+				},
+				{
+					"build" : "lib/nghttp2/tests",
+					"jsonFile" : "directory-lib.nghttp2.tests-Debug-89a86f02f4c882fc2092.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2/tests"
+				},
+				{
+					"build" : "lib/nghttp2/integration-tests",
+					"jsonFile" : "directory-lib.nghttp2.integration-tests-Debug-c77dab337e081ac03d4a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2/integration-tests",
+					"targetIndexes" : 
+					[
+						152
+					]
+				},
+				{
+					"build" : "lib/nghttp2/doc",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.nghttp2.doc-Debug-7434b9be902d847e4e30.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2/doc",
+					"targetIndexes" : 
+					[
+						10,
+						17,
+						18,
+						19,
+						20,
+						150,
+						151,
+						154,
+						155,
+						156,
+						158,
+						162,
+						178,
+						180,
+						185,
+						190
+					]
+				},
+				{
+					"build" : "lib/nghttp2/contrib",
+					"jsonFile" : "directory-lib.nghttp2.contrib-Debug-ba3ba292339552bb4932.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2/contrib"
+				},
+				{
+					"build" : "lib/nghttp2/script",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.nghttp2.script-Debug-589b57f08e988fac68a8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2/script"
+				},
+				{
+					"build" : "lib/nghttp2/bpf",
+					"jsonFile" : "directory-lib.nghttp2.bpf-Debug-59339534e3d8ef873008.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 11,
+					"source" : "lib/nghttp2/bpf"
+				},
+				{
+					"build" : "lib/c-ares-1.24.0",
+					"childIndexes" : 
+					[
+						34,
+						35,
+						38
+					],
+					"jsonFile" : "directory-lib.c-ares-1.24.0-Debug-0972411bea84f1cca244.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 12,
+					"source" : "lib/c-ares-1.24.0"
+				},
+				{
+					"build" : "lib/c-ares-1.24.0/include",
+					"jsonFile" : "directory-lib.c-ares-1.24.0.include-Debug-8edf86565d8f61f0998a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 33,
+					"projectIndex" : 12,
+					"source" : "lib/c-ares-1.24.0/include"
+				},
+				{
+					"build" : "lib/c-ares-1.24.0/src",
+					"childIndexes" : 
+					[
+						36,
+						37
+					],
+					"jsonFile" : "directory-lib.c-ares-1.24.0.src-Debug-31fb3ad05686d300ab33.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 33,
+					"projectIndex" : 12,
+					"source" : "lib/c-ares-1.24.0/src"
+				},
+				{
+					"build" : "lib/c-ares-1.24.0/src/lib",
+					"jsonFile" : "directory-lib.c-ares-1.24.0.src.lib-Debug-882afb403d938ac4d564.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 12,
+					"source" : "lib/c-ares-1.24.0/src/lib",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "lib/c-ares-1.24.0/src/tools",
+					"jsonFile" : "directory-lib.c-ares-1.24.0.src.tools-Debug-68c31cf9ed2806d948f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 12,
+					"source" : "lib/c-ares-1.24.0/src/tools"
+				},
+				{
+					"build" : "lib/c-ares-1.24.0/docs",
+					"jsonFile" : "directory-lib.c-ares-1.24.0.docs-Debug-f070b00f32c8a0d1e5dd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 33,
+					"projectIndex" : 12,
+					"source" : "lib/c-ares-1.24.0/docs"
+				},
+				{
+					"build" : "lib/chunkio",
+					"childIndexes" : 
+					[
+						40,
+						41,
+						42
+					],
+					"jsonFile" : "directory-lib.chunkio-Debug-595ac892366a85d59adb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 13,
+					"source" : "lib/chunkio"
+				},
+				{
+					"build" : "lib/chunkio/deps/crc32",
+					"jsonFile" : "directory-lib.chunkio.deps.crc32-Debug-ccd92f867c8a2591bc18.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 39,
+					"projectIndex" : 13,
+					"source" : "lib/chunkio/deps/crc32",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "lib/chunkio/src",
+					"jsonFile" : "directory-lib.chunkio.src-Debug-efaa3a289d61172aa59e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 39,
+					"projectIndex" : 13,
+					"source" : "lib/chunkio/src",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "lib/chunkio/tools",
+					"jsonFile" : "directory-lib.chunkio.tools-Debug-e2285e8e619b18a9c31e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 39,
+					"projectIndex" : 13,
+					"source" : "lib/chunkio/tools",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "lib/jsmn",
+					"jsonFile" : "directory-lib.jsmn-Debug-8c664e98a896592a1b2d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib/jsmn",
+					"targetIndexes" : 
+					[
+						153
+					]
+				},
+				{
+					"build" : "lib/monkey",
+					"childIndexes" : 
+					[
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.monkey-Debug-717d523ba4f0b4bdf618.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 14,
+					"source" : "lib/monkey"
+				},
+				{
+					"build" : "lib/monkey/man",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.monkey.man-Debug-c95bf3fb7c8a8c0050eb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/man"
+				},
+				{
+					"build" : "lib/monkey/deps/rbtree",
+					"jsonFile" : "directory-lib.monkey.deps.rbtree-Debug-c25670bef0a638a4791f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/deps/rbtree",
+					"targetIndexes" : 
+					[
+						181
+					]
+				},
+				{
+					"build" : "lib/monkey/deps/regex",
+					"jsonFile" : "directory-lib.monkey.deps.regex-Debug-ed49063c867415dabb1f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/deps/regex",
+					"targetIndexes" : 
+					[
+						184
+					]
+				},
+				{
+					"build" : "lib/monkey/deps/flb_libco",
+					"jsonFile" : "directory-lib.monkey.deps.flb_libco-Debug-19a4077178433ebc64fd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/deps/flb_libco",
+					"targetIndexes" : 
+					[
+						15
+					]
+				},
+				{
+					"build" : "lib/monkey/mk_core",
+					"jsonFile" : "directory-lib.monkey.mk_core-Debug-436906141a6347f8d1c5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/mk_core",
+					"targetIndexes" : 
+					[
+						166
+					]
+				},
+				{
+					"build" : "lib/monkey/plugins",
+					"childIndexes" : 
+					[
+						51,
+						53,
+						54
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.monkey.plugins-Debug-8b8c5f55dd4a0016ba88.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/plugins"
+				},
+				{
+					"build" : "lib/monkey/plugins/dirlisting",
+					"childIndexes" : 
+					[
+						52
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.monkey.plugins.dirlisting-Debug-d532e6a9f9990556f4df.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 50,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/plugins/dirlisting",
+					"targetIndexes" : 
+					[
+						170
+					]
+				},
+				{
+					"build" : "lib/monkey/plugins/dirlisting/conf",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.monkey.plugins.dirlisting.conf-Debug-588c09f0ae53442c6204.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 51,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/plugins/dirlisting/conf"
+				},
+				{
+					"build" : "lib/monkey/plugins/liana",
+					"jsonFile" : "directory-lib.monkey.plugins.liana-Debug-7998b1021fe2a1ef9c77.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 50,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/plugins/liana",
+					"targetIndexes" : 
+					[
+						171
+					]
+				},
+				{
+					"build" : "lib/monkey/plugins/mandril",
+					"childIndexes" : 
+					[
+						55
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.monkey.plugins.mandril-Debug-28adb52dedc2fd2ec5b9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 50,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/plugins/mandril",
+					"targetIndexes" : 
+					[
+						172
+					]
+				},
+				{
+					"build" : "lib/monkey/plugins/mandril/conf",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.monkey.plugins.mandril.conf-Debug-f0e83fe0eddef68b5139.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 54,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/plugins/mandril/conf"
+				},
+				{
+					"build" : "lib/monkey/mk_server",
+					"jsonFile" : "directory-lib.monkey.mk_server-Debug-5a195a0ad3d8fb4cdbf2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/mk_server",
+					"targetIndexes" : 
+					[
+						169
+					]
+				},
+				{
+					"build" : "lib/monkey/mk_bin",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.monkey.mk_bin-Debug-b4698d41f85c4c33bf14.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/mk_bin",
+					"targetIndexes" : 
+					[
+						168
+					]
+				},
+				{
+					"build" : "lib/monkey/conf",
+					"jsonFile" : "directory-lib.monkey.conf-Debug-2e6f3f05fa17646fcd42.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/conf"
+				},
+				{
+					"build" : "lib/monkey/htdocs",
+					"jsonFile" : "directory-lib.monkey.htdocs-Debug-b680cecc4b9c4c29015c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/htdocs"
+				},
+				{
+					"build" : "lib/monkey/include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.monkey.include-Debug-87f9814bc5a30fa9da89.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/include"
+				},
+				{
+					"build" : "lib/monkey/api",
+					"jsonFile" : "directory-lib.monkey.api-Debug-fc215afd28ea72d189c8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 14,
+					"source" : "lib/monkey/api",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "lib/sqlite-amalgamation-3450200",
+					"jsonFile" : "directory-lib.sqlite-amalgamation-3450200-Debug-de8f82514b65ebe1fd88.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib/sqlite-amalgamation-3450200",
+					"targetIndexes" : 
+					[
+						187
+					]
+				},
+				{
+					"build" : "tools/xxd-c",
+					"jsonFile" : "directory-tools.xxd-c-Debug-f1e092b3b34df19c7f38.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tools/xxd-c",
+					"targetIndexes" : 
+					[
+						194
+					]
+				},
+				{
+					"build" : "lib/librdkafka-2.3.0",
+					"childIndexes" : 
+					[
+						65,
+						66
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.librdkafka-2.3.0-Debug-7e681c8d9511c346f3b1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 15,
+					"source" : "lib/librdkafka-2.3.0"
+				},
+				{
+					"build" : "lib/librdkafka-2.3.0/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.librdkafka-2.3.0.src-Debug-cbe3006301cf8bc4fd14.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 64,
+					"projectIndex" : 15,
+					"source" : "lib/librdkafka-2.3.0/src",
+					"targetIndexes" : 
+					[
+						182
+					]
+				},
+				{
+					"build" : "lib/librdkafka-2.3.0/src-cpp",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.librdkafka-2.3.0.src-cpp-Debug-37fc41456998a86b1b89.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 64,
+					"projectIndex" : 15,
+					"source" : "lib/librdkafka-2.3.0/src-cpp",
+					"targetIndexes" : 
+					[
+						183
+					]
+				},
+				{
+					"build" : "lib/onigmo",
+					"jsonFile" : "directory-lib.onigmo-Debug-466806ca889ebe3254ee.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 16,
+					"source" : "lib/onigmo",
+					"targetIndexes" : 
+					[
+						176
+					]
+				},
+				{
+					"build" : "lib/luajit-cmake",
+					"childIndexes" : 
+					[
+						69,
+						70
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.luajit-cmake-Debug-9bb1b72e88b688618467.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 17,
+					"source" : "lib/luajit-cmake",
+					"targetIndexes" : 
+					[
+						7,
+						157,
+						159,
+						160,
+						161
+					]
+				},
+				{
+					"build" : "lib/luajit-cmake/host/minilua",
+					"jsonFile" : "directory-lib.luajit-cmake.host.minilua-Debug-89dc0145d416a2fae82c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 68,
+					"projectIndex" : 18,
+					"source" : "lib/luajit-cmake/host/minilua",
+					"targetIndexes" : 
+					[
+						164
+					]
+				},
+				{
+					"build" : "lib/luajit-cmake/host/buildvm",
+					"jsonFile" : "directory-lib.luajit-cmake.host.buildvm-Debug-4a197a543936a3cb50b6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 68,
+					"projectIndex" : 19,
+					"source" : "lib/luajit-cmake/host/buildvm",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-include-Debug-b45e3a25b12045b3f4d8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "include"
+				},
+				{
+					"build" : "plugins",
+					"childIndexes" : 
+					[
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112,
+						113,
+						114,
+						115,
+						116,
+						117,
+						118,
+						119,
+						120,
+						121,
+						123,
+						124,
+						125,
+						126,
+						127,
+						128,
+						129,
+						130,
+						131,
+						132,
+						133,
+						134,
+						135,
+						136,
+						137,
+						138,
+						139,
+						140,
+						141,
+						142,
+						143,
+						144,
+						145,
+						146,
+						147,
+						148,
+						149,
+						150,
+						151,
+						152,
+						153,
+						154,
+						155,
+						156,
+						157,
+						158,
+						159,
+						160,
+						161,
+						162,
+						163,
+						164,
+						165,
+						166,
+						167,
+						168,
+						169,
+						170,
+						171,
+						172,
+						173,
+						174,
+						175,
+						176,
+						177,
+						178,
+						179,
+						180,
+						181,
+						182,
+						183,
+						184,
+						185,
+						186,
+						187,
+						188,
+						191,
+						192
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-plugins-Debug-55275e3f2f02dcd473ff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "plugins"
+				},
+				{
+					"build" : "plugins/custom_calyptia",
+					"jsonFile" : "directory-plugins.custom_calyptia-Debug-060a25d8504f6de36eb3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/custom_calyptia",
+					"targetIndexes" : 
+					[
+						23
+					]
+				},
+				{
+					"build" : "plugins/in_cpu",
+					"jsonFile" : "directory-plugins.in_cpu-Debug-f287647d581106194cbe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_cpu",
+					"targetIndexes" : 
+					[
+						48
+					]
+				},
+				{
+					"build" : "plugins/in_mem",
+					"jsonFile" : "directory-plugins.in_mem-Debug-beb799b71a46d56e6636.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_mem",
+					"targetIndexes" : 
+					[
+						67
+					]
+				},
+				{
+					"build" : "plugins/in_thermal",
+					"jsonFile" : "directory-plugins.in_thermal-Debug-3457ffbf15c30a6a7121.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_thermal",
+					"targetIndexes" : 
+					[
+						88
+					]
+				},
+				{
+					"build" : "plugins/in_kmsg",
+					"jsonFile" : "directory-plugins.in_kmsg-Debug-2267e6afb9e0ffaa245e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_kmsg",
+					"targetIndexes" : 
+					[
+						64
+					]
+				},
+				{
+					"build" : "plugins/in_proc",
+					"jsonFile" : "directory-plugins.in_proc-Debug-9e38110421097f4dd3f3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_proc",
+					"targetIndexes" : 
+					[
+						74
+					]
+				},
+				{
+					"build" : "plugins/in_disk",
+					"jsonFile" : "directory-plugins.in_disk-Debug-e8236b3511410e776e99.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_disk",
+					"targetIndexes" : 
+					[
+						49
+					]
+				},
+				{
+					"build" : "plugins/in_systemd",
+					"jsonFile" : "directory-plugins.in_systemd-Debug-722342c71efc280cc345.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_systemd",
+					"targetIndexes" : 
+					[
+						85
+					]
+				},
+				{
+					"build" : "plugins/in_netif",
+					"jsonFile" : "directory-plugins.in_netif-Debug-71e9f02ce7867ea07279.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_netif",
+					"targetIndexes" : 
+					[
+						69
+					]
+				},
+				{
+					"build" : "plugins/in_docker",
+					"jsonFile" : "directory-plugins.in_docker-Debug-7972e09032ab9d7770d8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_docker",
+					"targetIndexes" : 
+					[
+						50
+					]
+				},
+				{
+					"build" : "plugins/in_docker_events",
+					"jsonFile" : "directory-plugins.in_docker_events-Debug-a69705e57039f8f766a3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_docker_events",
+					"targetIndexes" : 
+					[
+						51
+					]
+				},
+				{
+					"build" : "plugins/in_podman_metrics",
+					"jsonFile" : "directory-plugins.in_podman_metrics-Debug-1773b1c29c03000da133.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_podman_metrics",
+					"targetIndexes" : 
+					[
+						73
+					]
+				},
+				{
+					"build" : "plugins/in_process_exporter_metrics",
+					"jsonFile" : "directory-plugins.in_process_exporter_metrics-Debug-22ed9105362d3c7e7168.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_process_exporter_metrics",
+					"targetIndexes" : 
+					[
+						75
+					]
+				},
+				{
+					"build" : "plugins/in_node_exporter_metrics",
+					"jsonFile" : "directory-plugins.in_node_exporter_metrics-Debug-174dd7f4791e05b9ba71.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_node_exporter_metrics",
+					"targetIndexes" : 
+					[
+						71
+					]
+				},
+				{
+					"build" : "plugins/in_kubernetes_events",
+					"jsonFile" : "directory-plugins.in_kubernetes_events-Debug-15ad5622e3b896113a28.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_kubernetes_events",
+					"targetIndexes" : 
+					[
+						65
+					]
+				},
+				{
+					"build" : "plugins/in_kafka",
+					"jsonFile" : "directory-plugins.in_kafka-Debug-c23f7b4d6eb3097c5f42.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_kafka",
+					"targetIndexes" : 
+					[
+						63
+					]
+				},
+				{
+					"build" : "plugins/in_fluentbit_metrics",
+					"jsonFile" : "directory-plugins.in_fluentbit_metrics-Debug-c31d255a3dc70682d6c0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_fluentbit_metrics",
+					"targetIndexes" : 
+					[
+						58
+					]
+				},
+				{
+					"build" : "plugins/in_prometheus_scrape",
+					"jsonFile" : "directory-plugins.in_prometheus_scrape-Debug-47b8c2328168d578867b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_prometheus_scrape",
+					"targetIndexes" : 
+					[
+						76
+					]
+				},
+				{
+					"build" : "plugins/in_emitter",
+					"jsonFile" : "directory-plugins.in_emitter-Debug-06ce780048a4b0d42984.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_emitter",
+					"targetIndexes" : 
+					[
+						54
+					]
+				},
+				{
+					"build" : "plugins/in_tail",
+					"jsonFile" : "directory-plugins.in_tail-Debug-bd6e53c2aa30f450c837.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_tail",
+					"targetIndexes" : 
+					[
+						86
+					]
+				},
+				{
+					"build" : "plugins/in_dummy",
+					"jsonFile" : "directory-plugins.in_dummy-Debug-d3b91c2149f50ad4e7e0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_dummy",
+					"targetIndexes" : 
+					[
+						52
+					]
+				},
+				{
+					"build" : "plugins/in_head",
+					"jsonFile" : "directory-plugins.in_head-Debug-d62b762818a57b770d75.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_head",
+					"targetIndexes" : 
+					[
+						60
+					]
+				},
+				{
+					"build" : "plugins/in_health",
+					"jsonFile" : "directory-plugins.in_health-Debug-d2b54f3f66bb52fea57a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_health",
+					"targetIndexes" : 
+					[
+						61
+					]
+				},
+				{
+					"build" : "plugins/in_http",
+					"jsonFile" : "directory-plugins.in_http-Debug-69adf08698983d87d090.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_http",
+					"targetIndexes" : 
+					[
+						62
+					]
+				},
+				{
+					"build" : "plugins/in_collectd",
+					"jsonFile" : "directory-plugins.in_collectd-Debug-bb1cc00435de5c93408a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_collectd",
+					"targetIndexes" : 
+					[
+						47
+					]
+				},
+				{
+					"build" : "plugins/in_statsd",
+					"jsonFile" : "directory-plugins.in_statsd-Debug-afc606c5bfe63c3f0916.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_statsd",
+					"targetIndexes" : 
+					[
+						80
+					]
+				},
+				{
+					"build" : "plugins/in_opentelemetry",
+					"jsonFile" : "directory-plugins.in_opentelemetry-Debug-bb5b860d9488ad6901b6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_opentelemetry",
+					"targetIndexes" : 
+					[
+						72
+					]
+				},
+				{
+					"build" : "plugins/in_elasticsearch",
+					"jsonFile" : "directory-plugins.in_elasticsearch-Debug-211fb169b6475784f220.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_elasticsearch",
+					"targetIndexes" : 
+					[
+						53
+					]
+				},
+				{
+					"build" : "plugins/in_calyptia_fleet",
+					"jsonFile" : "directory-plugins.in_calyptia_fleet-Debug-1a6f377dbded66f4d12e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_calyptia_fleet",
+					"targetIndexes" : 
+					[
+						46
+					]
+				},
+				{
+					"build" : "plugins/in_splunk",
+					"jsonFile" : "directory-plugins.in_splunk-Debug-2561272d206c8f04e00a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_splunk",
+					"targetIndexes" : 
+					[
+						79
+					]
+				},
+				{
+					"build" : "plugins/in_event_type",
+					"jsonFile" : "directory-plugins.in_event_type-Debug-179fa3b45d7353b24481.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_event_type",
+					"targetIndexes" : 
+					[
+						55
+					]
+				},
+				{
+					"build" : "plugins/in_storage_backlog",
+					"jsonFile" : "directory-plugins.in_storage_backlog-Debug-e71fcb1a27b0e5f61c1b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_storage_backlog",
+					"targetIndexes" : 
+					[
+						82
+					]
+				},
+				{
+					"build" : "plugins/in_nginx_exporter_metrics",
+					"jsonFile" : "directory-plugins.in_nginx_exporter_metrics-Debug-92618a15cf3d42fbc209.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_nginx_exporter_metrics",
+					"targetIndexes" : 
+					[
+						70
+					]
+				},
+				{
+					"build" : "plugins/in_stream_processor",
+					"jsonFile" : "directory-plugins.in_stream_processor-Debug-d4160d98e069bb6649e3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_stream_processor",
+					"targetIndexes" : 
+					[
+						83
+					]
+				},
+				{
+					"build" : "plugins/in_serial",
+					"jsonFile" : "directory-plugins.in_serial-Debug-ffe723f41d86a504fc00.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_serial",
+					"targetIndexes" : 
+					[
+						78
+					]
+				},
+				{
+					"build" : "plugins/in_stdin",
+					"jsonFile" : "directory-plugins.in_stdin-Debug-df2ac046381e84251c11.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_stdin",
+					"targetIndexes" : 
+					[
+						81
+					]
+				},
+				{
+					"build" : "plugins/in_syslog",
+					"jsonFile" : "directory-plugins.in_syslog-Debug-39a986c8fa85ff5cc402.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_syslog",
+					"targetIndexes" : 
+					[
+						84
+					]
+				},
+				{
+					"build" : "plugins/in_exec",
+					"jsonFile" : "directory-plugins.in_exec-Debug-3c258c0968a9310a3fa8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_exec",
+					"targetIndexes" : 
+					[
+						56
+					]
+				},
+				{
+					"build" : "plugins/in_udp",
+					"jsonFile" : "directory-plugins.in_udp-Debug-6ac731a037a8a44e3b47.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_udp",
+					"targetIndexes" : 
+					[
+						89
+					]
+				},
+				{
+					"build" : "plugins/in_exec_wasi",
+					"jsonFile" : "directory-plugins.in_exec_wasi-Debug-ff41c01e6dfb047a540d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_exec_wasi",
+					"targetIndexes" : 
+					[
+						57
+					]
+				},
+				{
+					"build" : "plugins/in_tcp",
+					"jsonFile" : "directory-plugins.in_tcp-Debug-7a254617959effea3219.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_tcp",
+					"targetIndexes" : 
+					[
+						87
+					]
+				},
+				{
+					"build" : "plugins/in_mqtt",
+					"jsonFile" : "directory-plugins.in_mqtt-Debug-6eeb975b45fd9d3b6b64.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_mqtt",
+					"targetIndexes" : 
+					[
+						68
+					]
+				},
+				{
+					"build" : "plugins/in_lib",
+					"jsonFile" : "directory-plugins.in_lib-Debug-a82acd5b46c2231cbc98.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_lib",
+					"targetIndexes" : 
+					[
+						66
+					]
+				},
+				{
+					"build" : "plugins/in_forward",
+					"jsonFile" : "directory-plugins.in_forward-Debug-4a3c0130c94f51172f93.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_forward",
+					"targetIndexes" : 
+					[
+						59
+					]
+				},
+				{
+					"build" : "plugins/in_random",
+					"jsonFile" : "directory-plugins.in_random-Debug-deaa6308b178dce4957f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/in_random",
+					"targetIndexes" : 
+					[
+						77
+					]
+				},
+				{
+					"build" : "plugins/processor_content_modifier",
+					"jsonFile" : "directory-plugins.processor_content_modifier-Debug-f4327c3022f1b895c34b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/processor_content_modifier",
+					"targetIndexes" : 
+					[
+						136
+					]
+				},
+				{
+					"build" : "plugins/processor_labels",
+					"jsonFile" : "directory-plugins.processor_labels-Debug-32fa1efe9ce2531b31ae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/processor_labels",
+					"targetIndexes" : 
+					[
+						137
+					]
+				},
+				{
+					"build" : "plugins/processor_metrics_selector",
+					"jsonFile" : "directory-plugins.processor_metrics_selector-Debug-50e94b447eaa34c545ac.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/processor_metrics_selector",
+					"targetIndexes" : 
+					[
+						138
+					]
+				},
+				{
+					"build" : "plugins/processor_sql",
+					"childIndexes" : 
+					[
+						122
+					],
+					"jsonFile" : "directory-plugins.processor_sql-Debug-bd93ebee0f2d3ef54fee.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/processor_sql",
+					"targetIndexes" : 
+					[
+						139
+					]
+				},
+				{
+					"build" : "plugins/processor_sql/parser",
+					"jsonFile" : "directory-plugins.processor_sql.parser-Debug-5ef3d2a944a5a3910630.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 121,
+					"projectIndex" : 0,
+					"source" : "plugins/processor_sql/parser",
+					"targetIndexes" : 
+					[
+						179
+					]
+				},
+				{
+					"build" : "plugins/out_azure",
+					"jsonFile" : "directory-plugins.out_azure-Debug-92b6fe0a55bb02cce82f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_azure",
+					"targetIndexes" : 
+					[
+						90
+					]
+				},
+				{
+					"build" : "plugins/out_azure_blob",
+					"jsonFile" : "directory-plugins.out_azure_blob-Debug-6ad706da9bf89c6cb8c2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_azure_blob",
+					"targetIndexes" : 
+					[
+						91
+					]
+				},
+				{
+					"build" : "plugins/out_azure_logs_ingestion",
+					"jsonFile" : "directory-plugins.out_azure_logs_ingestion-Debug-b32d58cd3a8f3c766f48.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_azure_logs_ingestion",
+					"targetIndexes" : 
+					[
+						93
+					]
+				},
+				{
+					"build" : "plugins/out_azure_kusto",
+					"jsonFile" : "directory-plugins.out_azure_kusto-Debug-a25d350ab3a6ad12f6d4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_azure_kusto",
+					"targetIndexes" : 
+					[
+						92
+					]
+				},
+				{
+					"build" : "plugins/out_bigquery",
+					"jsonFile" : "directory-plugins.out_bigquery-Debug-6ec4cfb82f7ceca88ef8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_bigquery",
+					"targetIndexes" : 
+					[
+						94
+					]
+				},
+				{
+					"build" : "plugins/out_calyptia",
+					"jsonFile" : "directory-plugins.out_calyptia-Debug-7f4a66f83d694fcd35c0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_calyptia",
+					"targetIndexes" : 
+					[
+						95
+					]
+				},
+				{
+					"build" : "plugins/out_counter",
+					"jsonFile" : "directory-plugins.out_counter-Debug-732c2ec2d10dae19854a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_counter",
+					"targetIndexes" : 
+					[
+						98
+					]
+				},
+				{
+					"build" : "plugins/out_datadog",
+					"jsonFile" : "directory-plugins.out_datadog-Debug-45e7550bfe3f8dc78204.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_datadog",
+					"targetIndexes" : 
+					[
+						99
+					]
+				},
+				{
+					"build" : "plugins/out_es",
+					"jsonFile" : "directory-plugins.out_es-Debug-338355d50a6be6cf7b89.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_es",
+					"targetIndexes" : 
+					[
+						100
+					]
+				},
+				{
+					"build" : "plugins/out_exit",
+					"jsonFile" : "directory-plugins.out_exit-Debug-5a8ce068a1382daf5abb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_exit",
+					"targetIndexes" : 
+					[
+						101
+					]
+				},
+				{
+					"build" : "plugins/out_file",
+					"jsonFile" : "directory-plugins.out_file-Debug-3699f59f8cdf6558e8c0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_file",
+					"targetIndexes" : 
+					[
+						102
+					]
+				},
+				{
+					"build" : "plugins/out_forward",
+					"jsonFile" : "directory-plugins.out_forward-Debug-90f383ec15d5fd0eea00.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_forward",
+					"targetIndexes" : 
+					[
+						104
+					]
+				},
+				{
+					"build" : "plugins/out_http",
+					"jsonFile" : "directory-plugins.out_http-Debug-d59113315c06a218879e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_http",
+					"targetIndexes" : 
+					[
+						106
+					]
+				},
+				{
+					"build" : "plugins/out_influxdb",
+					"jsonFile" : "directory-plugins.out_influxdb-Debug-b3ba8ef7fb0252d5025a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_influxdb",
+					"targetIndexes" : 
+					[
+						107
+					]
+				},
+				{
+					"build" : "plugins/out_logdna",
+					"jsonFile" : "directory-plugins.out_logdna-Debug-56002af4a0a00b5a7d4d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_logdna",
+					"targetIndexes" : 
+					[
+						113
+					]
+				},
+				{
+					"build" : "plugins/out_loki",
+					"jsonFile" : "directory-plugins.out_loki-Debug-93bcc3e3686912629c43.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_loki",
+					"targetIndexes" : 
+					[
+						114
+					]
+				},
+				{
+					"build" : "plugins/out_kafka",
+					"jsonFile" : "directory-plugins.out_kafka-Debug-c303bb7bae4b3218ab57.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_kafka",
+					"targetIndexes" : 
+					[
+						108
+					]
+				},
+				{
+					"build" : "plugins/out_kafka_rest",
+					"jsonFile" : "directory-plugins.out_kafka_rest-Debug-29f8eee486083f5f1506.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_kafka_rest",
+					"targetIndexes" : 
+					[
+						109
+					]
+				},
+				{
+					"build" : "plugins/out_nats",
+					"jsonFile" : "directory-plugins.out_nats-Debug-c9b21df988af243804c3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_nats",
+					"targetIndexes" : 
+					[
+						115
+					]
+				},
+				{
+					"build" : "plugins/out_nrlogs",
+					"jsonFile" : "directory-plugins.out_nrlogs-Debug-e90d3cbfe82c19eaeb41.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_nrlogs",
+					"targetIndexes" : 
+					[
+						116
+					]
+				},
+				{
+					"build" : "plugins/out_null",
+					"jsonFile" : "directory-plugins.out_null-Debug-2ed73c3fded177df2a14.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_null",
+					"targetIndexes" : 
+					[
+						117
+					]
+				},
+				{
+					"build" : "plugins/out_opensearch",
+					"jsonFile" : "directory-plugins.out_opensearch-Debug-f4b108dc7f467f8e6893.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_opensearch",
+					"targetIndexes" : 
+					[
+						118
+					]
+				},
+				{
+					"build" : "plugins/out_oracle_log_analytics",
+					"jsonFile" : "directory-plugins.out_oracle_log_analytics-Debug-239296414a450222f52a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_oracle_log_analytics",
+					"targetIndexes" : 
+					[
+						120
+					]
+				},
+				{
+					"build" : "plugins/out_plot",
+					"jsonFile" : "directory-plugins.out_plot-Debug-0106b2b2fb2c459b3bad.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_plot",
+					"targetIndexes" : 
+					[
+						121
+					]
+				},
+				{
+					"build" : "plugins/out_skywalking",
+					"jsonFile" : "directory-plugins.out_skywalking-Debug-d7af09f2829d10b99209.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_skywalking",
+					"targetIndexes" : 
+					[
+						125
+					]
+				},
+				{
+					"build" : "plugins/out_slack",
+					"jsonFile" : "directory-plugins.out_slack-Debug-486b93bd59401b63ed50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_slack",
+					"targetIndexes" : 
+					[
+						126
+					]
+				},
+				{
+					"build" : "plugins/out_splunk",
+					"jsonFile" : "directory-plugins.out_splunk-Debug-433df2c16bcbda9f4057.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_splunk",
+					"targetIndexes" : 
+					[
+						127
+					]
+				},
+				{
+					"build" : "plugins/out_stackdriver",
+					"jsonFile" : "directory-plugins.out_stackdriver-Debug-50dfdc666a81635624a8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_stackdriver",
+					"targetIndexes" : 
+					[
+						128
+					]
+				},
+				{
+					"build" : "plugins/out_stdout",
+					"jsonFile" : "directory-plugins.out_stdout-Debug-b0b32c8a89aee7b5dc5e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_stdout",
+					"targetIndexes" : 
+					[
+						129
+					]
+				},
+				{
+					"build" : "plugins/out_syslog",
+					"jsonFile" : "directory-plugins.out_syslog-Debug-bd198f049690c888b5d4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_syslog",
+					"targetIndexes" : 
+					[
+						130
+					]
+				},
+				{
+					"build" : "plugins/out_tcp",
+					"jsonFile" : "directory-plugins.out_tcp-Debug-d5eea70ca4fdea86d6b0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_tcp",
+					"targetIndexes" : 
+					[
+						131
+					]
+				},
+				{
+					"build" : "plugins/out_udp",
+					"jsonFile" : "directory-plugins.out_udp-Debug-2b853920d1c49fca697c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_udp",
+					"targetIndexes" : 
+					[
+						133
+					]
+				},
+				{
+					"build" : "plugins/out_td",
+					"jsonFile" : "directory-plugins.out_td-Debug-7678e6a536da6df3bc7c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_td",
+					"targetIndexes" : 
+					[
+						132
+					]
+				},
+				{
+					"build" : "plugins/out_lib",
+					"jsonFile" : "directory-plugins.out_lib-Debug-064099bf0b8c8679b64f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_lib",
+					"targetIndexes" : 
+					[
+						112
+					]
+				},
+				{
+					"build" : "plugins/out_flowcounter",
+					"jsonFile" : "directory-plugins.out_flowcounter-Debug-cfd1dc6c2e52bb0fb2e4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_flowcounter",
+					"targetIndexes" : 
+					[
+						103
+					]
+				},
+				{
+					"build" : "plugins/out_gelf",
+					"jsonFile" : "directory-plugins.out_gelf-Debug-36a66c5def34196c484f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_gelf",
+					"targetIndexes" : 
+					[
+						105
+					]
+				},
+				{
+					"build" : "plugins/out_websocket",
+					"jsonFile" : "directory-plugins.out_websocket-Debug-38ff8bc0020d1ef401e5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_websocket",
+					"targetIndexes" : 
+					[
+						135
+					]
+				},
+				{
+					"build" : "plugins/out_cloudwatch_logs",
+					"jsonFile" : "directory-plugins.out_cloudwatch_logs-Debug-0ce590075bc10ba6d6f3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_cloudwatch_logs",
+					"targetIndexes" : 
+					[
+						97
+					]
+				},
+				{
+					"build" : "plugins/out_kinesis_firehose",
+					"jsonFile" : "directory-plugins.out_kinesis_firehose-Debug-dd53cb0ef06e41653f12.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_kinesis_firehose",
+					"targetIndexes" : 
+					[
+						110
+					]
+				},
+				{
+					"build" : "plugins/out_kinesis_streams",
+					"jsonFile" : "directory-plugins.out_kinesis_streams-Debug-e1e1349125401bed5dde.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_kinesis_streams",
+					"targetIndexes" : 
+					[
+						111
+					]
+				},
+				{
+					"build" : "plugins/out_opentelemetry",
+					"jsonFile" : "directory-plugins.out_opentelemetry-Debug-9ef8836ada87b0df8bc3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_opentelemetry",
+					"targetIndexes" : 
+					[
+						119
+					]
+				},
+				{
+					"build" : "plugins/out_prometheus_exporter",
+					"jsonFile" : "directory-plugins.out_prometheus_exporter-Debug-570839a00f1ebc8ae3e6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_prometheus_exporter",
+					"targetIndexes" : 
+					[
+						122
+					]
+				},
+				{
+					"build" : "plugins/out_prometheus_remote_write",
+					"jsonFile" : "directory-plugins.out_prometheus_remote_write-Debug-3696252293a6e21479e5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_prometheus_remote_write",
+					"targetIndexes" : 
+					[
+						123
+					]
+				},
+				{
+					"build" : "plugins/out_s3",
+					"jsonFile" : "directory-plugins.out_s3-Debug-c79b54540e9a85975573.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_s3",
+					"targetIndexes" : 
+					[
+						124
+					]
+				},
+				{
+					"build" : "plugins/out_vivo_exporter",
+					"jsonFile" : "directory-plugins.out_vivo_exporter-Debug-93755193d2462dd6f8c6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_vivo_exporter",
+					"targetIndexes" : 
+					[
+						134
+					]
+				},
+				{
+					"build" : "plugins/out_chronicle",
+					"jsonFile" : "directory-plugins.out_chronicle-Debug-faf526c5562565215e6c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/out_chronicle",
+					"targetIndexes" : 
+					[
+						96
+					]
+				},
+				{
+					"build" : "plugins/filter_alter_size",
+					"jsonFile" : "directory-plugins.filter_alter_size-Debug-b62ef8740b8088700fac.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_alter_size",
+					"targetIndexes" : 
+					[
+						24
+					]
+				},
+				{
+					"build" : "plugins/filter_aws",
+					"jsonFile" : "directory-plugins.filter_aws-Debug-789f8cad14fb634797ae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_aws",
+					"targetIndexes" : 
+					[
+						25
+					]
+				},
+				{
+					"build" : "plugins/filter_checklist",
+					"jsonFile" : "directory-plugins.filter_checklist-Debug-ce3a51cb1d1178cf3f66.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_checklist",
+					"targetIndexes" : 
+					[
+						26
+					]
+				},
+				{
+					"build" : "plugins/filter_ecs",
+					"jsonFile" : "directory-plugins.filter_ecs-Debug-0d2fd0ac7d2b4bccdab0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_ecs",
+					"targetIndexes" : 
+					[
+						27
+					]
+				},
+				{
+					"build" : "plugins/filter_record_modifier",
+					"jsonFile" : "directory-plugins.filter_record_modifier-Debug-63f4de1fd02699785340.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_record_modifier",
+					"targetIndexes" : 
+					[
+						39
+					]
+				},
+				{
+					"build" : "plugins/filter_sysinfo",
+					"jsonFile" : "directory-plugins.filter_sysinfo-Debug-2237cd44997c984d7df4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_sysinfo",
+					"targetIndexes" : 
+					[
+						42
+					]
+				},
+				{
+					"build" : "plugins/filter_throttle",
+					"jsonFile" : "directory-plugins.filter_throttle-Debug-db8162434d21d8f48c1c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_throttle",
+					"targetIndexes" : 
+					[
+						43
+					]
+				},
+				{
+					"build" : "plugins/filter_type_converter",
+					"jsonFile" : "directory-plugins.filter_type_converter-Debug-7853b05c813798c8f3bf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_type_converter",
+					"targetIndexes" : 
+					[
+						44
+					]
+				},
+				{
+					"build" : "plugins/filter_kubernetes",
+					"jsonFile" : "directory-plugins.filter_kubernetes-Debug-23b14c8553af0dd4b045.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_kubernetes",
+					"targetIndexes" : 
+					[
+						31
+					]
+				},
+				{
+					"build" : "plugins/filter_modify",
+					"jsonFile" : "directory-plugins.filter_modify-Debug-52f7a04b90277a160dbc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_modify",
+					"targetIndexes" : 
+					[
+						34
+					]
+				},
+				{
+					"build" : "plugins/filter_multiline",
+					"jsonFile" : "directory-plugins.filter_multiline-Debug-b60a2040c2831ed0f42b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_multiline",
+					"targetIndexes" : 
+					[
+						35
+					]
+				},
+				{
+					"build" : "plugins/filter_nest",
+					"jsonFile" : "directory-plugins.filter_nest-Debug-90557b4a4800c0bdb061.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_nest",
+					"targetIndexes" : 
+					[
+						36
+					]
+				},
+				{
+					"build" : "plugins/filter_parser",
+					"jsonFile" : "directory-plugins.filter_parser-Debug-c61270fb53164f17d137.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_parser",
+					"targetIndexes" : 
+					[
+						38
+					]
+				},
+				{
+					"build" : "plugins/filter_expect",
+					"jsonFile" : "directory-plugins.filter_expect-Debug-07a9031780d15bc231e0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_expect",
+					"targetIndexes" : 
+					[
+						28
+					]
+				},
+				{
+					"build" : "plugins/filter_grep",
+					"jsonFile" : "directory-plugins.filter_grep-Debug-cbb04ea00e4821d83403.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_grep",
+					"targetIndexes" : 
+					[
+						30
+					]
+				},
+				{
+					"build" : "plugins/filter_rewrite_tag",
+					"jsonFile" : "directory-plugins.filter_rewrite_tag-Debug-65a6b59b9662c3f64088.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_rewrite_tag",
+					"targetIndexes" : 
+					[
+						40
+					]
+				},
+				{
+					"build" : "plugins/filter_log_to_metrics",
+					"jsonFile" : "directory-plugins.filter_log_to_metrics-Debug-eff0cf8b20568452ba61.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_log_to_metrics",
+					"targetIndexes" : 
+					[
+						32
+					]
+				},
+				{
+					"build" : "plugins/filter_lua",
+					"jsonFile" : "directory-plugins.filter_lua-Debug-1f8d8a3f167db22c4f32.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_lua",
+					"targetIndexes" : 
+					[
+						33
+					]
+				},
+				{
+					"build" : "plugins/filter_stdout",
+					"jsonFile" : "directory-plugins.filter_stdout-Debug-6467e50395bb0a8432c8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_stdout",
+					"targetIndexes" : 
+					[
+						41
+					]
+				},
+				{
+					"build" : "plugins/filter_geoip2",
+					"childIndexes" : 
+					[
+						189
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-plugins.filter_geoip2-Debug-5828f8fd63856b5eb5ba.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_geoip2",
+					"targetIndexes" : 
+					[
+						29
+					]
+				},
+				{
+					"build" : "plugins/filter_geoip2/libmaxminddb",
+					"childIndexes" : 
+					[
+						190
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-plugins.filter_geoip2.libmaxminddb-Debug-9d191d7992841e4a8518.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 188,
+					"projectIndex" : 20,
+					"source" : "plugins/filter_geoip2/libmaxminddb",
+					"targetIndexes" : 
+					[
+						163
+					]
+				},
+				{
+					"build" : "plugins/filter_geoip2/libmaxminddb/bin",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-plugins.filter_geoip2.libmaxminddb.bin-Debug-e86de4011ce6d576ff42.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 189,
+					"projectIndex" : 20,
+					"source" : "plugins/filter_geoip2/libmaxminddb/bin",
+					"targetIndexes" : 
+					[
+						167
+					]
+				},
+				{
+					"build" : "plugins/filter_nightfall",
+					"jsonFile" : "directory-plugins.filter_nightfall-Debug-61cae33fbb05c3cfb891.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_nightfall",
+					"targetIndexes" : 
+					[
+						37
+					]
+				},
+				{
+					"build" : "plugins/filter_wasm",
+					"jsonFile" : "directory-plugins.filter_wasm-Debug-b64975516eaeb736d1aa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 72,
+					"projectIndex" : 0,
+					"source" : "plugins/filter_wasm",
+					"targetIndexes" : 
+					[
+						45
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						194,
+						195,
+						196,
+						198,
+						200,
+						203,
+						205
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src-Debug-dfd62ac693cb04ff6bba.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						145,
+						146,
+						147
+					]
+				},
+				{
+					"build" : "src/multiline",
+					"jsonFile" : "directory-src.multiline-Debug-f36bdbbc2133828aedb3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 193,
+					"projectIndex" : 0,
+					"source" : "src/multiline"
+				},
+				{
+					"build" : "src/record_accessor",
+					"jsonFile" : "directory-src.record_accessor-Debug-5a51f1d4a82ff6a32007.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 193,
+					"projectIndex" : 0,
+					"source" : "src/record_accessor",
+					"targetIndexes" : 
+					[
+						141
+					]
+				},
+				{
+					"build" : "src/stream_processor",
+					"childIndexes" : 
+					[
+						197
+					],
+					"jsonFile" : "directory-src.stream_processor-Debug-661a0e32e7e3c3485c1f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 193,
+					"projectIndex" : 21,
+					"source" : "src/stream_processor",
+					"targetIndexes" : 
+					[
+						142
+					]
+				},
+				{
+					"build" : "src/stream_processor/parser",
+					"jsonFile" : "directory-src.stream_processor.parser-Debug-dffe2fde0125b6227f60.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 196,
+					"projectIndex" : 21,
+					"source" : "src/stream_processor/parser",
+					"targetIndexes" : 
+					[
+						143
+					]
+				},
+				{
+					"build" : "src/aws",
+					"childIndexes" : 
+					[
+						199
+					],
+					"jsonFile" : "directory-src.aws-Debug-41817f9af0346961664e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 193,
+					"projectIndex" : 0,
+					"source" : "src/aws",
+					"targetIndexes" : 
+					[
+						21
+					]
+				},
+				{
+					"build" : "src/aws/compression",
+					"jsonFile" : "directory-src.aws.compression-Debug-885c7107f9414edc999a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 198,
+					"projectIndex" : 0,
+					"source" : "src/aws/compression"
+				},
+				{
+					"build" : "src/http_server",
+					"childIndexes" : 
+					[
+						201,
+						202
+					],
+					"jsonFile" : "directory-src.http_server-Debug-7a9c4cdc6eb699db7f12.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 193,
+					"projectIndex" : 0,
+					"source" : "src/http_server",
+					"targetIndexes" : 
+					[
+						22
+					]
+				},
+				{
+					"build" : "src/http_server/api/v1",
+					"jsonFile" : "directory-src.http_server.api.v1-Debug-123d5b95a3089926a861.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 200,
+					"projectIndex" : 0,
+					"source" : "src/http_server/api/v1",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/http_server/api/v2",
+					"jsonFile" : "directory-src.http_server.api.v2-Debug-9f3cbcdf5e1cbf7b9990.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 200,
+					"projectIndex" : 0,
+					"source" : "src/http_server/api/v2",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/proxy",
+					"childIndexes" : 
+					[
+						204
+					],
+					"jsonFile" : "directory-src.proxy-Debug-2e0aa2852a8bad1fd5aa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 193,
+					"projectIndex" : 0,
+					"source" : "src/proxy"
+				},
+				{
+					"build" : "src/proxy/go",
+					"jsonFile" : "directory-src.proxy.go-Debug-15360c65315724e77de2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 203,
+					"projectIndex" : 0,
+					"source" : "src/proxy/go",
+					"targetIndexes" : 
+					[
+						140
+					]
+				},
+				{
+					"build" : "src/wasm",
+					"jsonFile" : "directory-src.wasm-Debug-dcbd0d3b1d197b16e194.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 193,
+					"projectIndex" : 0,
+					"source" : "src/wasm",
+					"targetIndexes" : 
+					[
+						144,
+						193
+					]
+				},
+				{
+					"build" : "examples",
+					"childIndexes" : 
+					[
+						207,
+						208
+					],
+					"jsonFile" : "directory-examples-Debug-1c8b83b621b6ef38a245.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples"
+				},
+				{
+					"build" : "examples/hello_world",
+					"jsonFile" : "directory-examples.hello_world-Debug-ad0c0a1cd0b551b2d6bb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 206,
+					"projectIndex" : 0,
+					"source" : "examples/hello_world",
+					"targetIndexes" : 
+					[
+						149
+					]
+				},
+				{
+					"build" : "examples/out_lib",
+					"jsonFile" : "directory-examples.out_lib-Debug-311ec5e0d9f1cac5a97c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 206,
+					"projectIndex" : 0,
+					"source" : "examples/out_lib",
+					"targetIndexes" : 
+					[
+						177
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						20,
+						21
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						9,
+						43,
+						62,
+						63,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112,
+						113,
+						114,
+						115,
+						116,
+						117,
+						118,
+						119,
+						120,
+						121,
+						122,
+						123,
+						124,
+						125,
+						126,
+						127,
+						128,
+						129,
+						130,
+						131,
+						132,
+						133,
+						134,
+						135,
+						136,
+						137,
+						138,
+						139,
+						140,
+						141,
+						142,
+						143,
+						144,
+						145,
+						146,
+						147,
+						148,
+						149,
+						150,
+						151,
+						152,
+						153,
+						154,
+						155,
+						156,
+						157,
+						158,
+						159,
+						160,
+						161,
+						162,
+						163,
+						164,
+						165,
+						166,
+						167,
+						168,
+						169,
+						170,
+						171,
+						172,
+						173,
+						174,
+						175,
+						176,
+						177,
+						178,
+						179,
+						180,
+						181,
+						182,
+						183,
+						184,
+						185,
+						186,
+						187,
+						188,
+						191,
+						192,
+						193,
+						194,
+						195,
+						198,
+						199,
+						200,
+						201,
+						202,
+						203,
+						204,
+						205,
+						206,
+						207,
+						208
+					],
+					"name" : "fluent-bit",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						5,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112,
+						113,
+						114,
+						115,
+						116,
+						117,
+						118,
+						119,
+						120,
+						121,
+						122,
+						123,
+						124,
+						125,
+						126,
+						127,
+						128,
+						129,
+						130,
+						131,
+						132,
+						133,
+						134,
+						135,
+						136,
+						137,
+						138,
+						139,
+						140,
+						141,
+						144,
+						145,
+						146,
+						147,
+						149,
+						153,
+						173,
+						177,
+						179,
+						187,
+						193,
+						194
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						3,
+						4
+					],
+					"name" : "cfl",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "xxHash",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						195
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5,
+						6,
+						7
+					],
+					"name" : "fluent-opentelemetry-proto",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						148,
+						189
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "msgpack-c",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						174
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "miniz",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						165
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11,
+						12
+					],
+					"name" : "LwLibPROJECT",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						13
+					],
+					"name" : "tutf8e",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						191,
+						192
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						14
+					],
+					"name" : "snappy-c",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						186
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						15,
+						16,
+						17
+					],
+					"name" : "cmetrics",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						14,
+						188
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						18,
+						19,
+						20
+					],
+					"name" : "ctraces",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32
+					],
+					"name" : "nghttp2",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						10,
+						17,
+						18,
+						19,
+						20,
+						150,
+						151,
+						152,
+						154,
+						155,
+						156,
+						158,
+						162,
+						175,
+						178,
+						180,
+						185,
+						190
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						33,
+						34,
+						35,
+						36,
+						37,
+						38
+					],
+					"name" : "c-ares",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						39,
+						40,
+						41,
+						42
+					],
+					"name" : "chunk-io",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						11,
+						12,
+						13
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61
+					],
+					"name" : "monkey",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						15,
+						166,
+						168,
+						169,
+						170,
+						171,
+						172,
+						181,
+						184
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						64,
+						65,
+						66
+					],
+					"name" : "RdKafka",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						182,
+						183
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						67
+					],
+					"name" : "onigmo",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						176
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						18,
+						19
+					],
+					"directoryIndexes" : 
+					[
+						68
+					],
+					"name" : "luajit",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						7,
+						157,
+						159,
+						160,
+						161
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						69
+					],
+					"name" : "minilua",
+					"parentIndex" : 17,
+					"targetIndexes" : 
+					[
+						164
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						70
+					],
+					"name" : "buildvm",
+					"parentIndex" : 17,
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						189,
+						190
+					],
+					"name" : "maxminddb",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						163,
+						167
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						196,
+						197
+					],
+					"name" : "stream-processor",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						142,
+						143
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 11,
+					"id" : "LwLibPROJECT::@356b8f5bc10d4c1f4a82",
+					"jsonFile" : "target-LwLibPROJECT-Debug-74c3ce94416d7c456115.json",
+					"name" : "LwLibPROJECT",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 201,
+					"id" : "api-v1::@4f2555dd18c994db3729",
+					"jsonFile" : "target-api-v1-Debug-8fddd0a15fb48230b95e.json",
+					"name" : "api-v1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 202,
+					"id" : "api-v2::@f44d7deb27b3adef1927",
+					"jsonFile" : "target-api-v2-Debug-50fcaf19705fbe6325e0.json",
+					"name" : "api-v2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 61,
+					"id" : "api_error::@db73d6c272dee1fe946a",
+					"jsonFile" : "target-api_error-Debug-5d7bf49085a9b2b142cf.json",
+					"name" : "api_error",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 61,
+					"id" : "api_test::@db73d6c272dee1fe946a",
+					"jsonFile" : "target-api_test-Debug-7be2db1c6cd88387e767.json",
+					"name" : "api_test",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "backtrace::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-backtrace-Debug-a3c557a944789614d53d.json",
+					"name" : "backtrace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 70,
+					"id" : "buildvm::@7ad4f3971e8f3cb1f3e2",
+					"jsonFile" : "target-buildvm-Debug-9592016469d938a05f70.json",
+					"name" : "buildvm",
+					"projectIndex" : 19
+				},
+				{
+					"directoryIndex" : 68,
+					"id" : "buildvm_arch_h::@26aca074b6be4126724f",
+					"jsonFile" : "target-buildvm_arch_h-Debug-33726c58d7218c82bce9.json",
+					"name" : "buildvm_arch_h",
+					"projectIndex" : 17
+				},
+				{
+					"directoryIndex" : 36,
+					"id" : "c-ares::@62be8cfaee513df7f133",
+					"jsonFile" : "target-c-ares-Debug-46bdfdeea483142f09d5.json",
+					"name" : "c-ares",
+					"projectIndex" : 12
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "cfl-static::@847939ca9bb5340da2ce",
+					"jsonFile" : "target-cfl-static-Debug-d4e10f54dfcaf13a2b1f.json",
+					"name" : "cfl-static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "changes::@a073d782a7f398807a33",
+					"jsonFile" : "target-changes-Debug-650d9fe266b1784fc92e.json",
+					"name" : "changes",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 41,
+					"id" : "chunkio-static::@45c2be12cef41ce45017",
+					"jsonFile" : "target-chunkio-static-Debug-a79910a81e1b39a5fe5a.json",
+					"name" : "chunkio-static",
+					"projectIndex" : 13
+				},
+				{
+					"directoryIndex" : 42,
+					"id" : "cio::@2df1cc77f663f214f6c3",
+					"jsonFile" : "target-cio-Debug-5ff02586a6c064b60fce.json",
+					"name" : "cio",
+					"projectIndex" : 13
+				},
+				{
+					"directoryIndex" : 40,
+					"id" : "cio-crc32::@c279b109c178e146416c",
+					"jsonFile" : "target-cio-crc32-Debug-08616bc78042581e7ae2.json",
+					"name" : "cio-crc32",
+					"projectIndex" : 13
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "cmetrics-static::@089a760871195d034c06",
+					"jsonFile" : "target-cmetrics-static-Debug-9388fa2cbb2a3b9e651b.json",
+					"name" : "cmetrics-static",
+					"projectIndex" : 9
+				},
+				{
+					"directoryIndex" : 48,
+					"id" : "co::@ab2f814b5cc45d620d3e",
+					"jsonFile" : "target-co-Debug-bdaa02706986c78f85ab.json",
+					"name" : "co",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 20,
+					"id" : "ctraces-static::@8a8e75975a43e55c0fa5",
+					"jsonFile" : "target-ctraces-static-Debug-d226e745331fba93e04c.json",
+					"name" : "ctraces-static",
+					"projectIndex" : 10
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "devhelp::@a073d782a7f398807a33",
+					"jsonFile" : "target-devhelp-Debug-3bf4cf708b155d540932.json",
+					"name" : "devhelp",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "dirhtml::@a073d782a7f398807a33",
+					"jsonFile" : "target-dirhtml-Debug-5dd57bfce64f0094ccaa.json",
+					"name" : "dirhtml",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "doctest::@a073d782a7f398807a33",
+					"jsonFile" : "target-doctest-Debug-6b8a45d4114bd597b72e.json",
+					"name" : "doctest",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "epub::@a073d782a7f398807a33",
+					"jsonFile" : "target-epub-Debug-e00c91b76721a7e4760d.json",
+					"name" : "epub",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 198,
+					"id" : "flb-aws::@6a63df65cc6811e68d2d",
+					"jsonFile" : "target-flb-aws-Debug-89120546d96c348469e2.json",
+					"name" : "flb-aws",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 200,
+					"id" : "flb-http-server::@505ba6c34da3ce3440a2",
+					"jsonFile" : "target-flb-http-server-Debug-d59b40da3ca2a5b5c9e1.json",
+					"name" : "flb-http-server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 73,
+					"id" : "flb-plugin-custom_calyptia::@b955b85ec1ae5b4faefc",
+					"jsonFile" : "target-flb-plugin-custom_calyptia-Debug-dca60bca0482ba9b7010.json",
+					"name" : "flb-plugin-custom_calyptia",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 169,
+					"id" : "flb-plugin-filter_alter_size::@1df3426804c7c9762130",
+					"jsonFile" : "target-flb-plugin-filter_alter_size-Debug-a1f2d0d419aacb111469.json",
+					"name" : "flb-plugin-filter_alter_size",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 170,
+					"id" : "flb-plugin-filter_aws::@d6c5440e96c6087a74e0",
+					"jsonFile" : "target-flb-plugin-filter_aws-Debug-ef785464d363a34c070e.json",
+					"name" : "flb-plugin-filter_aws",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 171,
+					"id" : "flb-plugin-filter_checklist::@999b2e334bb4227dfee2",
+					"jsonFile" : "target-flb-plugin-filter_checklist-Debug-b028148b867ec3271b64.json",
+					"name" : "flb-plugin-filter_checklist",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 172,
+					"id" : "flb-plugin-filter_ecs::@4cca116cca2afbe70216",
+					"jsonFile" : "target-flb-plugin-filter_ecs-Debug-7e7592ed16c53e1539d6.json",
+					"name" : "flb-plugin-filter_ecs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 182,
+					"id" : "flb-plugin-filter_expect::@989a4b331b81b89015d3",
+					"jsonFile" : "target-flb-plugin-filter_expect-Debug-d3aab35c226aa86519fa.json",
+					"name" : "flb-plugin-filter_expect",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 188,
+					"id" : "flb-plugin-filter_geoip2::@3c5041cc15dc106b94ef",
+					"jsonFile" : "target-flb-plugin-filter_geoip2-Debug-5ddf0d3438a2d70e3a2f.json",
+					"name" : "flb-plugin-filter_geoip2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 183,
+					"id" : "flb-plugin-filter_grep::@d12078f0c831e3eb516c",
+					"jsonFile" : "target-flb-plugin-filter_grep-Debug-1d48a89c2911cc8d744b.json",
+					"name" : "flb-plugin-filter_grep",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 177,
+					"id" : "flb-plugin-filter_kubernetes::@6fd104b70cb93d13da99",
+					"jsonFile" : "target-flb-plugin-filter_kubernetes-Debug-25b24935616e3a374dbf.json",
+					"name" : "flb-plugin-filter_kubernetes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 185,
+					"id" : "flb-plugin-filter_log_to_metrics::@4c1d4362d2933f59f8b2",
+					"jsonFile" : "target-flb-plugin-filter_log_to_metrics-Debug-c956ef9a3ec63f613e42.json",
+					"name" : "flb-plugin-filter_log_to_metrics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 186,
+					"id" : "flb-plugin-filter_lua::@26e71d3b2efa90c4d0a4",
+					"jsonFile" : "target-flb-plugin-filter_lua-Debug-71d15d2081a3822e818e.json",
+					"name" : "flb-plugin-filter_lua",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 178,
+					"id" : "flb-plugin-filter_modify::@29d9808fd10a89b00e6b",
+					"jsonFile" : "target-flb-plugin-filter_modify-Debug-e199203c08cade0601fd.json",
+					"name" : "flb-plugin-filter_modify",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 179,
+					"id" : "flb-plugin-filter_multiline::@468a16af8110f4720bac",
+					"jsonFile" : "target-flb-plugin-filter_multiline-Debug-91b4905d980ddc0fde0a.json",
+					"name" : "flb-plugin-filter_multiline",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 180,
+					"id" : "flb-plugin-filter_nest::@a8f1268d8b886820acb2",
+					"jsonFile" : "target-flb-plugin-filter_nest-Debug-5d4a3edc87aeaeff62da.json",
+					"name" : "flb-plugin-filter_nest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 191,
+					"id" : "flb-plugin-filter_nightfall::@acccd9756f8d84d21ec4",
+					"jsonFile" : "target-flb-plugin-filter_nightfall-Debug-3b97c6f8308c9ce1d935.json",
+					"name" : "flb-plugin-filter_nightfall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 181,
+					"id" : "flb-plugin-filter_parser::@ab7090c370d062c66c8b",
+					"jsonFile" : "target-flb-plugin-filter_parser-Debug-f635dd3db13515465c92.json",
+					"name" : "flb-plugin-filter_parser",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 173,
+					"id" : "flb-plugin-filter_record_modifier::@680058a3550b4cf06517",
+					"jsonFile" : "target-flb-plugin-filter_record_modifier-Debug-d12365887e6e804ebccc.json",
+					"name" : "flb-plugin-filter_record_modifier",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 184,
+					"id" : "flb-plugin-filter_rewrite_tag::@1adb2e36129722a3dbda",
+					"jsonFile" : "target-flb-plugin-filter_rewrite_tag-Debug-3b2c4d2d40642e6b7923.json",
+					"name" : "flb-plugin-filter_rewrite_tag",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 187,
+					"id" : "flb-plugin-filter_stdout::@5174e4668fb30b03dc41",
+					"jsonFile" : "target-flb-plugin-filter_stdout-Debug-ededeeffdc3f2d4cb671.json",
+					"name" : "flb-plugin-filter_stdout",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 174,
+					"id" : "flb-plugin-filter_sysinfo::@224074b5570ecc3bb608",
+					"jsonFile" : "target-flb-plugin-filter_sysinfo-Debug-c2c3c526f46acf7d6c01.json",
+					"name" : "flb-plugin-filter_sysinfo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 175,
+					"id" : "flb-plugin-filter_throttle::@35ac0d08ebbdfd64edf9",
+					"jsonFile" : "target-flb-plugin-filter_throttle-Debug-b52c0c841e92100f8dec.json",
+					"name" : "flb-plugin-filter_throttle",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 176,
+					"id" : "flb-plugin-filter_type_converter::@84906e0641f579673679",
+					"jsonFile" : "target-flb-plugin-filter_type_converter-Debug-51d79ec7182cc89924d3.json",
+					"name" : "flb-plugin-filter_type_converter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 192,
+					"id" : "flb-plugin-filter_wasm::@eca35ea33816714e2e2b",
+					"jsonFile" : "target-flb-plugin-filter_wasm-Debug-de1733cd6683bdb53b96.json",
+					"name" : "flb-plugin-filter_wasm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 101,
+					"id" : "flb-plugin-in_calyptia_fleet::@d12701c8c1b5b3dd66b7",
+					"jsonFile" : "target-flb-plugin-in_calyptia_fleet-Debug-9c8956029e38ff755e71.json",
+					"name" : "flb-plugin-in_calyptia_fleet",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 97,
+					"id" : "flb-plugin-in_collectd::@3e2b41e16b9947ec47c6",
+					"jsonFile" : "target-flb-plugin-in_collectd-Debug-0561496ddb86ecc1b649.json",
+					"name" : "flb-plugin-in_collectd",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 74,
+					"id" : "flb-plugin-in_cpu::@7eb8e19178ca370e499b",
+					"jsonFile" : "target-flb-plugin-in_cpu-Debug-751696bae08684d373d2.json",
+					"name" : "flb-plugin-in_cpu",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 79,
+					"id" : "flb-plugin-in_disk::@debbc8ab5515b45f7b5d",
+					"jsonFile" : "target-flb-plugin-in_disk-Debug-83f5093fd7d1a85c5ecc.json",
+					"name" : "flb-plugin-in_disk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 82,
+					"id" : "flb-plugin-in_docker::@82ce2825698d38f42d14",
+					"jsonFile" : "target-flb-plugin-in_docker-Debug-570e15bb2e600638f8e8.json",
+					"name" : "flb-plugin-in_docker",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 83,
+					"id" : "flb-plugin-in_docker_events::@b2378c23629017d96f86",
+					"jsonFile" : "target-flb-plugin-in_docker_events-Debug-3661d91412f55679a0aa.json",
+					"name" : "flb-plugin-in_docker_events",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 93,
+					"id" : "flb-plugin-in_dummy::@28888518782537347bb0",
+					"jsonFile" : "target-flb-plugin-in_dummy-Debug-bb3bd089d02cc7c479a1.json",
+					"name" : "flb-plugin-in_dummy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 100,
+					"id" : "flb-plugin-in_elasticsearch::@ce4990a8b3a46b66ee07",
+					"jsonFile" : "target-flb-plugin-in_elasticsearch-Debug-622199278aa03034eb42.json",
+					"name" : "flb-plugin-in_elasticsearch",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 91,
+					"id" : "flb-plugin-in_emitter::@e17976cb4f617403f230",
+					"jsonFile" : "target-flb-plugin-in_emitter-Debug-de7f6cc3ad4514eb7ab8.json",
+					"name" : "flb-plugin-in_emitter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 103,
+					"id" : "flb-plugin-in_event_type::@c84930f0f55ce9ccb64e",
+					"jsonFile" : "target-flb-plugin-in_event_type-Debug-34a37dc2537268b2fadf.json",
+					"name" : "flb-plugin-in_event_type",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 110,
+					"id" : "flb-plugin-in_exec::@46c3ab76297339ef476d",
+					"jsonFile" : "target-flb-plugin-in_exec-Debug-85dd3f8df9b929aac1ba.json",
+					"name" : "flb-plugin-in_exec",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 112,
+					"id" : "flb-plugin-in_exec_wasi::@ee9993524ce8c9525131",
+					"jsonFile" : "target-flb-plugin-in_exec_wasi-Debug-e212622136dcbb43ab65.json",
+					"name" : "flb-plugin-in_exec_wasi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 89,
+					"id" : "flb-plugin-in_fluentbit_metrics::@07cda9f31e4a64f4132b",
+					"jsonFile" : "target-flb-plugin-in_fluentbit_metrics-Debug-e45a26e3fb4811d3dc80.json",
+					"name" : "flb-plugin-in_fluentbit_metrics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 116,
+					"id" : "flb-plugin-in_forward::@430a922daf69d5a01c4c",
+					"jsonFile" : "target-flb-plugin-in_forward-Debug-05ec9d0057946326cb9a.json",
+					"name" : "flb-plugin-in_forward",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 94,
+					"id" : "flb-plugin-in_head::@f3baffc185e21ccc9a89",
+					"jsonFile" : "target-flb-plugin-in_head-Debug-48b313dfa18d6c76495c.json",
+					"name" : "flb-plugin-in_head",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 95,
+					"id" : "flb-plugin-in_health::@386ae40871fbd7e27ee9",
+					"jsonFile" : "target-flb-plugin-in_health-Debug-e015548150f18a87e3e9.json",
+					"name" : "flb-plugin-in_health",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 96,
+					"id" : "flb-plugin-in_http::@416e80d0a3718fe54f5e",
+					"jsonFile" : "target-flb-plugin-in_http-Debug-abf632477bc977c0241a.json",
+					"name" : "flb-plugin-in_http",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 88,
+					"id" : "flb-plugin-in_kafka::@11c81791b4307f4e8204",
+					"jsonFile" : "target-flb-plugin-in_kafka-Debug-f01d2c7a82d2ae5c091f.json",
+					"name" : "flb-plugin-in_kafka",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 77,
+					"id" : "flb-plugin-in_kmsg::@7c510cc60a2b69ec5cb4",
+					"jsonFile" : "target-flb-plugin-in_kmsg-Debug-5e0d9580fe2aed1a66fd.json",
+					"name" : "flb-plugin-in_kmsg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 87,
+					"id" : "flb-plugin-in_kubernetes_events::@8fe7a8eb89001bc8b9ce",
+					"jsonFile" : "target-flb-plugin-in_kubernetes_events-Debug-9fc09f39d6d84eaf8c7d.json",
+					"name" : "flb-plugin-in_kubernetes_events",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 115,
+					"id" : "flb-plugin-in_lib::@d3aac2ccbdc9a80974e1",
+					"jsonFile" : "target-flb-plugin-in_lib-Debug-a5e27049fd2113483d9c.json",
+					"name" : "flb-plugin-in_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 75,
+					"id" : "flb-plugin-in_mem::@07018c0dbf7531a5b359",
+					"jsonFile" : "target-flb-plugin-in_mem-Debug-998b93755560abdc213c.json",
+					"name" : "flb-plugin-in_mem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 114,
+					"id" : "flb-plugin-in_mqtt::@fe7a0d9345f3dde81c41",
+					"jsonFile" : "target-flb-plugin-in_mqtt-Debug-e4aaa31c4988cb37ce64.json",
+					"name" : "flb-plugin-in_mqtt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 81,
+					"id" : "flb-plugin-in_netif::@14d837bb6498f6610720",
+					"jsonFile" : "target-flb-plugin-in_netif-Debug-0483031ed65d50d6394a.json",
+					"name" : "flb-plugin-in_netif",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 105,
+					"id" : "flb-plugin-in_nginx_exporter_metrics::@59f960023b13d9501424",
+					"jsonFile" : "target-flb-plugin-in_nginx_exporter_metrics-Debug-341a72314227181051b9.json",
+					"name" : "flb-plugin-in_nginx_exporter_metrics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 86,
+					"id" : "flb-plugin-in_node_exporter_metrics::@6be0d8830cad89477025",
+					"jsonFile" : "target-flb-plugin-in_node_exporter_metrics-Debug-3d8b1bb60331d8d79732.json",
+					"name" : "flb-plugin-in_node_exporter_metrics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 99,
+					"id" : "flb-plugin-in_opentelemetry::@fdef422a4edf6c6c9580",
+					"jsonFile" : "target-flb-plugin-in_opentelemetry-Debug-74e863fc5adaad358ed5.json",
+					"name" : "flb-plugin-in_opentelemetry",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 84,
+					"id" : "flb-plugin-in_podman_metrics::@0012767b28782f2cd783",
+					"jsonFile" : "target-flb-plugin-in_podman_metrics-Debug-3fa42503f3c6530e7c87.json",
+					"name" : "flb-plugin-in_podman_metrics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 78,
+					"id" : "flb-plugin-in_proc::@12200febc00a58e6321d",
+					"jsonFile" : "target-flb-plugin-in_proc-Debug-f738d466293fb84d2808.json",
+					"name" : "flb-plugin-in_proc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 85,
+					"id" : "flb-plugin-in_process_exporter_metrics::@4e9f4a74e715bcc23b2c",
+					"jsonFile" : "target-flb-plugin-in_process_exporter_metrics-Debug-829bc1a69c201d0bcb6b.json",
+					"name" : "flb-plugin-in_process_exporter_metrics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 90,
+					"id" : "flb-plugin-in_prometheus_scrape::@2a80aa4ac051d851f18a",
+					"jsonFile" : "target-flb-plugin-in_prometheus_scrape-Debug-3268700d4a942ebe7060.json",
+					"name" : "flb-plugin-in_prometheus_scrape",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 117,
+					"id" : "flb-plugin-in_random::@2f7a530f369fa0688ec5",
+					"jsonFile" : "target-flb-plugin-in_random-Debug-e186fc86a3c767ef67f6.json",
+					"name" : "flb-plugin-in_random",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 107,
+					"id" : "flb-plugin-in_serial::@557f9ffcc832d34153ec",
+					"jsonFile" : "target-flb-plugin-in_serial-Debug-36cf6447968370bcfa95.json",
+					"name" : "flb-plugin-in_serial",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 102,
+					"id" : "flb-plugin-in_splunk::@bdd6e21f46bd9d7cdc6a",
+					"jsonFile" : "target-flb-plugin-in_splunk-Debug-9681f2b4b126e2efa092.json",
+					"name" : "flb-plugin-in_splunk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 98,
+					"id" : "flb-plugin-in_statsd::@c5daddfb54701a91583e",
+					"jsonFile" : "target-flb-plugin-in_statsd-Debug-63edeced4a69014ebae3.json",
+					"name" : "flb-plugin-in_statsd",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 108,
+					"id" : "flb-plugin-in_stdin::@dabea33b16acea05c7c6",
+					"jsonFile" : "target-flb-plugin-in_stdin-Debug-db70162ae50d900589dc.json",
+					"name" : "flb-plugin-in_stdin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 104,
+					"id" : "flb-plugin-in_storage_backlog::@e5ed2cee3ebe6bf01b96",
+					"jsonFile" : "target-flb-plugin-in_storage_backlog-Debug-989976e561e16c694b37.json",
+					"name" : "flb-plugin-in_storage_backlog",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 106,
+					"id" : "flb-plugin-in_stream_processor::@d444bdfef23c8fbe20d2",
+					"jsonFile" : "target-flb-plugin-in_stream_processor-Debug-c8adec0d9a021d43285f.json",
+					"name" : "flb-plugin-in_stream_processor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 109,
+					"id" : "flb-plugin-in_syslog::@2260963af0c6217bf802",
+					"jsonFile" : "target-flb-plugin-in_syslog-Debug-720c3402f280c87d7ed4.json",
+					"name" : "flb-plugin-in_syslog",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 80,
+					"id" : "flb-plugin-in_systemd::@2d83398d5aa12c237d7e",
+					"jsonFile" : "target-flb-plugin-in_systemd-Debug-18d0bff2eac570f2ae5e.json",
+					"name" : "flb-plugin-in_systemd",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 92,
+					"id" : "flb-plugin-in_tail::@1ef35001d515d8ab8d8d",
+					"jsonFile" : "target-flb-plugin-in_tail-Debug-3bad1dba7b8c225126a4.json",
+					"name" : "flb-plugin-in_tail",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 113,
+					"id" : "flb-plugin-in_tcp::@d1cab0e8765724e8fed0",
+					"jsonFile" : "target-flb-plugin-in_tcp-Debug-565fd61104bec0c979c6.json",
+					"name" : "flb-plugin-in_tcp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 76,
+					"id" : "flb-plugin-in_thermal::@e04147b629e7e78a6895",
+					"jsonFile" : "target-flb-plugin-in_thermal-Debug-aa1e14b170e1df1f8c25.json",
+					"name" : "flb-plugin-in_thermal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 111,
+					"id" : "flb-plugin-in_udp::@f13b06f922736b3c85ab",
+					"jsonFile" : "target-flb-plugin-in_udp-Debug-f6cdb0c37a3c18790daf.json",
+					"name" : "flb-plugin-in_udp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 123,
+					"id" : "flb-plugin-out_azure::@20255a98b1ba49d16e86",
+					"jsonFile" : "target-flb-plugin-out_azure-Debug-21ec4eae0de667384e07.json",
+					"name" : "flb-plugin-out_azure",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 124,
+					"id" : "flb-plugin-out_azure_blob::@5ad03ba8bf1a099ab08d",
+					"jsonFile" : "target-flb-plugin-out_azure_blob-Debug-bf9ede361cc72a9ed074.json",
+					"name" : "flb-plugin-out_azure_blob",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 126,
+					"id" : "flb-plugin-out_azure_kusto::@e1f927f972f79073eb6e",
+					"jsonFile" : "target-flb-plugin-out_azure_kusto-Debug-490fa2a9c7d071ca2d15.json",
+					"name" : "flb-plugin-out_azure_kusto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 125,
+					"id" : "flb-plugin-out_azure_logs_ingestion::@749d6f5b763552c9df0a",
+					"jsonFile" : "target-flb-plugin-out_azure_logs_ingestion-Debug-2e0602d35dff7f94abd5.json",
+					"name" : "flb-plugin-out_azure_logs_ingestion",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 127,
+					"id" : "flb-plugin-out_bigquery::@40c7b78a87a6957173d2",
+					"jsonFile" : "target-flb-plugin-out_bigquery-Debug-b4475b360c1a16fd8f7f.json",
+					"name" : "flb-plugin-out_bigquery",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 128,
+					"id" : "flb-plugin-out_calyptia::@54b4784af1b0dc297579",
+					"jsonFile" : "target-flb-plugin-out_calyptia-Debug-14bc7aff8f00056a07d3.json",
+					"name" : "flb-plugin-out_calyptia",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 168,
+					"id" : "flb-plugin-out_chronicle::@4cdd40409a58fb6bd8ec",
+					"jsonFile" : "target-flb-plugin-out_chronicle-Debug-84093c8660784ed78612.json",
+					"name" : "flb-plugin-out_chronicle",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 160,
+					"id" : "flb-plugin-out_cloudwatch_logs::@4b736dc9de3ce0b11629",
+					"jsonFile" : "target-flb-plugin-out_cloudwatch_logs-Debug-3048694bd175851d9889.json",
+					"name" : "flb-plugin-out_cloudwatch_logs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 129,
+					"id" : "flb-plugin-out_counter::@d65363c8da55e8c21630",
+					"jsonFile" : "target-flb-plugin-out_counter-Debug-3bc93324f6956a0b060d.json",
+					"name" : "flb-plugin-out_counter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 130,
+					"id" : "flb-plugin-out_datadog::@d4039e424989224007d1",
+					"jsonFile" : "target-flb-plugin-out_datadog-Debug-f0c6c10eb8b6444f5778.json",
+					"name" : "flb-plugin-out_datadog",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 131,
+					"id" : "flb-plugin-out_es::@0eb0e7d585132bcb24e0",
+					"jsonFile" : "target-flb-plugin-out_es-Debug-9547d61c72b9e0c0f4b6.json",
+					"name" : "flb-plugin-out_es",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 132,
+					"id" : "flb-plugin-out_exit::@9a1c74d6385562dbe9ca",
+					"jsonFile" : "target-flb-plugin-out_exit-Debug-d3f8e4c288b7a851d367.json",
+					"name" : "flb-plugin-out_exit",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 133,
+					"id" : "flb-plugin-out_file::@3fab5635038e20505133",
+					"jsonFile" : "target-flb-plugin-out_file-Debug-eaf4924337eeaf499a04.json",
+					"name" : "flb-plugin-out_file",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 157,
+					"id" : "flb-plugin-out_flowcounter::@8b67270de228dee0e2c5",
+					"jsonFile" : "target-flb-plugin-out_flowcounter-Debug-195838731ec79d10f64a.json",
+					"name" : "flb-plugin-out_flowcounter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 134,
+					"id" : "flb-plugin-out_forward::@e00e41ef1b8ffaee168f",
+					"jsonFile" : "target-flb-plugin-out_forward-Debug-7bbb252202f466229950.json",
+					"name" : "flb-plugin-out_forward",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 158,
+					"id" : "flb-plugin-out_gelf::@8a46de21e6d8b8b9133a",
+					"jsonFile" : "target-flb-plugin-out_gelf-Debug-dfb363135df80a0c8272.json",
+					"name" : "flb-plugin-out_gelf",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 135,
+					"id" : "flb-plugin-out_http::@88a5d4bbf3fdee0f2de2",
+					"jsonFile" : "target-flb-plugin-out_http-Debug-340c2729ef7e930e97ff.json",
+					"name" : "flb-plugin-out_http",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 136,
+					"id" : "flb-plugin-out_influxdb::@5b3941f5abae5f5d4dc1",
+					"jsonFile" : "target-flb-plugin-out_influxdb-Debug-1e2a2170c80b907b6f92.json",
+					"name" : "flb-plugin-out_influxdb",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 139,
+					"id" : "flb-plugin-out_kafka::@3577602c518d7274cf8e",
+					"jsonFile" : "target-flb-plugin-out_kafka-Debug-906471e3a083eed079bb.json",
+					"name" : "flb-plugin-out_kafka",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 140,
+					"id" : "flb-plugin-out_kafka_rest::@fb97eb755ec4036972c5",
+					"jsonFile" : "target-flb-plugin-out_kafka_rest-Debug-28592e64237caf5a6c3c.json",
+					"name" : "flb-plugin-out_kafka_rest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 161,
+					"id" : "flb-plugin-out_kinesis_firehose::@d6daf989dc75785a5ab2",
+					"jsonFile" : "target-flb-plugin-out_kinesis_firehose-Debug-e32ec8fe675950d8ea1b.json",
+					"name" : "flb-plugin-out_kinesis_firehose",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 162,
+					"id" : "flb-plugin-out_kinesis_streams::@99a5217f6ecc1139625a",
+					"jsonFile" : "target-flb-plugin-out_kinesis_streams-Debug-0756a8da74beb8aad45a.json",
+					"name" : "flb-plugin-out_kinesis_streams",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 156,
+					"id" : "flb-plugin-out_lib::@835a6adf79fd76f70135",
+					"jsonFile" : "target-flb-plugin-out_lib-Debug-1c4acccde92eaca24e1e.json",
+					"name" : "flb-plugin-out_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 137,
+					"id" : "flb-plugin-out_logdna::@456c31fbeadf940be65f",
+					"jsonFile" : "target-flb-plugin-out_logdna-Debug-16420e39564ed38a0690.json",
+					"name" : "flb-plugin-out_logdna",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 138,
+					"id" : "flb-plugin-out_loki::@567ef79d87c8464b6a34",
+					"jsonFile" : "target-flb-plugin-out_loki-Debug-57a5f14bedb0eb40ea0f.json",
+					"name" : "flb-plugin-out_loki",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 141,
+					"id" : "flb-plugin-out_nats::@67d08c95dc0ccd5ba328",
+					"jsonFile" : "target-flb-plugin-out_nats-Debug-97e88774ac3acf84a6cb.json",
+					"name" : "flb-plugin-out_nats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 142,
+					"id" : "flb-plugin-out_nrlogs::@4421aaffc1efaebbfc61",
+					"jsonFile" : "target-flb-plugin-out_nrlogs-Debug-c3845fc145d86e8c7359.json",
+					"name" : "flb-plugin-out_nrlogs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 143,
+					"id" : "flb-plugin-out_null::@c2eb5a20ac194d918488",
+					"jsonFile" : "target-flb-plugin-out_null-Debug-7811898c11adfb92da18.json",
+					"name" : "flb-plugin-out_null",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 144,
+					"id" : "flb-plugin-out_opensearch::@8631168439e647104001",
+					"jsonFile" : "target-flb-plugin-out_opensearch-Debug-a098bd0357018d3b340b.json",
+					"name" : "flb-plugin-out_opensearch",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 163,
+					"id" : "flb-plugin-out_opentelemetry::@c35f5ff7b4bc34b1a1d8",
+					"jsonFile" : "target-flb-plugin-out_opentelemetry-Debug-cbe863e9bb10d56ee5da.json",
+					"name" : "flb-plugin-out_opentelemetry",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 145,
+					"id" : "flb-plugin-out_oracle_log_analytics::@d898541e1c98df4498ad",
+					"jsonFile" : "target-flb-plugin-out_oracle_log_analytics-Debug-f4bb8b3b3e0edad9f3ae.json",
+					"name" : "flb-plugin-out_oracle_log_analytics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 146,
+					"id" : "flb-plugin-out_plot::@0d17e618f5422b3aa391",
+					"jsonFile" : "target-flb-plugin-out_plot-Debug-b3e63710574c1070816a.json",
+					"name" : "flb-plugin-out_plot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 164,
+					"id" : "flb-plugin-out_prometheus_exporter::@c8952950fb28f3ba43c6",
+					"jsonFile" : "target-flb-plugin-out_prometheus_exporter-Debug-65a80b92db2cd41e9532.json",
+					"name" : "flb-plugin-out_prometheus_exporter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 165,
+					"id" : "flb-plugin-out_prometheus_remote_write::@6e9ca6cd402d3b6ce1e7",
+					"jsonFile" : "target-flb-plugin-out_prometheus_remote_write-Debug-be1d2472bcf4c94e0ce7.json",
+					"name" : "flb-plugin-out_prometheus_remote_write",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 166,
+					"id" : "flb-plugin-out_s3::@a550fcb1e5876851fefc",
+					"jsonFile" : "target-flb-plugin-out_s3-Debug-cbd17cfa78252204b0e4.json",
+					"name" : "flb-plugin-out_s3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 147,
+					"id" : "flb-plugin-out_skywalking::@5d6032eced75ef177b0f",
+					"jsonFile" : "target-flb-plugin-out_skywalking-Debug-329dc1a7a74237b5e5d9.json",
+					"name" : "flb-plugin-out_skywalking",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 148,
+					"id" : "flb-plugin-out_slack::@afd616c58a3496357320",
+					"jsonFile" : "target-flb-plugin-out_slack-Debug-580dbd69b2021d885b64.json",
+					"name" : "flb-plugin-out_slack",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 149,
+					"id" : "flb-plugin-out_splunk::@d4ca9064b1ed56a377d7",
+					"jsonFile" : "target-flb-plugin-out_splunk-Debug-ec9a6fc449ad22282f85.json",
+					"name" : "flb-plugin-out_splunk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 150,
+					"id" : "flb-plugin-out_stackdriver::@4bad87481035af91a4a4",
+					"jsonFile" : "target-flb-plugin-out_stackdriver-Debug-daa4a4f37f04721cc6f4.json",
+					"name" : "flb-plugin-out_stackdriver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 151,
+					"id" : "flb-plugin-out_stdout::@e29e67f0923c5d88d293",
+					"jsonFile" : "target-flb-plugin-out_stdout-Debug-a7facec36185f0137582.json",
+					"name" : "flb-plugin-out_stdout",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 152,
+					"id" : "flb-plugin-out_syslog::@270b45c0bd841dd1186e",
+					"jsonFile" : "target-flb-plugin-out_syslog-Debug-fb9c53cbdbbb92ef27da.json",
+					"name" : "flb-plugin-out_syslog",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 153,
+					"id" : "flb-plugin-out_tcp::@5ff6dec1e500407f5243",
+					"jsonFile" : "target-flb-plugin-out_tcp-Debug-70aaa559a4b0df043148.json",
+					"name" : "flb-plugin-out_tcp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 155,
+					"id" : "flb-plugin-out_td::@569f67eb15b48ab5fc0c",
+					"jsonFile" : "target-flb-plugin-out_td-Debug-c78a6bd0ce19e96c287b.json",
+					"name" : "flb-plugin-out_td",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 154,
+					"id" : "flb-plugin-out_udp::@f1281c92f762966de20a",
+					"jsonFile" : "target-flb-plugin-out_udp-Debug-f72e0fe34d1b8bae1b43.json",
+					"name" : "flb-plugin-out_udp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 167,
+					"id" : "flb-plugin-out_vivo_exporter::@9b52affa9b4ce60adfe7",
+					"jsonFile" : "target-flb-plugin-out_vivo_exporter-Debug-a180023b8a16ac73e060.json",
+					"name" : "flb-plugin-out_vivo_exporter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 159,
+					"id" : "flb-plugin-out_websocket::@edf7d1f80f9c43f43b72",
+					"jsonFile" : "target-flb-plugin-out_websocket-Debug-593830cc9f49ee994dfa.json",
+					"name" : "flb-plugin-out_websocket",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 118,
+					"id" : "flb-plugin-processor_content_modifier::@cfa9c6cd62afbc792539",
+					"jsonFile" : "target-flb-plugin-processor_content_modifier-Debug-cb412371f089f49b3f99.json",
+					"name" : "flb-plugin-processor_content_modifier",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 119,
+					"id" : "flb-plugin-processor_labels::@e09a5795ba2acf5da9aa",
+					"jsonFile" : "target-flb-plugin-processor_labels-Debug-3f232c5f9d2fdc783963.json",
+					"name" : "flb-plugin-processor_labels",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 120,
+					"id" : "flb-plugin-processor_metrics_selector::@37820708045ff6342bbe",
+					"jsonFile" : "target-flb-plugin-processor_metrics_selector-Debug-a7d3b34e1d6dd2e4a5be.json",
+					"name" : "flb-plugin-processor_metrics_selector",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 121,
+					"id" : "flb-plugin-processor_sql::@594f8e850d5859a22a9e",
+					"jsonFile" : "target-flb-plugin-processor_sql-Debug-aad0ffaf7be433c23bb0.json",
+					"name" : "flb-plugin-processor_sql",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 204,
+					"id" : "flb-plugin-proxy-go::@7a0733a88b75844d2913",
+					"jsonFile" : "target-flb-plugin-proxy-go-Debug-f830420a0ccdf2f4c861.json",
+					"name" : "flb-plugin-proxy-go",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 195,
+					"id" : "flb-ra-parser::@e7889afc93a48031a686",
+					"jsonFile" : "target-flb-ra-parser-Debug-2cafa5ef1e65e37655c5.json",
+					"name" : "flb-ra-parser",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 196,
+					"id" : "flb-sp::@bf6583b002379ca69efb",
+					"jsonFile" : "target-flb-sp-Debug-bfde7653fbdfa35fa800.json",
+					"name" : "flb-sp",
+					"projectIndex" : 21
+				},
+				{
+					"directoryIndex" : 197,
+					"id" : "flb-sp-parser::@fd6fd4c42e65963109c8",
+					"jsonFile" : "target-flb-sp-parser-Debug-84a0c96b0d7e744352d8.json",
+					"name" : "flb-sp-parser",
+					"projectIndex" : 21
+				},
+				{
+					"directoryIndex" : 205,
+					"id" : "flb-wasm-static::@c57854c1be3a994edfef",
+					"jsonFile" : "target-flb-wasm-static-Debug-2a6c30025b76a079afd6.json",
+					"name" : "flb-wasm-static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 193,
+					"id" : "fluent-bit-bin::@145eef247bfb46b6828c",
+					"jsonFile" : "target-fluent-bit-bin-Debug-b7e0cd75a0c870ea0400.json",
+					"name" : "fluent-bit-bin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 193,
+					"id" : "fluent-bit-shared::@145eef247bfb46b6828c",
+					"jsonFile" : "target-fluent-bit-shared-Debug-8550e915928c88d90669.json",
+					"name" : "fluent-bit-shared",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 193,
+					"id" : "fluent-bit-static::@145eef247bfb46b6828c",
+					"jsonFile" : "target-fluent-bit-static-Debug-e08ad79e097792a255f2.json",
+					"name" : "fluent-bit-static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "fluent-otel-proto::@43a54a11de83ea923b3c",
+					"jsonFile" : "target-fluent-otel-proto-Debug-a2fbf93a45e7795ec912.json",
+					"name" : "fluent-otel-proto",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 207,
+					"id" : "hello_world::@420546ebf2a479493815",
+					"jsonFile" : "target-hello_world-Debug-47d0a4f901d516fd16a6.json",
+					"name" : "hello_world",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "html::@a073d782a7f398807a33",
+					"jsonFile" : "target-html-Debug-d252a75519631dc256ce.json",
+					"name" : "html",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "htmlhelp::@a073d782a7f398807a33",
+					"jsonFile" : "target-htmlhelp-Debug-cf7c0ed6f267d19ba6d5.json",
+					"name" : "htmlhelp",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 28,
+					"id" : "it::@cff575e302f3e01afc18",
+					"jsonFile" : "target-it-Debug-b26aaf111af94a924acc.json",
+					"name" : "it",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 43,
+					"id" : "jsmn::@60086e74a2761604e6ab",
+					"jsonFile" : "target-jsmn-Debug-2706b2a6f812d0e6390d.json",
+					"name" : "jsmn",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "json::@a073d782a7f398807a33",
+					"jsonFile" : "target-json-Debug-367a00649a9b2becef6d.json",
+					"name" : "json",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "latex::@a073d782a7f398807a33",
+					"jsonFile" : "target-latex-Debug-3413b5813fe4425aae27.json",
+					"name" : "latex",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "latexpdf::@a073d782a7f398807a33",
+					"jsonFile" : "target-latexpdf-Debug-388cf6c148a1a468c45a.json",
+					"name" : "latexpdf",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 68,
+					"id" : "libluajit::@26aca074b6be4126724f",
+					"jsonFile" : "target-libluajit-Debug-aeae1e8bc1ac3a320b7e.json",
+					"name" : "libluajit",
+					"projectIndex" : 17
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "linkcheck::@a073d782a7f398807a33",
+					"jsonFile" : "target-linkcheck-Debug-c48ee11ef0a3878e738f.json",
+					"name" : "linkcheck",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 68,
+					"id" : "lj_gen_folddef::@26aca074b6be4126724f",
+					"jsonFile" : "target-lj_gen_folddef-Debug-d6f5feaefd5b9a5e54ce.json",
+					"name" : "lj_gen_folddef",
+					"projectIndex" : 17
+				},
+				{
+					"directoryIndex" : 68,
+					"id" : "lj_gen_headers::@26aca074b6be4126724f",
+					"jsonFile" : "target-lj_gen_headers-Debug-a204c6e49324f9d1e670.json",
+					"name" : "lj_gen_headers",
+					"projectIndex" : 17
+				},
+				{
+					"directoryIndex" : 68,
+					"id" : "luajit::@26aca074b6be4126724f",
+					"jsonFile" : "target-luajit-Debug-91a365b6c14f720a82aa.json",
+					"name" : "luajit",
+					"projectIndex" : 17
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "man::@a073d782a7f398807a33",
+					"jsonFile" : "target-man-Debug-696737524f4214f524e7.json",
+					"name" : "man",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 189,
+					"id" : "maxminddb::@164f95df5c80be570e7a",
+					"jsonFile" : "target-maxminddb-Debug-7131ee265fb922ad1275.json",
+					"name" : "maxminddb",
+					"projectIndex" : 20
+				},
+				{
+					"directoryIndex" : 69,
+					"id" : "minilua::@e6995880e5f360548fef",
+					"jsonFile" : "target-minilua-Debug-e2150aa15a9dffb68abf.json",
+					"name" : "minilua",
+					"projectIndex" : 18
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "miniz::@68360c25bbe8287779cc",
+					"jsonFile" : "target-miniz-Debug-5b66e94eedd0238c8052.json",
+					"name" : "miniz",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 49,
+					"id" : "mk_core::@b4e8358a7e7c2e92467d",
+					"jsonFile" : "target-mk_core-Debug-b17f8f586c4ea15de2db.json",
+					"name" : "mk_core",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 190,
+					"id" : "mmdblookup::@03cef0fcf3424d372840",
+					"jsonFile" : "target-mmdblookup-Debug-9c4a7b71413e9b82684f.json",
+					"name" : "mmdblookup",
+					"projectIndex" : 20
+				},
+				{
+					"directoryIndex" : 57,
+					"id" : "monkey-bin::@ff290c4ee9372599dab9",
+					"jsonFile" : "target-monkey-bin-Debug-6f5c80e5a010d5a82bff.json",
+					"name" : "monkey-bin",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 56,
+					"id" : "monkey-core-static::@0f0d8eb0919d3e97ab24",
+					"jsonFile" : "target-monkey-core-static-Debug-df05deda1808bed7d334.json",
+					"name" : "monkey-core-static",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "monkey-dirlisting-shared::@9ba6389a7c293d99a890",
+					"jsonFile" : "target-monkey-dirlisting-shared-Debug-58797727a6eac99f7c00.json",
+					"name" : "monkey-dirlisting-shared",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 53,
+					"id" : "monkey-liana-static::@f36876bf7c1fe94b43b1",
+					"jsonFile" : "target-monkey-liana-static-Debug-593a521828d9a1ad8a86.json",
+					"name" : "monkey-liana-static",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 54,
+					"id" : "monkey-mandril-shared::@b3173a624f295b76afcd",
+					"jsonFile" : "target-monkey-mandril-shared-Debug-deb16c906ad436b002cd.json",
+					"name" : "monkey-mandril-shared",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "mpack-static::@797d6d100d53aa736dd9",
+					"jsonFile" : "target-mpack-static-Debug-55a0539a56666a8a800a.json",
+					"name" : "mpack-static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "msgpack-c-static::@4564ce671c2ba62bc422",
+					"jsonFile" : "target-msgpack-c-static-Debug-a820d64674a7334d037a.json",
+					"name" : "msgpack-c-static",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "nghttp2_static::@eb511c7d649a99946d73",
+					"jsonFile" : "target-nghttp2_static-Debug-56fe78c033ba6e33fbd9.json",
+					"name" : "nghttp2_static",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 67,
+					"id" : "onigmo-static::@f43d21dece84a8eb738e",
+					"jsonFile" : "target-onigmo-static-Debug-88d8731faa8cc0ec2537.json",
+					"name" : "onigmo-static",
+					"projectIndex" : 16
+				},
+				{
+					"directoryIndex" : 208,
+					"id" : "out_lib::@3857d0a1cddd06dfb35f",
+					"jsonFile" : "target-out_lib-Debug-d2e373132f126f640b1b.json",
+					"name" : "out_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "pickle::@a073d782a7f398807a33",
+					"jsonFile" : "target-pickle-Debug-dab73944624dba31cb7f.json",
+					"name" : "pickle",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 122,
+					"id" : "processor-sql-parser::@fec19e8227f816f752bb",
+					"jsonFile" : "target-processor-sql-parser-Debug-427b157dc40bb4393d59.json",
+					"name" : "processor-sql-parser",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "qthelp::@a073d782a7f398807a33",
+					"jsonFile" : "target-qthelp-Debug-48bb9c9ce91ad7a6178a.json",
+					"name" : "qthelp",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 46,
+					"id" : "rbtree::@abb5cfef9606d4421afa",
+					"jsonFile" : "target-rbtree-Debug-5d7a8cc994fe7bbc1532.json",
+					"name" : "rbtree",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 65,
+					"id" : "rdkafka::@f79491db66cd6a21e9d3",
+					"jsonFile" : "target-rdkafka-Debug-0d0912039ce71096753a.json",
+					"name" : "rdkafka",
+					"projectIndex" : 15
+				},
+				{
+					"directoryIndex" : 66,
+					"id" : "rdkafka++::@6a8a96bf9955636b069a",
+					"jsonFile" : "target-rdkafka++-Debug-9e6ec07db6ae201b8dd0.json",
+					"name" : "rdkafka++",
+					"projectIndex" : 15
+				},
+				{
+					"directoryIndex" : 47,
+					"id" : "regex::@650c991785b42b7b6af5",
+					"jsonFile" : "target-regex-Debug-ad5b5b3b311ae64b18ec.json",
+					"name" : "regex",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "singlehtml::@a073d782a7f398807a33",
+					"jsonFile" : "target-singlehtml-Debug-190eeaf19d61ed1a87bf.json",
+					"name" : "singlehtml",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "snappy-c::@fdc7c5429da7c864670b",
+					"jsonFile" : "target-snappy-c-Debug-4f55ad8f7d24ad4e756a.json",
+					"name" : "snappy-c",
+					"projectIndex" : 8
+				},
+				{
+					"directoryIndex" : 62,
+					"id" : "sqlite3::@41471cdc28dda555ded7",
+					"jsonFile" : "target-sqlite3-Debug-61a2654c85e8a5fe7d4c.json",
+					"name" : "sqlite3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "tarball::@85b582c205a67fe9dd3a",
+					"jsonFile" : "target-tarball-Debug-1a03f2601eec024ce762.json",
+					"name" : "tarball",
+					"projectIndex" : 9
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "test-api::@df64e298066e9c10bee2",
+					"jsonFile" : "target-test-api-Debug-6b3310d04ebe20d0d37d.json",
+					"name" : "test-api",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "text::@a073d782a7f398807a33",
+					"jsonFile" : "target-text-Debug-c26c9c925934a50d3404.json",
+					"name" : "text",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "tutf8e::@6c5714744b24755b444f",
+					"jsonFile" : "target-tutf8e-Debug-7282f28b7a0234f9a108.json",
+					"name" : "tutf8e",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "tutf8e-test::@6c5714744b24755b444f",
+					"jsonFile" : "target-tutf8e-test-Debug-c12dbd55e412e497cfef.json",
+					"name" : "tutf8e-test",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 205,
+					"id" : "vmlib-static::@c57854c1be3a994edfef",
+					"jsonFile" : "target-vmlib-static-Debug-cfe0053d6ce8094c35ee.json",
+					"name" : "vmlib-static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 63,
+					"id" : "xxd-c::@de2bf3fba537770636ef",
+					"jsonFile" : "target-xxd-c-Debug-698cbe90dc068dcd0f47.json",
+					"name" : "xxd-c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "xxhash::@f9bb25231b0156e9f5cd",
+					"jsonFile" : "target-xxhash-Debug-3b4ddc69d932e48f8bc0.json",
+					"name" : "xxhash",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/work/clionProject/fluent-bit/cmake-build-debug",
+		"source" : "/home/work/clionProject/fluent-bit"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

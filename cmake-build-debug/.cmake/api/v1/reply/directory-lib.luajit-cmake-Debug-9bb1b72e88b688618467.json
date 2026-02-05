@@ -1,0 +1,95 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"include"
+		],
+		"files" : 
+		[
+			"lib/luajit-cmake/LuaJIT.cmake",
+			"lib/luajit-cmake/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 572,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 573,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 593,
+				"parent" : 2
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/luajit",
+			"paths" : 
+			[
+				"lib/luajit-3065c9/src/lauxlib.h",
+				"lib/luajit-3065c9/src/lua.h",
+				"lib/luajit-3065c9/src/luaconf.h",
+				"lib/luajit-3065c9/src/luajit.h",
+				"lib/luajit-3065c9/src/lualib.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"library/libluajit.a"
+			],
+			"targetId" : "libluajit::@26aca074b6be4126724f",
+			"targetIndex" : 157,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"bin/luajit"
+			],
+			"targetId" : "luajit::@26aca074b6be4126724f",
+			"targetIndex" : 161,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lib/luajit-cmake",
+		"source" : "lib/luajit-cmake"
+	}
+}

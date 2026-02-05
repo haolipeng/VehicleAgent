@@ -1,0 +1,53 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"MONKEY_PLUGIN"
+		],
+		"files" : 
+		[
+			"lib/monkey/plugins/CMakeLists.txt",
+			"lib/monkey/plugins/dirlisting/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 33,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/monkey/lib/monkey-dirlisting.so"
+			],
+			"targetId" : "monkey-dirlisting-shared::@9ba6389a7c293d99a890",
+			"targetIndex" : 170,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lib/monkey/plugins/dirlisting",
+		"source" : "lib/monkey/plugins/dirlisting"
+	}
+}

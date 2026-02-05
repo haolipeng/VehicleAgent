@@ -1,0 +1,1067 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "lib/c-ares-1.24.0/lib/libcares.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_LIBRARY",
+			"TARGET_COMPILE_DEFINITIONS",
+			"add_definitions",
+			"FLB_DEFINITION",
+			"include",
+			"ADD_DEFINITIONS",
+			"include_directories",
+			"TARGET_INCLUDE_DIRECTORIES",
+			"SET_TARGET_PROPERTIES"
+		],
+		"files" : 
+		[
+			"lib/c-ares-1.24.0/src/lib/CMakeLists.txt",
+			"cmake/macros.cmake",
+			"CMakeLists.txt",
+			"cmake/platform_feature_checks.cmake",
+			"lib/c-ares-1.24.0/CMakeLists.txt",
+			"cmake/headers.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 85,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 107,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 364,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 297,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 463,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 483,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 499,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 12
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 96,
+				"parent" : 3
+			},
+			{
+				"file" : 3,
+				"parent" : 14
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 7,
+				"parent" : 15
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 16
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 32,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 533,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 574,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 20
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 266,
+				"parent" : 22
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 389,
+				"parent" : 3
+			},
+			{
+				"file" : 5,
+				"parent" : 24
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 5,
+				"parent" : 25
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 56,
+				"parent" : 25
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 60,
+				"parent" : 25
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 99,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 87,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-Wall -D__FLB_FILENAME__=__FILE__ -Wall -Wextra -Wcast-align -Wconversion -Wdeclaration-after-statement -Wdouble-promotion -Wfloat-equal -Wformat-security -Winit-self -Wjump-misses-init -Wlogical-op -Wmissing-braces -Wmissing-declarations -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-prototypes -Wnested-externs -Wno-coverage-mismatch -Wold-style-definition -Wpacked -Wpointer-arith -Wredundant-decls -Wshadow -Wsign-conversion -Wstrict-overflow -Wstrict-prototypes -Wtrampolines -Wundef -Wunused -Wvariadic-macros -Wvla -Wwrite-strings -Wimplicit-fallthrough=3 -Werror=implicit-int -Werror=implicit-function-declaration -g -fno-omit-frame-pointer -O0 -fPIC"
+				},
+				{
+					"fragment" : "-std=gnu90"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "CARES_STATICLIB"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "FLB_HAVE_CHUNK_TRACE"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "FLB_HAVE_IN_STORAGE_BACKLOG"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "FLB_HAVE_PARSER"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "FLB_HAVE_RECORD_ACCESSOR"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "FLB_HAVE_STREAM_PROCESSOR"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "FLB_HAVE_SYS_WAIT_H"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "FLB_SYSTEM_LINUX"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "HAVE_CONFIG_H=1"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "MPACK_EXTENSIONS=1"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "NGHTTP2_STATICLIB"
+				},
+				{
+					"backtrace" : 23,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 23,
+					"define" : "_POSIX_C_SOURCE=200809L"
+				},
+				{
+					"backtrace" : 23,
+					"define" : "_XOPEN_SOURCE=700"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/fluent-otel-proto/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/fluent-otel-proto/proto_c"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cfl/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cfl/lib/xxhash"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/flb_libco"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/rbtree"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/msgpack-c/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/chunkio/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/chunkio/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/luajit-3065c9/src"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/luajit-cmake"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/monkey/include/monkey"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/sqlite-amalgamation-3450200"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/mpack-amalgamation-1.1.1/src"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/miniz"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/onigmo"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/snappy-fef67ac"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/cmetrics/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/ctraces/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/c-ares-1.24.0/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/lwrb/lwrb/src/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/c-ares-1.24.0"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/jansson-e23f558/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/cmetrics"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/monkey/include"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/monkey/include/monkey"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/nghttp2"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/cmake-build-debug/lib/nghttp2/lib/includes"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/work/clionProject/fluent-bit/lib/nghttp2/lib/includes"
+				},
+				{
+					"backtrace" : 27,
+					"path" : "/home/work/clionProject/fluent-bit/lib/librdkafka-2.3.0/src"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/work/clionProject/fluent-bit/lib/tutf8e/include"
+				},
+				{
+					"backtrace" : 29,
+					"path" : "/home/work/clionProject/fluent-bit/lib/c-ares-1.24.0"
+				},
+				{
+					"backtrace" : 29,
+					"path" : "/home/work/clionProject/fluent-bit/lib/c-ares-1.24.0/src/lib"
+				}
+			],
+			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					30
+				],
+				"standard" : "90"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74
+			]
+		}
+	],
+	"id" : "c-ares::@62be8cfaee513df7f133",
+	"name" : "c-ares",
+	"nameOnDisk" : "libcares.a",
+	"paths" : 
+	{
+		"build" : "lib/c-ares-1.24.0/src/lib",
+		"source" : "lib/c-ares-1.24.0/src/lib"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__addrinfo2hostent.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__addrinfo_localhost.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__buf.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__close_sockets.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__hosts_file.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__htable.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__htable_asvp.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__htable_strvp.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__htable_szvp.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__iface_ips.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__llist.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__parse_into_addrinfo.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__read_line.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__slist.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__socket.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__sortaddrinfo.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__threads.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares__timeval.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_android.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_cancel.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_data.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_destroy.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_dns_mapping.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_dns_name.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_dns_parse.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_dns_record.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_dns_write.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_expand_name.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_expand_string.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_fds.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_free_hostent.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_free_string.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_freeaddrinfo.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_getaddrinfo.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_getenv.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_gethostbyaddr.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_gethostbyname.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_getnameinfo.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_getsock.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_init.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_library_init.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_math.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_mkquery.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_create_query.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_options.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_parse_a_reply.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_parse_aaaa_reply.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_parse_caa_reply.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_parse_mx_reply.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_parse_naptr_reply.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_parse_ns_reply.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_parse_ptr_reply.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_parse_soa_reply.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_parse_srv_reply.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_parse_txt_reply.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_parse_uri_reply.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_platform.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_process.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_qcache.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_query.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_rand.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_search.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_send.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_strcasecmp.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_str.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_strerror.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_strsplit.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_sysconfig.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_sysconfig_files.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_timeout.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_update_servers.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/ares_version.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/inet_net_pton.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/inet_ntop.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/c-ares-1.24.0/src/lib/windows_port.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

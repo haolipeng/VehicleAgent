@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "lib/c-ares-1.24.0/src/lib",
+		"source" : "lib/c-ares-1.24.0/src/lib"
+	}
+}

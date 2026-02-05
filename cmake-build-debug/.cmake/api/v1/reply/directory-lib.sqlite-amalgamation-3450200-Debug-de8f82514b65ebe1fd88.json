@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "lib/sqlite-amalgamation-3450200",
+		"source" : "lib/sqlite-amalgamation-3450200"
+	}
+}

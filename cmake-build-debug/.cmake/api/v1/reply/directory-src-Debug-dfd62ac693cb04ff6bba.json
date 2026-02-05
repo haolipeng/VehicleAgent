@@ -1,0 +1,143 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 455,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 511,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 534,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 535,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 561,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 568,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 573,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "library",
+			"destination" : "lib/fluent-bit",
+			"paths" : 
+			[
+				"lib/libfluent-bit.so"
+			],
+			"targetId" : "fluent-bit-shared::@145eef247bfb46b6828c",
+			"targetIndex" : 146,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "binary",
+			"destination" : "/usr/local/bin",
+			"paths" : 
+			[
+				"bin/fluent-bit"
+			],
+			"targetId" : "fluent-bit-bin::@145eef247bfb46b6828c",
+			"targetIndex" : 145,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "binary",
+			"destination" : "/lib/systemd/system",
+			"paths" : 
+			[
+				"init/fluent-bit.service"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "binary",
+			"destination" : "etc/fluent-bit/",
+			"paths" : 
+			[
+				""
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "binary",
+			"destination" : "etc/fluent-bit",
+			"paths" : 
+			[
+				"conf/fluent-bit.conf"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "binary",
+			"destination" : "etc/fluent-bit",
+			"paths" : 
+			[
+				"conf/parsers.conf"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "binary",
+			"destination" : "etc/fluent-bit",
+			"paths" : 
+			[
+				"conf/plugins.conf"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src",
+		"source" : "src"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "lib/mpack-amalgamation-1.1.1",
+		"source" : "lib/mpack-amalgamation-1.1.1"
+	}
+}

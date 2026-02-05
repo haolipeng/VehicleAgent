@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "lib/luajit-cmake/host/buildvm",
+		"source" : "lib/luajit-cmake/host/buildvm"
+	}
+}

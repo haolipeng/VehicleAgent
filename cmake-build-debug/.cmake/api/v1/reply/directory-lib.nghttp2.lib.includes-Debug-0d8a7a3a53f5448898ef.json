@@ -1,0 +1,44 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"lib/nghttp2/lib/includes/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include/nghttp2",
+			"paths" : 
+			[
+				"lib/nghttp2/lib/includes/nghttp2/nghttp2.h",
+				"cmake-build-debug/lib/nghttp2/lib/includes/nghttp2/nghttp2ver.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lib/nghttp2/lib/includes",
+		"source" : "lib/nghttp2/lib/includes"
+	}
+}
