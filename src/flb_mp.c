@@ -25,7 +25,6 @@
 #include <fluent-bit/flb_mp_chunk.h>
 
 #include <fluent-bit/flb_slist.h>
-#include <fluent-bit/flb_record_accessor.h>
 #include <fluent-bit/flb_metrics.h>
 #include <fluent-bit/flb_conditionals.h>
 
@@ -34,6 +33,20 @@
 
 #include <msgpack.h>
 #include <mpack/mpack.h>
+
+/* Forward declaration of flb_record_accessor structure (stub implementation) */
+struct flb_record_accessor {
+    flb_sds_t pattern;
+    struct mk_list subkeys;
+};
+
+/* Stub function declarations */
+struct flb_record_accessor *flb_ra_create(char *str, int translate_env);
+void flb_ra_destroy(struct flb_record_accessor *ra);
+int flb_ra_subkey_count(struct flb_record_accessor *ra);
+int flb_ra_get_kv_pair(struct flb_record_accessor *ra, msgpack_object map,
+                       msgpack_object **start_key,
+                       msgpack_object **out_key, msgpack_object **out_val);
 
 /* don't do this at home */
 #define pack_uint16(buf, d) _msgpack_store16(buf, (uint16_t) d)

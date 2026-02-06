@@ -28,8 +28,6 @@
 #include <fluent-bit/flb_mp.h>
 #include <fluent-bit/flb_time.h>
 #include <fluent-bit/flb_parser.h>
-#include <fluent-bit/flb_log_event_decoder.h>
-#include <fluent-bit/flb_log_event_encoder.h>
 
 /* Types available */
 #define FLB_ML_REGEX     1    /* pattern is a regular expression    */
@@ -285,8 +283,6 @@ struct flb_ml {
     int flush_ms;                          /* max flush interval found in groups/parsers */
     uint64_t last_flush;                   /* last flush time (involving groups) */
     struct mk_list groups;                 /* list head for flb_ml_group(s) */
-    struct flb_log_event_encoder log_event_encoder;
-    struct flb_log_event_decoder log_event_decoder;
     struct flb_config *config;             /* Fluent Bit context */
 
     /* Limit for concatenated multiline messages */
@@ -310,10 +306,6 @@ int flb_ml_append_object(struct flb_ml *ml,
                          struct flb_time *tm,
                          msgpack_object *metadata,
                          msgpack_object *obj);
-
-int flb_ml_append_event(struct flb_ml *ml,
-                        uint64_t stream_id,
-                        struct flb_log_event *event);
 
 
 // int flb_ml_append_object(struct flb_ml *ml, uint64_t stream_id,

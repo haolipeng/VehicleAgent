@@ -36,7 +36,6 @@ include_directories(
   ${FLB_PATH_ROOT_SOURCE}/${FLB_PATH_LIB_CPROFILES}/include
   ${FLB_PATH_ROOT_SOURCE}/${FLB_PATH_LIB_RING_BUFFER}/lwrb/src/include
   ${FLB_PATH_ROOT_SOURCE}/${FLB_PATH_LIB_YYJSON}/src
-  ${FLB_PATH_ROOT_BINARY_DIR}/${FLB_PATH_LIB_JANSSON}/include
   ${FLB_PATH_ROOT_BINARY_DIR}/lib/cmetrics
   ${FLB_PATH_ROOT_BINARY_DIR}/lib/cprofiles/include
   ${FLB_PATH_ROOT_BINARY_DIR}/include
@@ -44,6 +43,16 @@ include_directories(
   ${FLB_PATH_ROOT_BINARY_DIR}/lib/monkey/include/
   ${FLB_PATH_ROOT_BINARY_DIR}/lib/monkey/include/monkey/
   )
+
+# Jansson: only add internal include path if system library not found
+find_package(PkgConfig QUIET)
+if(PKG_CONFIG_FOUND)
+  pkg_check_modules(PC_JANSSON QUIET jansson)
+endif()
+if(NOT PC_JANSSON_FOUND)
+  # System jansson not found, use internal library include path
+  include_directories(${FLB_PATH_ROOT_BINARY_DIR}/${FLB_PATH_LIB_JANSSON}/include)
+endif()
 
 if(FLB_UTF8_ENCODER)
   include_directories(${FLB_PATH_ROOT_SOURCE}/${FLB_PATH_LIB_TUTF8E}/include)

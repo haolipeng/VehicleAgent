@@ -731,7 +731,9 @@ static void *tls_context_create(int verify,
     SSL_CTX *ssl_ctx;
     struct tls_context *ctx;
     char err_buf[256];
+#ifdef FLB_HAVE_DEV
     char *key_log_filename;
+#endif
 
     /*
      * Init library ? based in the documentation on OpenSSL >= 1.1.0 is not longer

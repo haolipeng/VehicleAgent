@@ -95,13 +95,6 @@ if(FLB_PARSER)
     )
 endif()
 
-if(FLB_STREAM_PROCESSOR)
-  set(UNIT_TESTS_FILES
-    ${UNIT_TESTS_FILES}
-    stream_processor.c
-    )
-endif()
-
 if(FLB_RECORD_ACCESSOR)
   set(UNIT_TESTS_FILES
     ${UNIT_TESTS_FILES}

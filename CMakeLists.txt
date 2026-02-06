@@ -155,7 +155,6 @@ option(FLB_UNICODE_ENCODER     "Build with Unicode (UTF-16LE, UTF-16BE) encoding
 option(FLB_PARSER              "Build with Parser support"    Yes)
 option(FLB_TLS                 "Build with SSL/TLS support"   Yes)
 option(FLB_BINARY              "Build executable binary"      Yes)
-option(FLB_EXAMPLES            "Build examples"               Yes)
 option(FLB_SHARED_LIB          "Build shared library"         Yes)
 option(FLB_VALGRIND            "Enable Valgrind support"       No)
 option(FLB_TRACE               "Enable trace mode"             No)
@@ -170,9 +169,7 @@ option(FLB_INOTIFY             "Enable inotify support"       Yes)
 option(FLB_SQLDB               "Enable SQL embedded DB"       Yes)
 option(FLB_HTTP_SERVER         "Enable HTTP Server"           Yes)
 option(FLB_BACKTRACE           "Enable stacktrace support"    Yes)
-option(FLB_RECORD_ACCESSOR     "Enable record accessor"       Yes)
 option(FLB_STATIC_CONF         "Build binary using static configuration")
-option(FLB_STREAM_PROCESSOR    "Enable Stream Processor"                    Yes)
 option(FLB_SIMD                "Enable SIMD support"                         No)
 option(FLB_CORO_STACK_SIZE     "Set coroutine stack size")
 option(FLB_AVRO_ENCODER        "Build with Avro encoding support"            No)
@@ -484,35 +481,6 @@ endif()
 # Is sanitize_address defined ?
 if(SANITIZE_ADDRESS)
   FLB_DEFINITION(FLB_HAVE_SANITIZE_ADDRESS)
-endif()
-
-# Record Accessor
-if(FLB_RECORD_ACCESSOR)
-  if(NOT FLB_FLEX_BISON)
-    message(FATAL_ERROR
-      "Record Accessor feature requires Flex and Bison in your system.\n"
-      "This is a build time dependency, you can either install the "
-      "dependencies or disable the feature setting the CMake option "
-      "-DFLB_RECORD_ACCESSOR=Off ."
-      )
-  endif()
-  FLB_DEFINITION(FLB_HAVE_RECORD_ACCESSOR)
-endif()
-
-# Stream Processor
-if(FLB_STREAM_PROCESSOR)
-  if(NOT FLB_FLEX_BISON)
-    message(FATAL_ERROR
-      "Stream Processor feature requires Flex and Bison in your system.\n"
-      "This is a build time dependency, you can either install the "
-      "dependencies or disable the feature setting the CMake option "
-      "-DFLB_STREAM_PROCESSOR=Off ."
-      )
-  endif()
-
-  # Enable Stream Processor internal helper plugin
-  set(FLB_IN_STREAM_PROCESSOR On)
-  FLB_DEFINITION(FLB_HAVE_STREAM_PROCESSOR)
 endif()
 
 # mk_core is aware about jemalloc usage, we need to disable this as
@@ -1335,14 +1303,6 @@ endif()
 add_subdirectory(include)
 add_subdirectory(plugins)
 add_subdirectory(src)
-
-if(NOT FLB_SHARED_LIB)
-  set(FLB_EXAMPLES OFF)
-endif()
-
-if(FLB_EXAMPLES)
-  add_subdirectory(examples)
-endif()
 
 if(FLB_TESTS_RUNTIME)
   enable_testing()

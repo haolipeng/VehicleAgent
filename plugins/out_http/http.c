@@ -31,7 +31,6 @@
 #include <fluent-bit/flb_snappy.h>
 #include <fluent-bit/flb_zstd.h>
 
-#include <fluent-bit/flb_record_accessor.h>
 #include <fluent-bit/flb_log_event_decoder.h>
 #include <msgpack.h>
 
@@ -456,153 +455,6 @@ static int compose_payload(struct flb_out_http *ctx,
     return FLB_OK;
 }
 
-static char **extract_headers(msgpack_object *obj) {
-    size_t i;
-    char **headers = NULL;
-    size_t str_count;
-    msgpack_object_map map;
-    msgpack_object_str k;
-    msgpack_object_str v;
-
-    if (obj->type != MSGPACK_OBJECT_MAP) {
-        goto err;
-    }
-
-    map = obj->via.map;
-    str_count = map.size * 2 + 1;
-    headers = flb_calloc(str_count, sizeof *headers);
-
-    if (!headers) {
-        goto err;
-    }
-
-    for (i = 0; i < map.size; i++) {
-        if (map.ptr[i].key.type != MSGPACK_OBJECT_STR ||
-            map.ptr[i].val.type != MSGPACK_OBJECT_STR) {
-            continue;
-        }
-
-        k = map.ptr[i].key.via.str;
-        v = map.ptr[i].val.via.str;
-
-        headers[i * 2] = strndup(k.ptr, k.size);
-
-        if (!headers[i]) {
-            goto err;
-        }
-
-        headers[i * 2 + 1] = strndup(v.ptr, v.size);
-
-        if (!headers[i]) {
-            goto err;
-        }
-    }
-
-    return headers;
-
-err:
-    if (headers) {
-        for (i = 0; i < str_count; i++) {
-            if (headers[i]) {
-                flb_free(headers[i]);
-            }
-        }
-        flb_free(headers);
-    }
-    return NULL;
-}
-
-static int send_all_requests(struct flb_out_http *ctx,
-                             const char *data, size_t size,
-                             flb_sds_t body_key,
-                             flb_sds_t headers_key,
-                             struct flb_event_chunk *event_chunk)
-{
-    msgpack_object map;
-    msgpack_object *k;
-    msgpack_object *v;
-    msgpack_object *start_key;
-    const char *body;
-    size_t body_size;
-    bool body_found;
-    bool headers_found;
-    char **headers;
-    size_t record_count = 0;
-    int ret = 0;
-    struct flb_log_event_decoder log_decoder;
-    struct flb_log_event log_event;
-
-    ret = flb_log_event_decoder_init(&log_decoder, (char *) data, size);
-
-    if (ret != FLB_EVENT_DECODER_SUCCESS) {
-        flb_plg_error(ctx->ins,
-                      "Log event decoder initialization error : %d", ret);
-
-        return -1;
-    }
-
-    while ((flb_log_event_decoder_next(
-                    &log_decoder,
-                    &log_event)) == FLB_EVENT_DECODER_SUCCESS) {
-        headers = NULL;
-        body_found = false;
-        headers_found = false;
-
-        map = *log_event.body;
-
-        if (map.type != MSGPACK_OBJECT_MAP) {
-            ret = -1;
-            break;
-        }
-
-        if (!flb_ra_get_kv_pair(ctx->body_ra, map, &start_key, &k, &v)) {
-            if (v->type == MSGPACK_OBJECT_STR || v->type == MSGPACK_OBJECT_BIN) {
-                body = v->via.str.ptr;
-                body_size = v->via.str.size;
-                body_found = true;
-            }
-            else {
-                flb_plg_warn(ctx->ins,
-                             "failed to extract body using pattern \"%s\" "
-                             "(must be a msgpack string or bin)", ctx->body_key);
-            }
-        }
-
-        if (!flb_ra_get_kv_pair(ctx->headers_ra, map, &start_key, &k, &v)) {
-            headers = extract_headers(v);
-            if (headers) {
-                headers_found = true;
-            }
-            else {
-                flb_plg_warn(ctx->ins,
-                             "error extracting headers using pattern \"%s\"",
-                             ctx->headers_key);
-            }
-        }
-
-        if (body_found && headers_found) {
-            flb_plg_trace(ctx->ins, "sending record %zu via %s",
-                          record_count++,
-                          ctx->http_method == FLB_HTTP_POST ? "POST" : "PUT");
-            ret = http_request(ctx, body, body_size, event_chunk->tag,
-                    flb_sds_len(event_chunk->tag), headers);
-        }
-        else {
-            flb_plg_warn(ctx->ins,
-                         "failed to extract body/headers using patterns "
-                         "\"%s\" and \"%s\"", ctx->body_key, ctx->headers_key);
-            ret = -1;
-            continue;
-        }
-
-        flb_free(headers);
-    }
-
-    flb_log_event_decoder_destroy(&log_decoder);
-
-    return ret;
-}
-
 static void cb_http_flush(struct flb_event_chunk *event_chunk,
                           struct flb_output_flush *out_flush,
                           struct flb_input_instance *i_ins,
@@ -615,35 +467,25 @@ static void cb_http_flush(struct flb_event_chunk *event_chunk,
     size_t out_size;
     (void) i_ins;
 
-    if (ctx->body_key) {
-        ret = send_all_requests(ctx, event_chunk->data, event_chunk->size,
-                                ctx->body_key, ctx->headers_key, event_chunk);
-        if (ret < 0) {
-            flb_plg_error(ctx->ins,
-                          "failed to send requests using body key \"%s\"", ctx->body_key);
-        }
+    ret = compose_payload(ctx, event_chunk->data, event_chunk->size,
+                          &out_body, &out_size, config);
+    if (ret != FLB_OK) {
+        FLB_OUTPUT_RETURN(ret);
+    }
+
+    if ((ctx->out_format == FLB_PACK_JSON_FORMAT_JSON) ||
+        (ctx->out_format == FLB_PACK_JSON_FORMAT_STREAM) ||
+        (ctx->out_format == FLB_PACK_JSON_FORMAT_LINES) ||
+        (ctx->out_format == FLB_HTTP_OUT_GELF)) {
+        ret = http_request(ctx, out_body, out_size,
+                           event_chunk->tag, flb_sds_len(event_chunk->tag), NULL);
+        flb_sds_destroy(out_body);
     }
     else {
-        ret = compose_payload(ctx, event_chunk->data, event_chunk->size,
-                              &out_body, &out_size, config);
-        if (ret != FLB_OK) {
-            FLB_OUTPUT_RETURN(ret);
-        }
-
-        if ((ctx->out_format == FLB_PACK_JSON_FORMAT_JSON) ||
-            (ctx->out_format == FLB_PACK_JSON_FORMAT_STREAM) ||
-            (ctx->out_format == FLB_PACK_JSON_FORMAT_LINES) ||
-            (ctx->out_format == FLB_HTTP_OUT_GELF)) {
-            ret = http_request(ctx, out_body, out_size,
-                               event_chunk->tag, flb_sds_len(event_chunk->tag), NULL);
-            flb_sds_destroy(out_body);
-        }
-        else {
-            /* msgpack */
-            ret = http_request(ctx,
-                               event_chunk->data, event_chunk->size,
-                               event_chunk->tag, flb_sds_len(event_chunk->tag), NULL);
-        }
+        /* msgpack */
+        ret = http_request(ctx,
+                           event_chunk->data, event_chunk->size,
+                           event_chunk->tag, flb_sds_len(event_chunk->tag), NULL);
     }
 
     FLB_OUTPUT_RETURN(ret);

@@ -60,7 +60,6 @@ enum section {
     SECTION_PARSER,
     SECTION_MULTILINE_PARSER,
     SECTION_MULTILINE_PARSER_RULE,
-    SECTION_STREAM_PROCESSOR,
     SECTION_PLUGINS,
     SECTION_UPSTREAM_SERVERS,
     SECTION_OTHER,
@@ -79,7 +78,6 @@ static char *section_names[] = {
     "parser",
     "multiline_parser",
     "multiline_parser_rule",
-    "stream_processor",
     "plugins",
     "upstream_servers",
     "other"
@@ -153,11 +151,6 @@ enum state {
     STATE_MULTILINE_PARSER_ENTRY, /* a multiline parser definition */
     STATE_MULTILINE_PARSER_VALUE, /* reading a value inside a multiline parser */
     STATE_MULTILINE_PARSER_RULE, /* reading a multiline parser rule */
-
-    /* Stream Processor */
-    STATE_STREAM_PROCESSOR,
-    STATE_STREAM_PROCESSOR_ENTRY,
-    STATE_STREAM_PROCESSOR_KEY,
 
     /* Plugins */
     STATE_PLUGINS,
@@ -301,8 +294,6 @@ static char *state_str(enum state val)
         return "parser";
     case STATE_MULTILINE_PARSER:
         return "multiline-parser";
-    case STATE_STREAM_PROCESSOR:
-        return "stream-processor";
     case STATE_PLUGINS:
         return "plugins";
     case STATE_UPSTREAM_SERVERS:
@@ -337,9 +328,6 @@ static int add_section_type(struct flb_cf *conf, struct parser_state *state)
     }
     else if (state->section == SECTION_MULTILINE_PARSER) {
         state->cf_section = flb_cf_section_create(conf, "multiline_parser", 0);
-    }
-    else if (state->section == SECTION_STREAM_PROCESSOR) {
-        state->cf_section = flb_cf_section_create(conf, "stream_processor", 0);
     }
     else if (state->section == SECTION_PLUGINS) {
         state->cf_section = flb_cf_section_create(conf, "plugins", 0);
@@ -1217,94 +1205,6 @@ static int consume_event(struct flb_cf *conf, struct local_ctx *ctx,
         };
         break;
 
-
-    /*
-     * Stream Processor
-     * ----------------
-     */
-    case STATE_STREAM_PROCESSOR:
-        switch (event->type) {
-        case YAML_SEQUENCE_START_EVENT:
-            break;
-
-        case YAML_MAPPING_START_EVENT:
-            if (add_section_type(conf, state) == -1) {
-                flb_error("Unable to add parsers section");
-                return YAML_FAILURE;
-            }
-
-            state = state_push_withvals(ctx, state, STATE_STREAM_PROCESSOR_ENTRY);
-            if (!state) {
-                flb_error("Unable to allocate state for stream processor entry");
-                return YAML_FAILURE;
-            }
-            break;
-
-        case YAML_SEQUENCE_END_EVENT:
-            state = state_pop(ctx);
-            if (!state) {
-                flb_error("No state left");
-                return YAML_FAILURE;
-            }
-            break;
-
-        default:
-            yaml_error_event(ctx, state, event);
-            return YAML_FAILURE;
-        }
-        break;
-
-    case STATE_STREAM_PROCESSOR_ENTRY:
-        switch (event->type) {
-        case YAML_SCALAR_EVENT:
-            value = (char *) event->data.scalar.value;
-
-            state = state_push_key(ctx, STATE_STREAM_PROCESSOR_KEY, value);
-            if (!state) {
-                flb_error("Unable to allocate state for stream processor key");
-                return YAML_FAILURE;
-            }
-            break;
-
-        case YAML_MAPPING_END_EVENT:
-            state = state_pop(ctx);
-            if (!state) {
-                flb_error("No state left");
-                return YAML_FAILURE;
-            }
-            break;
-
-        default:
-            yaml_error_event(ctx, state, event);
-            return YAML_FAILURE;
-        }
-        break;
-
-    case STATE_STREAM_PROCESSOR_KEY:
-        switch (event->type) {
-        case YAML_SCALAR_EVENT:
-            value = (char *) event->data.scalar.value;
-
-            if (flb_cf_section_property_add(conf, state->cf_section->properties,
-                                            state->key, flb_sds_len(state->key),
-                                            value, strlen(value)) < 0) {
-                flb_error("Unable to add property");
-                return YAML_FAILURE;
-            }
-
-            state = state_pop(ctx);
-            if (!state) {
-                flb_error("No state left");
-                return YAML_FAILURE;
-            }
-            break;
-
-        default:
-            yaml_error_event(ctx, state, event);
-            return YAML_FAILURE;
-        }
-        break;
-
     /*
      * Plugins: define a list of absolute paths for external plugins to load
      * ---------------------------------------------------------------------
@@ -1587,13 +1487,6 @@ static int consume_event(struct flb_cf *conf, struct local_ctx *ctx,
             }
             else if (strcasecmp(value, "multiline_parsers") == 0) {
                 state = state_push_section(ctx, STATE_MULTILINE_PARSER, SECTION_MULTILINE_PARSER);
-                if (state == NULL) {
-                    flb_error("unable to allocate state");
-                    return YAML_FAILURE;
-                }
-            }
-            else if (strcasecmp(value, "stream_processor") == 0) {
-                state = state_push_section(ctx, STATE_STREAM_PROCESSOR, SECTION_STREAM_PROCESSOR);
                 if (state == NULL) {
                     flb_error("unable to allocate state");
                     return YAML_FAILURE;

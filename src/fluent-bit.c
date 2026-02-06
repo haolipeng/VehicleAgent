@@ -54,8 +54,6 @@
 #include <fluent-bit/flb_parser.h>
 #include <fluent-bit/flb_lib.h>
 #include <fluent-bit/flb_help.h>
-#include <fluent-bit/flb_record_accessor.h>
-#include <fluent-bit/flb_ra_key.h>
 #include <fluent-bit/flb_kv.h>
 #include <fluent-bit/flb_reload.h>
 #include <fluent-bit/flb_config_format.h>
@@ -147,9 +145,6 @@ static void flb_help(int rc, struct flb_config *config)
     print_opt("-e, --plugin=FILE", "load an external plugin (shared lib)");
     print_opt("-l, --log_file=FILE", "write log info to a file");
     print_opt("-t, --tag=TAG", "set plugin tag, same as '-p tag=abc'");
-#ifdef FLB_HAVE_STREAM_PROCESSOR
-    print_opt("-T, --sp-task=SQL", "define a stream processor task");
-#endif
     print_opt("-v, --verbose", "increase logging verbosity (default: info)");
 #ifdef FLB_TRACE
     print_opt("-vv", "trace mode (available)");
@@ -277,34 +272,37 @@ static void help_plugin_description(int left_padding, flb_sds_t str)
     }
 }
 
+/* Simplified help_get_value - directly search msgpack map without record accessor */
 static flb_sds_t help_get_value(msgpack_object map, char *key)
 {
-    flb_sds_t k;
-    flb_sds_t val;
-    msgpack_object *o;
-    struct flb_ra_value *rval = NULL;
-    struct flb_record_accessor *ra = NULL;
+    int i;
+    size_t key_len;
+    msgpack_object_kv *kv;
 
-    k = flb_sds_create(key);
-    ra = flb_ra_create(k, FLB_FALSE);
-    flb_sds_destroy(k);
-    if (!ra) {
+    if (map.type != MSGPACK_OBJECT_MAP) {
         return NULL;
     }
 
-    rval = flb_ra_get_value_object(ra, map);
-    if (!rval) {
-        flb_ra_destroy(ra);
-        return NULL;
+    key_len = strlen(key);
+
+    for (i = 0; i < (int)map.via.map.size; i++) {
+        kv = &map.via.map.ptr[i];
+
+        if (kv->key.type != MSGPACK_OBJECT_STR) {
+            continue;
+        }
+
+        if (kv->key.via.str.size == key_len &&
+            strncmp(kv->key.via.str.ptr, key, key_len) == 0) {
+
+            if (kv->val.type == MSGPACK_OBJECT_STR) {
+                return flb_sds_create_len(kv->val.via.str.ptr,
+                                          kv->val.via.str.size);
+            }
+        }
     }
 
-    o = &rval->o;
-    val = flb_sds_create_len(o->via.str.ptr, o->via.str.size);
-
-    flb_ra_key_value_destroy(rval);
-    flb_ra_destroy(ra);
-
-    return val;
+    return NULL;
 }
 
 static void help_print_property(int max, msgpack_object k, msgpack_object v)
@@ -912,8 +910,8 @@ static int parse_trace_pipeline(flb_ctx_t *ctx, const char *pipeline, char **tra
     struct flb_split_entry *part;
     char *key;
     char *value;
-    const char *propname;
-    const char *propval;
+    char *propname;
+    char *propval;
 
 
     parts = flb_utils_split(pipeline, (int)' ', 0);
@@ -1008,7 +1006,7 @@ static int flb_main_run(int argc, char **argv)
     struct flb_cf_section *s;
     struct flb_cf_section *section;
     struct flb_cf *cf_opts;
-    struct flb_cf_group *group;
+    struct flb_cf_group *group = NULL;
     int supervisor_reload_notified = FLB_FALSE;
 
     prog_name = argv[0];
@@ -1061,9 +1059,6 @@ static int flb_main_run(int argc, char **argv)
         { "prop",            required_argument, NULL, 'p' },
         { "plugin",          required_argument, NULL, 'e' },
         { "tag",             required_argument, NULL, 't' },
-#ifdef FLB_HAVE_STREAM_PROCESSOR
-        { "sp-task",         required_argument, NULL, 'T' },
-#endif
         { "version",         no_argument      , NULL, 'V' },
         { "verbose",         no_argument      , NULL, 'v' },
         { "workdir",         required_argument, NULL, 'w' },
@@ -1236,11 +1231,6 @@ static int flb_main_run(int argc, char **argv)
                 flb_cf_section_property_add(cf_opts, s->properties, "tag", 0, optarg, 0);
             }
             break;
-#ifdef FLB_HAVE_STREAM_PROCESSOR
-        case 'T':
-            flb_slist_add(&config->stream_processor_tasks, optarg);
-            break;
-#endif
         case 'h':
             if (last_plugin == -1) {
                 flb_help(EXIT_SUCCESS, config);

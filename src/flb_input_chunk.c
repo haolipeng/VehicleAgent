@@ -35,7 +35,6 @@
 #include <fluent-bit/flb_task.h>
 #include <fluent-bit/flb_routes_mask.h>
 #include <fluent-bit/flb_metrics.h>
-#include <fluent-bit/stream_processor/flb_sp.h>
 #include <fluent-bit/flb_ring_buffer.h>
 #include <chunkio/chunkio.h>
 #include <monkey/mk_core.h>
@@ -2839,23 +2838,6 @@ static int input_chunk_append_raw(struct flb_input_instance *in,
         flb_input_chunk_set_limits(in);
         return 0;
     }
-#ifdef FLB_HAVE_STREAM_PROCESSOR
-    else if (in->config->stream_processor_ctx &&
-             ic->event_type == FLB_INPUT_LOGS) {
-        char *c_data;
-        size_t c_size;
-
-        /* Retrieve chunk (filtered) output content */
-        cio_chunk_get_content(ic->chunk, &c_data, &c_size);
-
-        /* Invoke stream processor */
-        flb_sp_do(in->config->stream_processor_ctx,
-                  in,
-                  tag, tag_len,
-                  c_data + ic->stream_off, c_size - ic->stream_off);
-        ic->stream_off += (c_size - ic->stream_off);
-    }
-#endif
 
     if (set_down == FLB_TRUE) {
         cio_chunk_down(ic->chunk);

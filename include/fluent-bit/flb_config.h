@@ -274,18 +274,6 @@ struct flb_config {
     struct mk_list wasm_list;
 #endif
 
-#ifdef FLB_HAVE_STREAM_PROCESSOR
-    char *stream_processor_file;            /* SP configuration file */
-    void *stream_processor_ctx;             /* SP context */
-    int  stream_processor_str_conv;         /* SP enable converting from string to number */
-
-    /*
-     * Temporal list to hold tasks defined before the SP context is created
-     * by the engine. The list is passed upon start and destroyed.
-     */
-    struct mk_list stream_processor_tasks;
-#endif
-
 #ifdef FLB_HAVE_CHUNK_TRACE
     int enable_chunk_trace;
 #endif /* FLB_HAVE_CHUNK_TRACE */

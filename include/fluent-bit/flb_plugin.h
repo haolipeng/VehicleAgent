@@ -24,6 +24,10 @@
 #include <fluent-bit/flb_sds.h>
 #include <monkey/mk_core.h>
 
+/* Forward declarations */
+struct flb_config;
+struct flb_cf;
+
 #define FLB_PLUGIN_INPUT     1
 #define FLB_PLUGIN_FILTER    2
 #define FLB_PLUGIN_OUTPUT    3

@@ -194,15 +194,6 @@ struct flb_service_config service_configs[] = {
      FLB_CONF_TYPE_BOOL,
      offsetof(struct flb_config, json_escape_unicode)},
 
-#ifdef FLB_HAVE_STREAM_PROCESSOR
-    {FLB_CONF_STR_STREAMS_FILE,
-     FLB_CONF_TYPE_STR,
-     offsetof(struct flb_config, stream_processor_file)},
-    {FLB_CONF_STR_STREAMS_STR_CONV,
-     FLB_CONF_TYPE_BOOL,
-     offsetof(struct flb_config, stream_processor_str_conv)},
-#endif
-
 #ifdef FLB_HAVE_CHUNK_TRACE
     {FLB_CONF_STR_ENABLE_CHUNK_TRACE,
      FLB_CONF_TYPE_BOOL,
@@ -383,11 +374,6 @@ struct flb_config *flb_config_init()
     mk_list_init(&config->luajit_list);
 #endif
 
-#ifdef FLB_HAVE_STREAM_PROCESSOR
-    flb_slist_create(&config->stream_processor_tasks);
-    config->stream_processor_str_conv = FLB_TRUE;
-#endif
-
     flb_slist_create(&config->external_plugins);
 
     /* Set default coroutines stack size */
@@ -445,14 +431,6 @@ struct flb_config *flb_config_init()
     config->env = flb_env_create();
     if (config->env == NULL) {
         flb_error("[config] environment creation failed");
-        flb_config_exit(config);
-        return NULL;
-    }
-
-    /* Multiline core */
-    ret = flb_ml_init(config);
-    if (ret == -1) {
-        flb_error("[config] multiline core initialization failed");
         flb_config_exit(config);
         return NULL;
     }
@@ -624,14 +602,6 @@ void flb_config_exit(struct flb_config *config)
     if (config->storage_rejected_path) {
         flb_free(config->storage_rejected_path);
     }
-
-#ifdef FLB_HAVE_STREAM_PROCESSOR
-    if (config->stream_processor_file) {
-        flb_free(config->stream_processor_file);
-    }
-
-    flb_slist_destroy(&config->stream_processor_tasks);
-#endif
 
     flb_slist_destroy(&config->external_plugins);
 

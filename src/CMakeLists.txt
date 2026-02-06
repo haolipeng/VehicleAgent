@@ -92,11 +92,11 @@ set(src
   flb_msgpack_append_message.c
   flb_notification.c
   flb_lock.c
-  flb_cfl_ra_key.c
-  flb_cfl_record_accessor.c
   flb_conditionals.c
   flb_mem.c
   flb_blob_db.c
+  flb_record_accessor_stub.c
+  flb_multiline_stub.c
   )
 
 # Config format
@@ -111,13 +111,6 @@ if(FLB_HAVE_LIBYAML)
     config_format/flb_cf_yaml.c
     )
 endif()
-
-# Multiline subsystem
-add_subdirectory(multiline)
-set(src
-  ${src}
-  ${src_multiline}
-  )
 
 if(FLB_SYSTEM_WINDOWS)
   set(src
@@ -268,30 +261,6 @@ if(FLB_SYSTEM_MACOS)
     )
 endif()
 
-# Record Accessor
-# ---------------
-# Make sure it dependency is enabled
-if(FLB_RECORD_ACCESSOR AND NOT FLB_REGEX)
-  message(FATAL_ERROR
-    "FLB_RECORD_ACCESSOR depends on FLB_REGEX, "
-    "enable it with: -DFLB_REGEX=ON")
-endif()
-
-# Build record accessor files
-if(FLB_RECORD_ACCESSOR)
-  set(src
-    ${src}
-    "flb_record_accessor.c"
-    "flb_ra_key.c"
-    )
-  add_subdirectory(record_accessor)
-endif()
-
-# Stream Processor
-if(FLB_STREAM_PROCESSOR)
-  add_subdirectory(stream_processor)
-endif()
-
 # HTTP Server
 if(FLB_HTTP_SERVER)
   add_subdirectory(http_server)
@@ -394,14 +363,6 @@ endif()
 set(FLB_DEPS
   ${FLB_DEPS}
   )
-
-# Stream Processor
-if(FLB_STREAM_PROCESSOR)
-  set(FLB_DEPS
-    ${FLB_DEPS}
-    flb-sp
-    )
-endif()
 
 # Unicode Conversions
 add_subdirectory(unicode)

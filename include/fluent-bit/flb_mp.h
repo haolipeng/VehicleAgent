@@ -23,6 +23,9 @@
 #include <msgpack.h>
 #include <cfl/cfl.h>
 
+/* Forward declaration - struct defined in flb_record_accessor_stub.c */
+struct flb_record_accessor;
+
 #define FLB_MP_MAP        MSGPACK_OBJECT_MAP
 #define FLB_MP_ARRAY      MSGPACK_OBJECT_ARRAY
 

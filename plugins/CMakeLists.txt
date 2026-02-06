@@ -141,11 +141,6 @@ REGISTER_OUT_PLUGIN("out_lib")
 
 # FILTER PLUGINS
 # ==============
-if(FLB_REGEX)
-  REGISTER_FILTER_PLUGIN("filter_modify")
-endif()
-
-REGISTER_FILTER_PLUGIN("filter_record_modifier")
 REGISTER_FILTER_PLUGIN("filter_stdout")
 
 # Register external plugins

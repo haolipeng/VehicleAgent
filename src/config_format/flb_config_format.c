@@ -122,9 +122,6 @@ struct flb_cf *flb_cf_create()
     mk_list_init(&ctx->parsers);
     mk_list_init(&ctx->multiline_parsers);
 
-    /* stream processors */
-    mk_list_init(&ctx->stream_processors);
-
     /* external plugins (*.so) */
     mk_list_init(&ctx->plugins);
 
@@ -180,9 +177,6 @@ static enum section_type get_section_type(char *name, int len)
     }
     else if (strncasecmp(name, "multiline_parser", len) == 0) {
         return FLB_CF_MULTILINE_PARSER;
-    }
-    else if (strncasecmp(name, "stream_processor", len) == 0) {
-        return FLB_CF_STREAM_PROCESSOR;
     }
     else if (strncasecmp(name, "plugins", len) == 0) {
         return FLB_CF_PLUGINS;
@@ -693,9 +687,6 @@ struct flb_cf_section *flb_cf_section_create(struct flb_cf *cf, char *name, int 
     else if (type == FLB_CF_MULTILINE_PARSER) {
         mk_list_add(&s->_head_section, &cf->multiline_parsers);
     }
-    else if (type == FLB_CF_STREAM_PROCESSOR) {
-        mk_list_add(&s->_head_section, &cf->stream_processors);
-    }
     else if (type == FLB_CF_PLUGINS) {
         mk_list_add(&s->_head_section, &cf->plugins);
     }
@@ -796,8 +787,6 @@ static char *section_type_str(int type)
         return "PARSER";
     case FLB_CF_MULTILINE_PARSER:
         return "MULTILINE_PARSER";
-    case FLB_CF_STREAM_PROCESSOR:
-        return "STREAM_PROCESSOR";
     case FLB_CF_PLUGINS:
         return "PLUGINS";
     case FLB_CF_UPSTREAM_SERVERS:
