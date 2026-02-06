@@ -1,4 +1,0 @@
-# We need the git commit info
-# .git
-build/**
-dockerfiles/**
