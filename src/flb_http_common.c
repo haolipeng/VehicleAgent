@@ -784,33 +784,9 @@ int flb_http_request_perform_signv4_signature(
         struct flb_http_request *request,
         const char *aws_region,
         const char *aws_service,
-        struct flb_aws_provider *aws_provider)
+        void *aws_provider)
 {
-    flb_sds_t signature;
-
-#ifdef FLB_HAVE_SIGNV4
-#ifdef FLB_HAVE_AWS
-    flb_debug("signing request with AWS Sigv4");
-
-    signature = flb_signv4_ng_do(request,
-                                 FLB_TRUE,  /* normalize URI ? */
-                                 FLB_TRUE,  /* add x-amz-date header ? */
-                                 time(NULL),
-                                 (char *) aws_region,
-                                 (char *) aws_service,
-                                 0, NULL,
-                                 aws_provider);
-
-    if (signature == NULL) {
-        flb_error("could not sign request with sigv4");
-
-        return -1;
-    }
-
-    flb_sds_destroy(signature);
-#endif
-#endif
-
+    /* AWS support removed - this is now a no-op stub */
     return 0;
 }
 

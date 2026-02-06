@@ -39,12 +39,6 @@
 
 #include <fluent-bit/calyptia/calyptia_constants.h>
 
-#ifdef FLB_HAVE_AWS_ERROR_REPORTER
-#include <fluent-bit/aws/flb_aws_error_reporter.h>
-
-extern struct flb_aws_error_reporter *error_reporter;
-#endif
-
 #ifdef FLB_HAVE_OPENSSL
 #include <openssl/rand.h>
 #endif
@@ -136,20 +130,9 @@ void flb_utils_error(int err)
         fprintf(stderr,
                 "%sError%s: undefined. Aborting",
                 ANSI_BOLD ANSI_RED, ANSI_RESET);
-        #ifdef FLB_HAVE_AWS_ERROR_REPORTER
-        if (is_error_reporting_enabled()) {
-            flb_aws_error_reporter_write(error_reporter, "Error: undefined. Aborting\n");
-        }
-        #endif
-
     }
     else {
         flb_error("%s, aborting.", msg);
-        #ifdef FLB_HAVE_AWS_ERROR_REPORTER
-        if (is_error_reporting_enabled()) {
-            flb_aws_error_reporter_write(error_reporter, msg);
-        }
-        #endif
     }
 
     if (err <= FLB_ERR_FILTER_INVALID) {

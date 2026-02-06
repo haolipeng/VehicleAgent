@@ -13,7 +13,6 @@ set(UNIT_TESTS_FILES
   kv.c
   slist.c
   router.c
-  router_config.c
   network.c
   unit_sizes.c
   hashtable.c
@@ -55,7 +54,6 @@ set(UNIT_TESTS_FILES
   strptime.c
   storage_inherit.c
   unicode.c
-  opentelemetry.c
   storage_dlq.c
 )
 
@@ -119,13 +117,6 @@ if(FLB_METRICS)
     )
 endif()
 
-if(FLB_SIGNV4)
-  set(UNIT_TESTS_FILES
-    ${UNIT_TESTS_FILES}
-    signv4.c
-    )
-endif()
-
 if(FLB_AVRO_ENCODER)
   set(UNIT_TESTS_FILES
     ${UNIT_TESTS_FILES}
@@ -133,39 +124,6 @@ if(FLB_AVRO_ENCODER)
     )
 endif()
 
-if(FLB_AWS)
-  set(UNIT_TESTS_FILES
-    ${UNIT_TESTS_FILES}
-    aws_util.c
-    aws_compress.c
-    aws_aggregation.c
-    aws_credentials.c
-    aws_credentials_ec2.c
-    aws_credentials_sts.c
-    aws_credentials_http.c
-    aws_credentials_profile.c
-    )
-  if(FLB_HAVE_AWS_CREDENTIAL_PROCESS)
-    set(UNIT_TESTS_FILES
-      ${UNIT_TESTS_FILES}
-      aws_credentials_process.c
-      )
-  endif()
-endif()
-
-if(FLB_AWS_ERROR_REPORTER)
-  set(UNIT_TESTS_FILES
-    ${UNIT_TESTS_FILES}
-    error_reporter.c
-    )
-endif()
-
-if(FLB_LUAJIT)
-  set(UNIT_TESTS_FILES
-    ${UNIT_TESTS_FILES}
-    lua.c
-    )
-endif()
 
 set(UNIT_TESTS_DATA
   data/tls/certificate.pem
@@ -176,7 +134,6 @@ set(UNIT_TESTS_DATA
   data/parser/regex.conf
   data/input_chunk/log/a_thousand_plus_one_bytes.log
   data/input_chunk/log/test_buffer_valid.log
-  data/opentelemetry/logs.json
   )
 
 set(FLB_TESTS_DATA_PATH ${CMAKE_CURRENT_SOURCE_DIR}/)
@@ -212,10 +169,6 @@ function(prepare_unit_tests TEST_PREFIX SOURCEFILES)
         target_link_libraries(${source_file_we} ${JEMALLOC_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
       else()
         target_link_libraries(${source_file_we} ${CMAKE_THREAD_LIBS_INIT})
-      endif()
-
-      if(FLB_AWS)
-        target_link_libraries(${source_file_we} flb-aws)
       endif()
 
       if(FLB_STREAM_PROCESSOR)

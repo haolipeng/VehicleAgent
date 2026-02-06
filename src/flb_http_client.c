@@ -2531,7 +2531,7 @@ int flb_http_request_set_parameters_internal(
     size_t                          header_data_type;
     char                           *content_type;
     char                           *bearer_token;
-    struct flb_aws_provider        *aws_provider;
+    void                           *aws_provider;
     struct flb_slist_entry         *header_value;
     char                          **header_array;
     char                           *aws_service;

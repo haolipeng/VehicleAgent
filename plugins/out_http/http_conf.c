@@ -25,11 +25,6 @@
 #include <fluent-bit/flb_http_client.h>
 #include <fluent-bit/flb_record_accessor.h>
 
-#ifdef FLB_HAVE_SIGNV4
-#ifdef FLB_HAVE_AWS
-#include <fluent-bit/flb_aws_credentials.h>
-#endif
-#endif
 #include "http.h"
 #include "http_conf.h"
 
@@ -115,39 +110,6 @@ struct flb_out_http *flb_http_conf_create(struct flb_output_instance *ins,
     else {
         flb_output_net_default("127.0.0.1", 80, ins);
     }
-
-    /* Check if AWS SigV4 authentication is enabled */
-#ifdef FLB_HAVE_SIGNV4
-#ifdef FLB_HAVE_AWS
-    if (ctx->has_aws_auth) {
-        ctx->aws_service = flb_output_get_property(FLB_HTTP_AWS_CREDENTIAL_PREFIX
-                                                   "service", ctx->ins);
-        if (!ctx->aws_service) {
-            flb_plg_error(ins, "aws_auth option requires " FLB_HTTP_AWS_CREDENTIAL_PREFIX
-                          "service to be set");
-            flb_free(ctx);
-            return NULL;
-        }
-
-        ctx->aws_provider = flb_managed_chain_provider_create(
-            ins,
-            config,
-            FLB_HTTP_AWS_CREDENTIAL_PREFIX,
-            NULL,
-            flb_aws_client_generator()
-        );
-        if (!ctx->aws_provider) {
-            flb_plg_error(ins, "failed to create aws credential provider for sigv4 auth");
-            flb_free(ctx);
-            return NULL;
-        }
-
-        /* If managed provider creation succeeds, then region key is present */
-        ctx->aws_region = flb_output_get_property(FLB_HTTP_AWS_CREDENTIAL_PREFIX
-                                                  "region", ctx->ins);
-    }
-#endif /* !FLB_HAVE_AWS */
-#endif /* !FLB_HAVE_SIGNV4 */
 
     /* Check if SSL/TLS is enabled */
 #ifdef FLB_HAVE_TLS
@@ -315,14 +277,6 @@ void flb_http_conf_destroy(struct flb_out_http *ctx)
     if (ctx->u) {
         flb_upstream_destroy(ctx->u);
     }
-
-#ifdef FLB_HAVE_SIGNV4
-#ifdef FLB_HAVE_AWS
-    if (ctx->aws_provider) {
-        flb_aws_provider_destroy(ctx->aws_provider);
-    }
-#endif
-#endif
 
     flb_free(ctx->proxy_host);
     flb_free(ctx->uri);

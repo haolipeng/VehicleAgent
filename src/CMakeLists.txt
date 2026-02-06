@@ -112,14 +112,6 @@ if(FLB_HAVE_LIBYAML)
     )
 endif()
 
-# OpenTelemetry Helpers
-set(src
-  ${src}
-  opentelemetry/flb_opentelemetry_logs.c
-  opentelemetry/flb_opentelemetry_traces.c
-  opentelemetry/flb_opentelemetry_utils.c
-)
-
 # Multiline subsystem
 add_subdirectory(multiline)
 set(src
@@ -184,41 +176,11 @@ if(FLB_METRICS)
     )
 endif()
 
-if(FLB_SIGNV4 AND FLB_TLS)
-  set(src
-    ${src}
-    "flb_signv4.c"
-    "flb_signv4_ng.c"
-    )
-endif()
-
 if(FLB_HTTP_CLIENT_DEBUG)
   set(src
     ${src}
     "flb_http_client_debug.c"
      )
-endif()
-
-if (FLB_AWS_ERROR_REPORTER)
-  set(src
-    ${src}
-    "aws/flb_aws_error_reporter.c"
-    )
-endif()
-
-if(FLB_LUAJIT)
-  set(src
-    ${src}
-    "flb_lua.c"
-    "flb_luajit.c"
-    )
-endif()
-
-if(FLB_KAFKA)
-  set(src
-    ${src}
-    "flb_kafka.c"
-    )
 endif()
 
 # Link to libco
@@ -244,12 +206,6 @@ if(FLB_REGEX)
     ${src}
     "flb_regex.c"
     )
-endif()
-
-if(FLB_LUAJIT)
-  set(extra_libs
-    ${extra_libs}
-    ${LUAJIT_LIBRARIES})
 endif()
 
 if(FLB_SQLDB)
@@ -336,11 +292,6 @@ if(FLB_STREAM_PROCESSOR)
   add_subdirectory(stream_processor)
 endif()
 
-# AWS specific
-if(FLB_AWS)
-  add_subdirectory(aws)
-endif()
-
 # HTTP Server
 if(FLB_HTTP_SERVER)
   add_subdirectory(http_server)
@@ -354,18 +305,8 @@ if(FLB_PROXY_GO)
   set(FLB_PROXY_PLUGINS ${FLB_PROXY_PLUGINS} flb-plugin-proxy-go)
 endif()
 
-# WASM runtime
-if(FLB_WASM)
-  add_subdirectory(wasm)
-endif()
-
 if(FLB_UNICODE_ENCODER)
   add_subdirectory(simdutf)
-endif()
-
-# WAMRC compiler
-if(FLB_WAMRC)
-  add_subdirectory(wamrc)
 endif()
 
 # HTTP Server
@@ -382,14 +323,6 @@ set(FLB_DEPS
   avro-static
   jansson
   )
-endif()
-
-# WASM runtime
-if(FLB_WASM)
-  set(FLB_DEPS
-    ${FLB_DEPS}
-    vmlib-static
-    flb-wasm-static)
 endif()
 
 # Set static dependencies
@@ -448,14 +381,6 @@ set(FLB_DEPS
   simdutf-static
   flb-simdutf-connector-static
   )
-endif()
-
-# AWS specific
-if(FLB_AWS)
-  set(FLB_DEPS
-    ${FLB_DEPS}
-    flb-aws
-    )
 endif()
 
 # Record Accessor
@@ -573,11 +498,6 @@ if(FLB_BINARY)
   endif()
 
   target_link_libraries(fluent-bit-bin fluent-bit-static ${CMAKE_THREAD_LIBS_INIT})
-
-  # KAFKA SPECIFIC
-  if(FLB_SASL_ENABLED)
-    target_link_libraries(fluent-bit-bin sasl2)
-  endif()
 
   set_target_properties(fluent-bit-bin
     PROPERTIES

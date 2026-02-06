@@ -28,26 +28,10 @@
 #define FLB_HTTP_MIME_JSON      "application/json"
 #define FLB_HTTP_MIME_NDJSON    "application/x-ndjson"
 
-#ifdef FLB_HAVE_SIGNV4
-#ifdef FLB_HAVE_AWS
-#define FLB_HTTP_AWS_CREDENTIAL_PREFIX "aws_"
-#endif
-#endif
-
 struct flb_out_http {
     /* HTTP Auth */
     char *http_user;
     char *http_passwd;
-
-    /* AWS Auth */
-#ifdef FLB_HAVE_SIGNV4
-#ifdef FLB_HAVE_AWS
-    int has_aws_auth;
-    struct flb_aws_provider *aws_provider;
-    const char *aws_region;
-    const char *aws_service;
-#endif
-#endif
 
     /* Proxy */
     const char *proxy;

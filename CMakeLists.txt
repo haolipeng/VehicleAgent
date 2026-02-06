@@ -91,15 +91,6 @@ else()
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-z,noexecstack")
     set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-z,noexecstack")
   endif()
-  # The following flags are to enhance security, but it may impact performance,
-  # we disable them by default.
-  if (FLB_WASM_STACK_PROTECT)
-    if (WAMR_BUILD_TARGET MATCHES "X86_.*" OR WAMR_BUILD_TARGET STREQUAL "AMD_64")
-      set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -ftrapv -D_FORTIFY_SOURCE=2")
-    endif ()
-    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fstack-protector-strong --param ssp-buffer-size=4")
-    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wl,-z,noexecstack,-z,relro,-z,now")
-  endif()
 endif()
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D__FLB_FILENAME__=__FILE__")
@@ -113,16 +104,6 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
   add_definitions(-DFLB_SYSTEM_FREEBSD)
   set(CMAKE_C_LINK_FLAGS "${CMAKE_C_LINK_FLAGS} -lutil")
   set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -lutil")
-endif()
-
-# *BSD is not supported platform for wasm-micro-runtime except for FreeBSD.
-# Now, we should be disabled for these platforms.
-if(NOT FLB_SYSTEM_FREEBSD AND ${CMAKE_SYSTEM_NAME} MATCHES "BSD")
-  message(STATUS "This platform is not supported for WASM feature so disabled.")
-  set(FLB_WASM OFF)
-elseif(FLB_SYSTEM_FREEBSD)
-  message(STATUS "Some of FreeBSD environment do not work with hardware boundary check so disabled.")
-  set(WAMR_DISABLE_STACK_HW_BOUND_CHECK 1)
 endif()
 
 INCLUDE(TestBigEndian)
@@ -189,23 +170,15 @@ option(FLB_INOTIFY             "Enable inotify support"       Yes)
 option(FLB_SQLDB               "Enable SQL embedded DB"       Yes)
 option(FLB_HTTP_SERVER         "Enable HTTP Server"           Yes)
 option(FLB_BACKTRACE           "Enable stacktrace support"    Yes)
-option(FLB_LUAJIT              "Enable Lua Scripting support" Yes)
 option(FLB_RECORD_ACCESSOR     "Enable record accessor"       Yes)
-option(FLB_SIGNV4              "Enable AWS Signv4 support"    Yes)
-option(FLB_AWS                 "Enable AWS support"           Yes)
 option(FLB_STATIC_CONF         "Build binary using static configuration")
 option(FLB_STREAM_PROCESSOR    "Enable Stream Processor"                    Yes)
 option(FLB_SIMD                "Enable SIMD support"                         No)
 option(FLB_CORO_STACK_SIZE     "Set coroutine stack size")
 option(FLB_AVRO_ENCODER        "Build with Avro encoding support"            No)
-option(FLB_AWS_ERROR_REPORTER  "Build with aws error reporting support"      No)
 option(FLB_ARROW               "Build with Apache Arrow support"             No)
 option(FLB_WINDOWS_DEFAULTS    "Build with predefined Windows settings"     Yes)
-option(FLB_WASM                "Build with WASM runtime support"            Yes)
-option(FLB_WAMRC               "Build with WASM AOT compiler executable"    No)
-option(FLB_WASM_STACK_PROTECT  "Build with WASM runtime with strong stack protector flags" No)
 option(FLB_ENFORCE_ALIGNMENT   "Enable limited platform specific aligned memory access" No)
-option(FLB_KAFKA               "Enable Kafka support"         Yes)
 option(FLB_ZIG                 "Enable zig integration"       Yes)
 
 # Native Metrics Support (cmetrics)
@@ -268,8 +241,6 @@ option(FLB_PREFER_SYSTEM_LIBS             "Prefer system libraries"             
 option(FLB_PREFER_SYSTEM_LIB_BACKTRACE    "Prefer the libbacktrace system library"    ${FLB_PREFER_SYSTEM_LIBS})
 option(FLB_PREFER_SYSTEM_LIB_CARES        "Prefer the libcares system library"        ${FLB_PREFER_SYSTEM_LIBS})
 option(FLB_PREFER_SYSTEM_LIB_JEMALLOC     "Prefer the libjemalloc system library"     ${FLB_PREFER_SYSTEM_LIBS})
-option(FLB_PREFER_SYSTEM_LIB_KAFKA        "Prefer the libkafka system library"        ${FLB_PREFER_SYSTEM_LIBS})
-option(FLB_PREFER_SYSTEM_LIB_LUAJIT       "Prefer the libluajit system library"       ${FLB_PREFER_SYSTEM_LIBS})
 option(FLB_PREFER_SYSTEM_LIB_MSGPACK      "Prefer the libmsgpack system library"      ${FLB_PREFER_SYSTEM_LIBS})
 option(FLB_PREFER_SYSTEM_LIB_NGHTTP2      "Prefer the libnghttp2 system library"      ${FLB_PREFER_SYSTEM_LIBS})
 option(FLB_PREFER_SYSTEM_LIB_SQLITE       "Prefer the libsqlite3 system library"      ${FLB_PREFER_SYSTEM_LIBS})
@@ -310,7 +281,6 @@ if(FLB_ALL)
   set(FLB_OUT_RETRY       1)
   set(FLB_OUT_TD          1)
   set(FLB_OUT_STDOUT      1)
-  set(FLB_OUT_S3          1)
   set(FLB_OUT_SYSLOG      1)
   set(FLB_OUT_LIB         1)
   set(FLB_OUT_FLOWCOUNTER 1)
@@ -352,11 +322,6 @@ endif()
 
 if (FLB_TESTS_OSSFUZZ)
   FLB_DEFINITION(FLB_HAVE_TESTS_OSSFUZZ)
-endif()
-
-if (FLB_WASM)
-  # For Linking libedit adjustments on LLVM 15.
-  include(cmake/FindLibEdit.cmake)
 endif()
 
 # Set Fluent Bit dependency libraries path
@@ -808,88 +773,6 @@ if(FLB_PROFILES)
   FLB_DEFINITION(FLB_HAVE_PROFILES)
 endif()
 
-# WASM
-if(FLB_WASM)
-  if (FLB_SYSTEM_LINUX)
-    check_c_source_compiles("
-       #include <stdatomic.h>
-       int main() {
-          _Atomic int a;
-          return 0;
-       }" FLB_HAVE_STDATOMIC_H)
-    include(CheckIncludeFiles)
-    check_include_files(stdatomic.h FLB_HAVE_STDATOMIC_H)
-    if (FLB_HAVE_STDATOMIC_H)
-      enable_language (ASM)
-      FLB_DEFINITION(FLB_HAVE_WASM)
-    else ()
-      message(STATUS "This platform does not provide stdatomic.h that is needed for the FLB_WASM feature so disabled.")
-      set(FLB_WASM OFF)
-    endif ()
-  else ()
-    enable_language (ASM)
-    FLB_DEFINITION(FLB_HAVE_WASM)
-  endif ()
-endif()
-
-# Kafka support (library in general)
-if(FLB_KAFKA)
-  if(FLB_IN_KAFKA OR FLB_OUT_KAFKA)
-    if(FLB_PREFER_SYSTEM_LIB_KAFKA)
-      find_package(PkgConfig)
-      pkg_check_modules(KAFKA rdkafka>=2.3.0)
-    endif()
-    if(KAFKA_FOUND)
-      include_directories(${KAFKA_INCLUDE_DIRS})
-      link_directories(${KAFKA_LIBRARY_DIRS})
-    else()
-      include(cmake/kafka.cmake)
-    endif()
-  endif()
-endif()
-
-# AWS MSK IAM detection (must come after Kafka section)
-if(FLB_AWS AND FLB_KAFKA)
-  # Check if Kafka SASL support was detected
-  if(DEFINED FLB_SASL_ENABLED AND FLB_SASL_ENABLED)
-    set(FLB_HAVE_AWS_MSK_IAM ON)  # Set CMake variable
-    FLB_DEFINITION(FLB_HAVE_AWS_MSK_IAM)  # Set preprocessor definition
-    message(STATUS "AWS MSK IAM authentication: ENABLED")
-  else()
-    message(STATUS "AWS MSK IAM authentication: DISABLED (requires Kafka with libsasl2)")
-  endif()
-else()
-  if(FLB_AWS AND NOT FLB_KAFKA)
-    message(STATUS "AWS MSK IAM authentication: DISABLED (requires FLB_KAFKA=ON)")
-  endif()
-endif()
-
-# AWS
-if (FLB_AWS)
-  FLB_DEFINITION(FLB_HAVE_AWS)
-
-  # Support for credential_process in the AWS config file is currently Linux-only.
-  # The current implementation might work for other Unix systems, but would require
-  # further testing to confirm.
-  # Spawning a sub-process in Windows is very different and will require its own
-  # implementation.
-  if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-    FLB_OPTION(FLB_HAVE_AWS_CREDENTIAL_PROCESS ON)
-    FLB_DEFINITION(FLB_HAVE_AWS_CREDENTIAL_PROCESS)
-  else()
-    FLB_OPTION(FLB_HAVE_AWS_CREDENTIAL_PROCESS OFF)
-  endif()
-endif()
-
-if (FLB_AWS_ERROR_REPORTER)
-  FLB_DEFINITION(FLB_HAVE_AWS_ERROR_REPORTER)
-endif()
-
-# Signv4
-if (FLB_SIGNV4)
-  FLB_DEFINITION(FLB_HAVE_SIGNV4)
-endif()
-
 if(FLB_SQLDB)
   if(FLB_PREFER_SYSTEM_LIB_SQLITE)
     find_package(PkgConfig)
@@ -1279,22 +1162,6 @@ endif()
 # =====================
 if(FLB_AVRO_ENCODER)
   FLB_DEFINITION(FLB_HAVE_AVRO_ENCODER)
-endif()
-
-# LuaJIT (Scripting Support)
-# ==========================
-if(FLB_LUAJIT)
-  if(FLB_PREFER_SYSTEM_LIB_LUAJIT)
-    find_package(PkgConfig)
-    pkg_check_modules(LUAJIT luajit>=2.1.0)
-  endif()
-  if(LUAJIT_FOUND)
-    include_directories(${LUAJIT_INCLUDE_DIRS})
-    link_directories(${LUAJIT_LIBRARY_DIRS})
-  else()
-    include(cmake/luajit.cmake)
-  endif()
-  FLB_DEFINITION(FLB_HAVE_LUAJIT)
 endif()
 
 # PostgreSQL

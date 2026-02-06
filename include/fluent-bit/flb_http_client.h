@@ -301,8 +301,6 @@ struct flb_http_client_session {
     struct cfl_list                 _head;
 };
 
-struct flb_aws_provider;
-
 int flb_http_client_ng_init(struct flb_http_client_ng *client,
                             struct flb_upstream_ha *upstream_ha,
                             struct flb_upstream *upstream,

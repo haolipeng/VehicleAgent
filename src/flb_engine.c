@@ -66,12 +66,6 @@
 #include <fluent-bit/stream_processor/flb_sp.h>
 #endif
 
-#ifdef FLB_HAVE_AWS_ERROR_REPORTER
-#include <fluent-bit/aws/flb_aws_error_reporter.h>
-
-extern struct flb_aws_error_reporter *error_reporter;
-#endif
-
 #include <ctraces/ctr_version.h>
 
 static pthread_once_t local_thread_engine_evl_init = PTHREAD_ONCE_INIT;
@@ -1282,15 +1276,6 @@ int flb_engine_start(struct flb_config *config)
             flb_upstream_conn_pending_destroy_list(&config->upstreams);
             flb_downstream_conn_pending_destroy_list(&config->downstreams);
 
-            /*
-            * depend on main thread to clean up expired message
-            * in aws error reporting message queue
-            */
-            #ifdef FLB_HAVE_AWS_ERROR_REPORTER
-            if (is_error_reporting_enabled()) {
-                flb_aws_error_reporter_clean(error_reporter);
-            }
-            #endif
         }
     }
 }

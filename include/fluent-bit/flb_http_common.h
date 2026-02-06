@@ -140,8 +140,6 @@ struct flb_http_stream {
     struct cfl_list                 _head;
 };
 
-struct flb_aws_provider;
-
 /* HTTP REQUEST */
 
 int flb_http_request_init(struct flb_http_request *request);
@@ -210,7 +208,7 @@ int flb_http_request_perform_signv4_signature(
         struct flb_http_request *request,
         const char *aws_region,
         const char *aws_service,
-        struct flb_aws_provider *aws_provider);
+        void *aws_provider);
 
 /* HTTP RESPONSE */
 
