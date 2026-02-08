@@ -2,8 +2,6 @@
 set(FLB_PATH_LIB_CFL         "lib/cfl")
 set(FLB_PATH_LIB_FLUENT_OTEL "lib/fluent-otel-proto")
 set(FLB_PATH_LIB_CMETRICS    "lib/cmetrics")
-set(FLB_PATH_LIB_CTRACES     "lib/ctraces")
-set(FLB_PATH_LIB_CPROFILES   "lib/cprofiles")
 
 set(FLB_PATH_LIB_CO          "lib/flb_libco")
 set(FLB_PATH_LIB_RBTREE      "lib/rbtree")
@@ -21,7 +19,7 @@ set(FLB_PATH_LIB_MPACK       "lib/mpack-amalgamation-1.1.1")
 set(FLB_PATH_LIB_MINIZ       "lib/miniz")
 set(FLB_PATH_LIB_TUTF8E      "lib/tutf8e")
 set(FLB_PATH_LIB_CARES       "lib/c-ares-1.34.6")
-set(FLB_PATH_LIB_SNAPPY      "lib/snappy-fef67ac")
+# Snappy removed
 # Kafka removed - FLB_KAFKA disabled
 set(FLB_PATH_LIB_RING_BUFFER "lib/lwrb")
 # WASM removed - FLB_WASM disabled

@@ -24,12 +24,10 @@ set(UNIT_TESTS_FILES
   config_map.c
   mp.c
   mp_chunk_cobj.c
-  input_chunk.c
   input_chunk_routes.c
   flb_time.c
   file.c
   csv.c
-  multiline.c
   typecast.c
   base64.c
   bucket_queue.c
@@ -37,18 +35,12 @@ set(UNIT_TESTS_FILES
   ring_buffer.c
   regex.c
   parser_json.c
-  parser_ltsv.c
-  parser_regex.c
-  parser_logfmt.c
   env.c
   log.c
   log_event_decoder.c
   log_event_encoder.c
-  processor.c
-  processor_conditional.c
   uri.c
   msgpack_append_message.c
-  conditionals.c
   endianness.c
   task_map.c
   strptime.c
@@ -162,10 +154,6 @@ function(prepare_unit_tests TEST_PREFIX SOURCEFILES)
         target_link_libraries(${source_file_we} ${JEMALLOC_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
       else()
         target_link_libraries(${source_file_we} ${CMAKE_THREAD_LIBS_INIT})
-      endif()
-
-      if(FLB_STREAM_PROCESSOR)
-        target_link_libraries(${source_file_we} flb-sp)
       endif()
 
       target_link_libraries(${source_file_we} fluent-bit-static cfl-static)

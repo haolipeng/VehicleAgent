@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <fcntl.h>
 
 #include <msgpack.h>
@@ -33,11 +14,6 @@
 #include <fluent-bit/flb_router.h>
 #include <fluent-bit/flb_kv.h>
 
-
-/* Register external function to emit records, check 'plugins/in_emitter' */
-int in_emitter_add_record(const char *tag, int tag_len,
-                          const char *buf_data, size_t buf_size,
-                          struct flb_input_instance *in);
 
 /****************************************************************************/
 /* To avoid double frees when enabling and disabling tracing as well        */
@@ -82,20 +58,6 @@ static inline void flb_chunk_trace_sub(struct flb_chunk_trace_context *ctxt)
 static inline void flb_chunk_trace_set_destroy(struct flb_chunk_trace_context *ctxt)
 {
     ctxt->to_destroy = 1;
-}
-
-static struct flb_output_instance *find_calyptia_output_instance(struct flb_config *config)
-{
-    struct mk_list *head = NULL;
-    struct flb_output_instance *output = NULL;
-
-    mk_list_foreach(head, &config->outputs) {
-        output = mk_list_entry(head, struct flb_output_instance, _head);
-        if (strcmp(output->p->name, "calyptia") == 0) {
-            return output;
-        }
-    }
-    return NULL;
 }
 
 static void trace_pipeline_stop(struct flb_chunk_pipeline_context *pipeline)
@@ -181,7 +143,7 @@ static void *trace_chunk_pipeline_thread(void *arg)
 
     flb_service_set(ctx->flb, "flush", "1", "grace", "1", NULL);
 
-    input = (void *)flb_input_new(ctx->flb->config, "emitter", NULL, FLB_FALSE);
+    input = (void *)flb_input_new(ctx->flb->config, "dummy", NULL, FLB_FALSE);
     if (input == NULL) {
         flb_error("could not load trace emitter");
         goto error_flb;
@@ -344,21 +306,10 @@ static int trace_pipeline_init(struct flb_chunk_pipeline_context *pipeline,
                            struct flb_config *config, const char *output_name,
                            void *data, struct mk_list *props)
 {
-    struct flb_output_instance *calyptia = NULL;
-
     pipeline->data = data;
     pipeline->output_name = flb_sds_create(output_name);
 
-    if (strcmp(pipeline->output_name, "calyptia") == 0) {
-        calyptia = find_calyptia_output_instance(config);
-        if (calyptia == NULL) {
-            flb_error("unable to find calyptia output instance");
-            flb_sds_destroy(pipeline->output_name);
-            return FLB_FALSE;
-        }
-        pipeline->props = &calyptia->properties;
-    }
-    else if (props != NULL) {
+    if (props != NULL) {
         pipeline->props = props;
     }
 

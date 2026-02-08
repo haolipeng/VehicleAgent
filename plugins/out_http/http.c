@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <fluent-bit/flb_output_plugin.h>
 #include <fluent-bit/flb_output.h>
 #include <fluent-bit/flb_http_client.h>
@@ -28,7 +9,6 @@
 #include <fluent-bit/flb_sds.h>
 
 #include <fluent-bit/flb_gzip.h>
-#include <fluent-bit/flb_snappy.h>
 #include <fluent-bit/flb_zstd.h>
 
 #include <fluent-bit/flb_log_event_decoder.h>
@@ -144,13 +124,6 @@ static int http_request(struct flb_out_http *ctx,
             compressed = FLB_TRUE;
         }
     }
-    else if (ctx->compress_snappy == FLB_TRUE) {
-        ret = flb_snappy_compress((void *) body, body_len,
-                                  (char **) &payload_buf, &payload_size);
-        if (ret == 0) {
-            compressed = FLB_TRUE;
-        }
-    }
     else if (ctx->compress_zstd == FLB_TRUE) {
         ret = flb_zstd_compress((void *) body, body_len,
                                 &payload_buf, &payload_size);
@@ -246,9 +219,6 @@ static int http_request(struct flb_out_http *ctx,
     if (compressed == FLB_TRUE) {
         if (ctx->compress_gzip == FLB_TRUE) {
             flb_http_set_content_encoding_gzip(c);
-        }
-        else if (ctx->compress_snappy == FLB_TRUE) {
-            flb_http_set_content_encoding_snappy(c);
         }
         else if (ctx->compress_zstd == FLB_TRUE) {
             flb_http_set_content_encoding_zstd(c);
@@ -559,7 +529,7 @@ static struct flb_config_map config_map[] = {
     {
      FLB_CONFIG_MAP_STR, "compress", NULL,
      0, FLB_FALSE, 0,
-     "Set payload compression mechanism. Option available are 'gzip', 'snappy' and 'zstd'"
+     "Set payload compression mechanism. Option available are 'gzip' and 'zstd'"
     },
     {
      FLB_CONFIG_MAP_SLIST_1, "header", NULL,

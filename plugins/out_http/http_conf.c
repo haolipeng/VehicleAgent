@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <fluent-bit/flb_output_plugin.h>
 #include <fluent-bit/flb_utils.h>
 #include <fluent-bit/flb_pack.h>
@@ -192,9 +173,6 @@ struct flb_out_http *flb_http_conf_create(struct flb_output_instance *ins,
     if (tmp) {
         if (strcasecmp(tmp, "gzip") == 0) {
             ctx->compress_gzip = FLB_TRUE;
-        }
-        else if (strcasecmp(tmp, "snappy") == 0) {
-            ctx->compress_snappy = FLB_TRUE;
         }
         else if (strcasecmp(tmp, "zstd") == 0) {
             ctx->compress_zstd = FLB_TRUE;

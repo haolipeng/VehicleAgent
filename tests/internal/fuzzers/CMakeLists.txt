@@ -5,7 +5,6 @@ set(UNIT_TESTS_FILES
   cmetrics_decode_prometheus.c
   config_fuzzer.c
   config_random_fuzzer.c
-  ctrace_fuzzer.c
   input_fuzzer.c
   flb_json_fuzzer.c
   flb_mp_fuzzer.c
@@ -13,8 +12,6 @@ set(UNIT_TESTS_FILES
   fstore_fuzzer.c
   parser_fuzzer.c
   parse_json_fuzzer.c
-  parse_logfmt_fuzzer.c
-  parse_ltsv_fuzzer.c
   msgpack_parse_fuzzer.c
   msgpack_to_gelf_fuzzer.c
   multiline_fuzzer.c
@@ -41,10 +38,6 @@ foreach(source_file ${UNIT_TESTS_FILES})
     target_link_libraries(${source_file_we} ${JEMALLOC_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
   else()
     target_link_libraries(${source_file_we} ${CMAKE_THREAD_LIBS_INIT})
-  endif()
-
-  if(FLB_STREAM_PROCESSOR)
-    target_link_libraries(${source_file_we} flb-sp)
   endif()
 
   target_link_libraries(${source_file_we} fluent-bit-static)

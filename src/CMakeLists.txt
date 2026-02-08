@@ -28,8 +28,6 @@ set(src
   flb_input_chunk.c
   flb_input_log.c
   flb_input_metric.c
-  flb_input_trace.c
-  flb_input_profiles.c
   flb_input_blob.c
   flb_input_thread.c
   flb_filter.c
@@ -66,7 +64,6 @@ set(src
   flb_random.c
   flb_plugin.c
   flb_gzip.c
-  flb_snappy.c
   flb_zstd.c
   flb_compression.c
   flb_http_common.c
@@ -124,11 +121,8 @@ if(FLB_PARSER)
   set(src
     ${src}
     flb_parser.c
-    flb_parser_regex.c
     flb_parser_json.c
     flb_parser_decoder.c
-    flb_parser_ltsv.c
-    flb_parser_logfmt.c
     )
 endif()
 
@@ -151,13 +145,6 @@ if(FLB_TLS)
   # Make sure our output targets links to the TLS library
   set(extra_libs
     ${extra_libs}
-    )
-endif()
-
-if(FLB_PROXY_GO)
-  set(src
-    ${src}
-    "flb_plugin_proxy.c"
     )
 endif()
 
@@ -269,11 +256,6 @@ endif()
 # Proxy interfaces
 add_subdirectory(proxy)
 
-set(FLB_PROXY_PLUGINS "")
-if(FLB_PROXY_GO)
-  set(FLB_PROXY_PLUGINS ${FLB_PROXY_PLUGINS} flb-plugin-proxy-go)
-endif()
-
 if(FLB_UNICODE_ENCODER)
   add_subdirectory(simdutf)
 endif()
@@ -299,9 +281,7 @@ set(FLB_DEPS
   ${FLB_DEPS}
   cfl-static
   fluent-otel-proto
-  cprofiles-static
   cmetrics-static
-  ctraces-static
   mk_core
   jsmn
   yyjson
@@ -312,10 +292,8 @@ set(FLB_DEPS
   ${LIBZSTD_LIBRARIES}
 
   ${FLB_PLUGINS}
-  ${FLB_PROXY_PLUGINS}
   ${extra_libs}
   ${LIBCARES_LIBRARIES}
-  snappy-c
   lwrb
   ${NGHTTP2_LIBRARIES}
   )

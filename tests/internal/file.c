@@ -3,7 +3,6 @@
 #include <string.h>
 
 #include "flb_tests_internal.h"
-#include "fluent-bit/stream_processor/flb_sp.h"
 
 #define TEXT_FILE    FLB_TESTS_DATA_PATH "/data/file/text_file.txt"
 #define EMPTY_FILE    FLB_TESTS_DATA_PATH "/data/file/empty_file.txt"

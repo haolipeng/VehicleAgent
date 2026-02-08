@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <ctype.h>
 #include <inttypes.h>
 #include <stdio.h>
@@ -180,8 +161,7 @@ static int validate_rule_field(const char *field, uint32_t signals)
 
     if (signals == FLB_ROUTER_SIGNAL_ANY) {
         signals = FLB_ROUTER_SIGNAL_LOGS |
-                  FLB_ROUTER_SIGNAL_METRICS |
-                  FLB_ROUTER_SIGNAL_TRACES;
+                  FLB_ROUTER_SIGNAL_METRICS;
     }
 
     if ((signals & FLB_ROUTER_SIGNAL_LOGS) && field_allowed_for_logs(field)) {
@@ -190,11 +170,6 @@ static int validate_rule_field(const char *field, uint32_t signals)
 
     if ((signals & FLB_ROUTER_SIGNAL_METRICS) &&
         field_allowed_for_metrics(field)) {
-        ok = FLB_TRUE;
-    }
-
-    if ((signals & FLB_ROUTER_SIGNAL_TRACES) &&
-        field_allowed_for_traces(field)) {
         ok = FLB_TRUE;
     }
 
@@ -239,9 +214,6 @@ static uint32_t parse_signal_key(const char *key)
         }
         else if (len == 7 && strncasecmp(start, "metrics", len) == 0) {
             mask |= FLB_ROUTER_SIGNAL_METRICS;
-        }
-        else if (len == 6 && strncasecmp(start, "traces", len) == 0) {
-            mask |= FLB_ROUTER_SIGNAL_TRACES;
         }
         else if (len == 3 && strncasecmp(start, "any", len) == 0) {
             mask |= FLB_ROUTER_SIGNAL_ANY;
@@ -1423,9 +1395,6 @@ static int output_supports_signals(struct flb_output_instance *out, uint32_t sig
         return FLB_FALSE;
     }
     if ((signals & FLB_ROUTER_SIGNAL_METRICS) && !(out->event_type & FLB_OUTPUT_METRICS)) {
-        return FLB_FALSE;
-    }
-    if ((signals & FLB_ROUTER_SIGNAL_TRACES) && !(out->event_type & FLB_OUTPUT_TRACES)) {
         return FLB_FALSE;
     }
 

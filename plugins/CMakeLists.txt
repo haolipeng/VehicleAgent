@@ -124,20 +124,16 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
   REGISTER_IN_PLUGIN("in_mem")
 endif()
 
-REGISTER_IN_PLUGIN("in_emitter")
 REGISTER_IN_PLUGIN("in_dummy")
 REGISTER_IN_PLUGIN("in_tcp")
 REGISTER_IN_PLUGIN("in_unix_socket")
-REGISTER_IN_PLUGIN("in_lib")
 
 # OUTPUT PLUGINS
 # ==============
 REGISTER_OUT_PLUGIN("out_file")
 REGISTER_OUT_PLUGIN("out_http")
-REGISTER_OUT_PLUGIN("out_null")
 REGISTER_OUT_PLUGIN("out_stdout")
 REGISTER_OUT_PLUGIN("out_tcp")
-REGISTER_OUT_PLUGIN("out_lib")
 
 # FILTER PLUGINS
 # ==============

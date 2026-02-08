@@ -1,27 +1,7 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2022 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <fluent-bit/flb_mem.h>
 
 #include <fluent-bit/http_server/flb_http_server.h>
 #include <fluent-bit/flb_http_common.h>
-#include <fluent-bit/flb_snappy.h>
 #include <fluent-bit/flb_gzip.h>
 #include <fluent-bit/flb_zstd.h>
 
@@ -44,12 +24,6 @@ int uncompress_deflate(char **output_buffer,
                        size_t *output_size,
                        char *input_buffer,
                        size_t input_size);
-
-static \
-int uncompress_snappy(char **output_buffer,
-                      size_t *output_size,
-                      char *input_buffer,
-                      size_t input_size);
 
 static \
 int uncompress_gzip(char **output_buffer,
@@ -80,12 +54,6 @@ int compress_deflate(char **output_buffer,
                      size_t *output_size,
                      char *input_buffer,
                      size_t input_size);
-
-static \
-int compress_snappy(char **output_buffer,
-                    size_t *output_size,
-                    char *input_buffer,
-                    size_t input_size);
 
 static \
 int compress_gzip(char **output_buffer,
@@ -350,12 +318,6 @@ int flb_http_request_compress_body(
                                request->body,
                                cfl_sds_len(request->body));
     }
-    else if (strncasecmp(content_encoding_header_value, "snappy", 6) == 0) {
-        result = compress_snappy(&output_buffer,
-                                 &output_size,
-                                 request->body,
-                                 cfl_sds_len(request->body));
-    }
     else if (strncasecmp(content_encoding_header_value, "deflate", 7) == 0) {
         result = compress_deflate(&output_buffer,
                                   &output_size,
@@ -429,12 +391,6 @@ int flb_http_request_uncompress_body(
     }
     else if (strncasecmp(content_encoding_header_value, "zstd", 4) == 0) {
         result = uncompress_zstd(&output_buffer,
-                                    &output_size,
-                                    request->body,
-                                    cfl_sds_len(request->body));
-    }
-    else if (strncasecmp(content_encoding_header_value, "snappy", 6) == 0) {
-        result = uncompress_snappy(&output_buffer,
                                     &output_size,
                                     request->body,
                                     cfl_sds_len(request->body));
@@ -1185,12 +1141,6 @@ int flb_http_response_compress_body(
                                response->body,
                                cfl_sds_len(response->body));
     }
-    else if (strncasecmp(content_encoding_header_value, "snappy", 6) == 0) {
-        result = compress_snappy(&output_buffer,
-                                 &output_size,
-                                 response->body,
-                                 cfl_sds_len(response->body));
-    }
     else if (strncasecmp(content_encoding_header_value, "deflate", 4) == 0) {
         result = compress_deflate(&output_buffer,
                                   &output_size,
@@ -1268,12 +1218,6 @@ int flb_http_response_uncompress_body(
     }
     else if (strncasecmp(content_encoding_header_value, "zstd", 4) == 0) {
         result = uncompress_zstd(&output_buffer,
-                                    &output_size,
-                                    response->body,
-                                    cfl_sds_len(response->body));
-    }
-    else if (strncasecmp(content_encoding_header_value, "snappy", 6) == 0) {
-        result = uncompress_snappy(&output_buffer,
                                     &output_size,
                                     response->body,
                                     cfl_sds_len(response->body));
@@ -1510,27 +1454,6 @@ int uncompress_deflate(char **output_buffer,
 }
 
 static \
-int uncompress_snappy(char **output_buffer,
-                      size_t *output_size,
-                      char *input_buffer,
-                      size_t input_size)
-{
-    int ret;
-
-    ret = flb_snappy_uncompress_framed_data(input_buffer,
-                                            input_size,
-                                            output_buffer,
-                                            output_size);
-
-    if (ret != 0) {
-        flb_error("[http snappy] decompression failed");
-        return -1;
-    }
-
-    return 1;
-}
-
-static \
 int uncompress_gzip(char **output_buffer,
                     size_t *output_size,
                     char *input_buffer,
@@ -1587,15 +1510,6 @@ int compress_deflate(char **output_buffer,
                      size_t *output_size,
                      char *input_buffer,
                      size_t input_size)
-{
-    return 0;
-}
-
-static \
-int compress_snappy(char **output_buffer,
-                    size_t *output_size,
-                    char *input_buffer,
-                    size_t input_size)
 {
     return 0;
 }

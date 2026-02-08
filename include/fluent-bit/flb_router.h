@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2025 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #ifndef FLB_ROUTER_H
 #define FLB_ROUTER_H
 
@@ -76,14 +57,6 @@ static inline int flb_router_match_type(int in_event_type,
              !(o_ins->event_type & FLB_OUTPUT_METRICS)) {
         return FLB_FALSE;
     }
-    else if (in_event_type == FLB_INPUT_TRACES &&
-             !(o_ins->event_type & FLB_OUTPUT_TRACES)) {
-        return FLB_FALSE;
-    }
-    else if (in_event_type == FLB_INPUT_PROFILES &&
-             !(o_ins->event_type & FLB_OUTPUT_PROFILES)) {
-        return FLB_FALSE;
-    }
     else if (in_event_type == FLB_INPUT_BLOBS &&
              !(o_ins->event_type & FLB_OUTPUT_BLOBS)) {
         return FLB_FALSE;
@@ -95,10 +68,8 @@ static inline int flb_router_match_type(int in_event_type,
 enum flb_router_signal {
     FLB_ROUTER_SIGNAL_LOGS    = (1U << 0),
     FLB_ROUTER_SIGNAL_METRICS = (1U << 1),
-    FLB_ROUTER_SIGNAL_TRACES  = (1U << 2),
     FLB_ROUTER_SIGNAL_ANY     = (FLB_ROUTER_SIGNAL_LOGS |
-                                 FLB_ROUTER_SIGNAL_METRICS |
-                                 FLB_ROUTER_SIGNAL_TRACES)
+                                 FLB_ROUTER_SIGNAL_METRICS)
 };
 
 struct flb_route_condition_rule {
@@ -187,9 +158,6 @@ int flb_condition_eval_logs(struct flb_event_chunk *chunk,
 int flb_condition_eval_metrics(struct flb_event_chunk *chunk,
                                struct flb_router_chunk_context *context,
                                struct flb_route *route);
-int flb_condition_eval_traces(struct flb_event_chunk *chunk,
-                              struct flb_router_chunk_context *context,
-                              struct flb_route *route);
 int flb_router_path_should_route(struct flb_event_chunk *chunk,
                                  struct flb_router_chunk_context *context,
                                  struct flb_router_path *path);

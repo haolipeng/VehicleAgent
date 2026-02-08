@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 /*
  * This is a very simple HTTP Client interface which aims to provide an
  * easy way to issue HTTP requests and handle reponses from the input/output
@@ -1190,17 +1171,6 @@ int flb_http_set_content_encoding_zstd(struct flb_http_client *c)
                               FLB_HTTP_HEADER_CONTENT_ENCODING,
                               sizeof(FLB_HTTP_HEADER_CONTENT_ENCODING) - 1,
                               "zstd", 4);
-    return ret;
-}
-
-int flb_http_set_content_encoding_snappy(struct flb_http_client *c)
-{
-    int ret;
-
-    ret = flb_http_add_header(c,
-                              FLB_HTTP_HEADER_CONTENT_ENCODING,
-                              sizeof(FLB_HTTP_HEADER_CONTENT_ENCODING) - 1,
-                              "snappy", 6);
     return ret;
 }
 

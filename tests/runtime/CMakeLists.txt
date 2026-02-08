@@ -28,6 +28,13 @@ FLB_RT_CORE_TEST(FLB_COROUTINE_TIMEOUT    "core-timeout.c")
 FLB_RT_CORE_TEST(FLB_INTERNAL_LOGGER      "core_internal_logger.c")
 FLB_RT_CORE_TEST(FLB_DOWNSTREAM_ACCEPT_TIMEOUT "core_accept_timeout.c")
 
+# Integration tests (no FLB_IN_LIB/FLB_OUT_LIB dependency)
+FLB_RT_CORE_TEST(TRUE "custom_tcp_pipeline.c")
+FLB_RT_CORE_TEST(TRUE "custom_out_tcp.c")
+FLB_RT_CORE_TEST(TRUE "custom_out_http.c")
+FLB_RT_CORE_TEST(TRUE "custom_engine_lifecycle.c")
+FLB_RT_CORE_TEST(TRUE "custom_storage.c")
+
 FLB_RT_TEST(FLB_CHUNK_TRACE "core_chunk_trace.c")
 
 # Input Plugins
@@ -65,42 +72,6 @@ if(FLB_OUT_LIB)
   if (FLB_IN_SYSTEMD)
     FLB_RT_TEST(FLB_IN_SYSTEMD        "in_systemd.c")
   endif ()
-endif()
-
-if (FLB_CUSTOM_CALYPTIA)
-    set(CALYPTIA_TEST_LINK_LIBS
-        fluent-bit-static
-        ${CMAKE_THREAD_LIBS_INIT}
-    )
-
-    set(CALYPTIA_TESTS
-        "custom_calyptia_test.c"
-        "custom_calyptia_registration_retry_test.c"
-        "custom_calyptia_input_test.c"
-        "in_calyptia_fleet_test.c"
-    )
-
-    foreach(TEST_SOURCE ${CALYPTIA_TESTS})
-        get_filename_component(TEST_NAME ${TEST_SOURCE} NAME_WE)
-
-        set(TEST_TARGET "flb-rt-${TEST_NAME}")
-        add_executable(${TEST_TARGET}
-            ${TEST_SOURCE}
-            "../../plugins/custom_calyptia/calyptia.c"
-            "../../plugins/in_calyptia_fleet/in_calyptia_fleet.c"
-        )
-
-        target_link_libraries(${TEST_TARGET}
-            ${CALYPTIA_TEST_LINK_LIBS}
-        )
-
-        add_test(NAME ${TEST_TARGET}
-                 COMMAND ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${TEST_TARGET}
-                 WORKING_DIRECTORY ${CMAKE_HOME_DIRECTORY}/build)
-
-        set_tests_properties(${TEST_TARGET} PROPERTIES LABELS "runtime")
-        add_dependencies(${TEST_TARGET} fluent-bit-static)
-    endforeach()
 endif()
 
 if(FLB_IN_EBPF)

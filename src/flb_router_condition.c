@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <fluent-bit/flb_mem.h>
 #include <fluent-bit/flb_log.h>
 #include <fluent-bit/flb_router.h>
@@ -263,8 +244,6 @@ uint32_t flb_router_signal_from_chunk(struct flb_event_chunk *chunk)
         return FLB_ROUTER_SIGNAL_LOGS;
     case FLB_EVENT_TYPE_METRICS:
         return FLB_ROUTER_SIGNAL_METRICS;
-    case FLB_EVENT_TYPE_TRACES:
-        return FLB_ROUTER_SIGNAL_TRACES;
     default:
         break;
     }
@@ -324,17 +303,6 @@ int flb_condition_eval_metrics(struct flb_event_chunk *chunk,
     return FLB_FALSE;
 }
 
-int flb_condition_eval_traces(struct flb_event_chunk *chunk,
-                              struct flb_router_chunk_context *context,
-                              struct flb_route *route)
-{
-    (void) chunk;
-    (void) context;
-    (void) route;
-
-    return FLB_FALSE;
-}
-
 int flb_route_condition_eval(struct flb_event_chunk *chunk,
                              struct flb_router_chunk_context *context,
                              struct flb_route *route)
@@ -367,8 +335,6 @@ int flb_route_condition_eval(struct flb_event_chunk *chunk,
         return flb_condition_eval_logs(chunk, context, route);
     case FLB_ROUTER_SIGNAL_METRICS:
         return flb_condition_eval_metrics(chunk, context, route);
-    case FLB_ROUTER_SIGNAL_TRACES:
-        return flb_condition_eval_traces(chunk, context, route);
     default:
         break;
     }

@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <stdlib.h>
 
 #include <monkey/mk_core.h>
@@ -280,27 +261,6 @@ struct flb_input_instance *flb_input_new(struct flb_config *config,
                                                            512, 0);
         if (!instance->ht_metric_chunks) {
             flb_hash_table_destroy(instance->ht_log_chunks);
-            flb_free(instance);
-            return NULL;
-        }
-
-        /* Index for trace Chunks (hash table) */
-        instance->ht_trace_chunks = flb_hash_table_create(FLB_HASH_TABLE_EVICT_NONE,
-                                                          512, 0);
-        if (!instance->ht_trace_chunks) {
-            flb_hash_table_destroy(instance->ht_log_chunks);
-            flb_hash_table_destroy(instance->ht_metric_chunks);
-            flb_free(instance);
-            return NULL;
-        }
-
-        /* Index for profile Chunks (hash table) */
-        instance->ht_profile_chunks = flb_hash_table_create(FLB_HASH_TABLE_EVICT_NONE,
-                                                            512, 0);
-        if (!instance->ht_profile_chunks) {
-            flb_hash_table_destroy(instance->ht_log_chunks);
-            flb_hash_table_destroy(instance->ht_metric_chunks);
-            flb_hash_table_destroy(instance->ht_trace_chunks);
             flb_free(instance);
             return NULL;
         }
@@ -917,16 +877,6 @@ void flb_input_instance_destroy(struct flb_input_instance *ins)
     if (ins->ht_metric_chunks) {
         flb_hash_table_destroy(ins->ht_metric_chunks);
         ins->ht_metric_chunks = NULL;
-    }
-
-    if (ins->ht_trace_chunks) {
-        flb_hash_table_destroy(ins->ht_trace_chunks);
-        ins->ht_trace_chunks = NULL;
-    }
-
-    if (ins->ht_profile_chunks) {
-        flb_hash_table_destroy(ins->ht_profile_chunks);
-        ins->ht_profile_chunks = NULL;
     }
 
     if (ins->ch_events[0] > 0) {

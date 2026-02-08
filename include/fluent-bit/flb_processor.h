@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #ifndef FLB_PROCESSOR_H
 #define FLB_PROCESSOR_H
 
@@ -26,9 +7,7 @@
 #include <fluent-bit/flb_config_map.h>
 #include <fluent-bit/flb_config_format.h>
 
-#include <ctraces/ctraces.h>
 #include <cmetrics/cmetrics.h>
-#include <cprofiles/cprofiles.h>
 
 /* Processor plugin result values */
 #define FLB_PROCESSOR_SUCCESS        0
@@ -37,8 +16,6 @@
 /* Processor event types */
 #define FLB_PROCESSOR_LOGS           1
 #define FLB_PROCESSOR_METRICS        2
-#define FLB_PROCESSOR_TRACES         4
-#define FLB_PROCESSOR_PROFILES       8
 
 /* Type of processor unit: 'pipeline filter' or 'native unit' */
 #define FLB_PROCESSOR_UNIT_NATIVE    0
@@ -117,8 +94,6 @@ struct flb_processor {
     /* lists for different types */
     struct mk_list logs;
     struct mk_list metrics;
-    struct mk_list traces;
-    struct mk_list profiles;
 
     size_t stage_count;
     /*
@@ -158,17 +133,6 @@ struct flb_processor_plugin {
                                struct cmt **, /* out */
                                const char *,
                                int);
-
-    int (*cb_process_traces) (struct flb_processor_instance *,
-                              struct ctrace *,
-                              struct ctrace **,
-                              const char *,
-                              int);
-
-    int (*cb_process_profiles) (struct flb_processor_instance *,
-                              struct cprof *,
-                              const char *,
-                              int);
 
     int (*cb_exit) (struct flb_processor_instance *, void *);
 

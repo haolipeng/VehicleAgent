@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -61,8 +42,6 @@
 #ifdef FLB_HAVE_METRICS
 #include <fluent-bit/flb_metrics_exporter.h>
 #endif
-
-#include <ctraces/ctr_version.h>
 
 static pthread_once_t local_thread_engine_evl_init = PTHREAD_ONCE_INIT;
 FLB_TLS_DEFINE(struct mk_event_loop, flb_engine_evl);
@@ -918,7 +897,6 @@ int flb_engine_start(struct flb_config *config)
     /* Init Metrics engine */
     cmt_initialize();
     flb_info("[cmetrics] version=%s", cmt_version());
-    flb_info("[ctraces ] version=%s", ctr_version());
 
     /* Initialize the scheduler */
     sched = flb_sched_create(config, config->evl);

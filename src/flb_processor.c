@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <fluent-bit/flb_info.h>
 #include <fluent-bit/flb_log.h>
 #include <fluent-bit/flb_env.h>
@@ -153,8 +134,6 @@ struct flb_processor *flb_processor_create(struct flb_config *config,
     /* lists for types */
     mk_list_init(&proc->logs);
     mk_list_init(&proc->metrics);
-    mk_list_init(&proc->traces);
-    mk_list_init(&proc->profiles);
 
     return proc;
 }
@@ -293,12 +272,6 @@ struct flb_processor_unit *flb_processor_unit_create(struct flb_processor *proc,
     }
     else if (event_type == FLB_PROCESSOR_METRICS) {
         mk_list_add(&pu->_head, &proc->metrics);
-    }
-    else if (event_type == FLB_PROCESSOR_TRACES) {
-        mk_list_add(&pu->_head, &proc->traces);
-    }
-    else if (event_type == FLB_PROCESSOR_PROFILES) {
-        mk_list_add(&pu->_head, &proc->profiles);
     }
 
     pu->stage = proc->stage_count;
@@ -730,28 +703,6 @@ int flb_processor_init(struct flb_processor *proc)
         count++;
     }
 
-    mk_list_foreach(head, &proc->traces) {
-        pu = mk_list_entry(head, struct flb_processor_unit, _head);
-        ret = flb_processor_unit_init(pu);
-
-        if (ret == -1) {
-            flb_error("[processor] initialization of processor unit '%s' failed", pu->name);
-            return -1;
-        }
-        count++;
-    }
-
-    mk_list_foreach(head, &proc->profiles) {
-        pu = mk_list_entry(head, struct flb_processor_unit, _head);
-        ret = flb_processor_unit_init(pu);
-
-        if (ret == -1) {
-            flb_error("[processor] initialization of processor unit '%s' failed", pu->name);
-            return -1;
-        }
-        count++;
-    }
-
     if (count > 0) {
         proc->is_active = FLB_TRUE;
     }
@@ -808,12 +759,6 @@ int flb_processor_run(struct flb_processor *proc,
     }
     else if (type == FLB_PROCESSOR_METRICS) {
         list = &proc->metrics;
-    }
-    else if (type == FLB_PROCESSOR_TRACES) {
-        list = &proc->traces;
-    }
-    else if (type == FLB_PROCESSOR_PROFILES) {
-        list = &proc->profiles;
     }
 
 #ifdef FLB_HAVE_METRICS
@@ -1088,55 +1033,6 @@ int flb_processor_run(struct flb_processor *proc,
                     }
                 }
             }
-            else if (type == FLB_PROCESSOR_TRACES) {
-                if (p_ins->p->cb_process_traces != NULL) {
-                    tmp_buf = NULL;
-                    out_size = NULL;
-                    ret = p_ins->p->cb_process_traces(p_ins,
-                                                      (struct ctrace *) cur_buf,
-                                                      (struct ctrace **) &tmp_buf,
-                                                      tag,
-                                                      tag_len);
-                    if (ret == FLB_PROCESSOR_FAILURE) {
-                        release_lock(&pu->lock,
-                                     FLB_PROCESSOR_LOCK_RETRY_LIMIT,
-                                     FLB_PROCESSOR_LOCK_RETRY_DELAY);
-
-                        return -1;
-                    }
-                    else if (ret == FLB_PROCESSOR_SUCCESS) {
-                        if (tmp_buf == NULL) {
-                            /*
-                             * the processsor ran successfuly but there is no
-                             * trace output, that means that the invoked processor
-                             * will enqueue the trace through a different mechanism,
-                             * we just return saying nothing else is needed.
-                             */
-                            release_lock(&pu->lock,
-                                         FLB_PROCESSOR_LOCK_RETRY_LIMIT,
-                                         FLB_PROCESSOR_LOCK_RETRY_DELAY);
-                            return 0;
-                        }
-                    }
-
-                }
-            }
-            else if (type == FLB_PROCESSOR_PROFILES) {
-                if (p_ins->p->cb_process_profiles != NULL) {
-                    ret = p_ins->p->cb_process_profiles(p_ins,
-                                                        (struct cprof *) cur_buf,
-                                                        tag,
-                                                        tag_len);
-
-                    if (ret != FLB_PROCESSOR_SUCCESS) {
-                        release_lock(&pu->lock,
-                                     FLB_PROCESSOR_LOCK_RETRY_LIMIT,
-                                     FLB_PROCESSOR_LOCK_RETRY_DELAY);
-
-                        return -1;
-                    }
-                }
-            }
         }
 
         release_lock(&pu->lock,
@@ -1169,18 +1065,6 @@ void flb_processor_destroy(struct flb_processor *proc)
     }
 
     mk_list_foreach_safe(head, tmp, &proc->metrics) {
-        pu = mk_list_entry(head, struct flb_processor_unit, _head);
-        mk_list_del(&pu->_head);
-        flb_processor_unit_destroy(pu);
-    }
-
-    mk_list_foreach_safe(head, tmp, &proc->traces) {
-        pu = mk_list_entry(head, struct flb_processor_unit, _head);
-        mk_list_del(&pu->_head);
-        flb_processor_unit_destroy(pu);
-    }
-
-    mk_list_foreach_safe(head, tmp, &proc->profiles) {
         pu = mk_list_entry(head, struct flb_processor_unit, _head);
         mk_list_del(&pu->_head);
         flb_processor_unit_destroy(pu);
@@ -1308,28 +1192,6 @@ int flb_processors_load_from_config_format_group(struct flb_processor *proc, str
 
         if (ret == -1) {
             flb_error("failed to load 'metrics' processors");
-            return -1;
-        }
-    }
-
-    /* traces */
-    val = cfl_kvlist_fetch(g->properties, "traces");
-    if (val) {
-        ret = load_from_config_format_group(proc, FLB_PROCESSOR_TRACES, val);
-
-        if (ret == -1) {
-            flb_error("failed to load 'traces' processors");
-            return -1;
-        }
-    }
-
-    /* profiles */
-    val = cfl_kvlist_fetch(g->properties, "profiles");
-    if (val) {
-        ret = load_from_config_format_group(proc, FLB_PROCESSOR_PROFILES, val);
-
-        if (ret == -1) {
-            flb_error("failed to load 'profiles' processors");
             return -1;
         }
     }

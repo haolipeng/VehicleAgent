@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <fluent-bit/flb_info.h>
 #include <fluent-bit/flb_log.h>
 #include <fluent-bit/flb_mem.h>
@@ -92,25 +73,10 @@ static unsigned u64_to_str(uint64_t value, char* dst) {
     return length;
 }
 
-int flb_parser_regex_do(struct flb_parser *parser,
-                        const char *buf, size_t length,
-                        void **out_buf, size_t *out_size,
-                        struct flb_time *out_time);
-
 int flb_parser_json_do(struct flb_parser *parser,
                        const char *buf, size_t length,
                        void **out_buf, size_t *out_size,
                        struct flb_time *out_time);
-
-int flb_parser_ltsv_do(struct flb_parser *parser,
-                       const char *buf, size_t length,
-                       void **out_buf, size_t *out_size,
-                       struct flb_time *out_time);
-
-int flb_parser_logfmt_do(struct flb_parser *parser,
-                         const char *buf, size_t length,
-                         void **out_buf, size_t *out_size,
-                         struct flb_time *out_time);
 
 /*
  * This function is used to free all aspects of a parser
@@ -122,11 +88,6 @@ int flb_parser_logfmt_do(struct flb_parser *parser,
  */
 static void flb_interim_parser_destroy(struct flb_parser *parser)
 {
-    if (parser->type == FLB_PARSER_REGEX) {
-        flb_regex_destroy(parser->regex);
-        flb_free(parser->p_regex);
-    }
-
     flb_free(parser->name);
     if (parser->time_fmt) {
         flb_free(parser->time_fmt);
@@ -168,7 +129,6 @@ struct flb_parser *flb_parser_create(const char *name, const char *format,
     char *timeptr;
     struct mk_list *head;
     struct flb_parser *p;
-    struct flb_regex *regex;
 
     /* Iterate current parsers and make sure the new one don't exists */
     mk_list_foreach(head, &config->parsers) {
@@ -189,44 +149,15 @@ struct flb_parser *flb_parser_create(const char *name, const char *format,
     p->decoders = decoders;
     mk_list_add(&p->_head, &config->parsers);
 
-    /* Format lookup */
-    if (strcasecmp(format, "regex") == 0) {
-        p->type = FLB_PARSER_REGEX;
-    }
-    else if (strcasecmp(format, "json") == 0) {
+    /* Format lookup: only JSON is supported */
+    if (strcasecmp(format, "json") == 0) {
         p->type = FLB_PARSER_JSON;
     }
-    else if (strcasecmp(format, "ltsv") == 0) {
-        p->type = FLB_PARSER_LTSV;
-    }
-    else if (strcasecmp(format, "logfmt") == 0) {
-        p->type = FLB_PARSER_LOGFMT;
-    }
     else {
-        flb_error("[parser:%s] Invalid format %s", name, format);
+        flb_error("[parser:%s] Invalid format %s (only 'json' is supported)", name, format);
         mk_list_del(&p->_head);
         flb_free(p);
         return NULL;
-    }
-
-    if (p->type == FLB_PARSER_REGEX) {
-        if (!p_regex) {
-            flb_error("[parser:%s] Invalid regex pattern", name);
-            mk_list_del(&p->_head);
-            flb_free(p);
-            return NULL;
-        }
-
-        regex = flb_regex_create(p_regex);
-        if (!regex) {
-            flb_error("[parser:%s] Invalid regex pattern %s", name, p_regex);
-            mk_list_del(&p->_head);
-            flb_free(p);
-            return NULL;
-        }
-        p->regex = regex;
-        p->skip_empty = skip_empty;
-        p->p_regex = flb_strdup(p_regex);
     }
 
     p->name = flb_strdup(name);
@@ -350,11 +281,6 @@ struct flb_parser *flb_parser_create(const char *name, const char *format,
 void flb_parser_destroy(struct flb_parser *parser)
 {
     int i = 0;
-
-    if (parser->type == FLB_PARSER_REGEX) {
-        flb_regex_destroy(parser->regex);
-        flb_free(parser->p_regex);
-    }
 
     flb_free(parser->name);
     if (parser->time_fmt) {
@@ -788,20 +714,8 @@ int flb_parser_do(struct flb_parser *parser, const char *buf, size_t length,
                   void **out_buf, size_t *out_size, struct flb_time *out_time)
 {
 
-    if (parser->type == FLB_PARSER_REGEX) {
-        return flb_parser_regex_do(parser, buf, length,
-                                   out_buf, out_size, out_time);
-    }
-    else if (parser->type == FLB_PARSER_JSON) {
+    if (parser->type == FLB_PARSER_JSON) {
         return flb_parser_json_do(parser, buf, length,
-                                  out_buf, out_size, out_time);
-    }
-    else if (parser->type == FLB_PARSER_LTSV) {
-        return flb_parser_ltsv_do(parser, buf, length,
-                                  out_buf, out_size, out_time);
-    }
-    else if (parser->type == FLB_PARSER_LOGFMT) {
-        return flb_parser_logfmt_do(parser, buf, length,
                                   out_buf, out_size, out_time);
     }
 

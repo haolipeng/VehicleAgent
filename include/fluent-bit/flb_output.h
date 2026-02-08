@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #ifndef FLB_OUTPUT_H
 #define FLB_OUTPUT_H
 
@@ -57,16 +38,6 @@
 #include <cmetrics/cmt_decode_msgpack.h>
 #include <cmetrics/cmt_encode_msgpack.h>
 
-#include <ctraces/ctraces.h>
-#include <ctraces/ctr_decode_msgpack.h>
-#include <ctraces/ctr_encode_msgpack.h>
-#include <ctraces/ctr_mpack_utils_defs.h>
-
-#include <cprofiles/cprofiles.h>
-#include <cprofiles/cprof_decode_msgpack.h>
-#include <cprofiles/cprof_encode_msgpack.h>
-#include <cprofiles/cprof_mpack_utils_defs.h>
-
 #ifdef FLB_HAVE_REGEX
 #include <fluent-bit/flb_regex.h>
 #endif
@@ -95,9 +66,7 @@ int flb_chunk_trace_output(struct flb_chunk_trace *trace, struct flb_output_inst
  */
 #define FLB_OUTPUT_LOGS        1
 #define FLB_OUTPUT_METRICS     2
-#define FLB_OUTPUT_TRACES      4
 #define FLB_OUTPUT_BLOBS       8
-#define FLB_OUTPUT_PROFILES    16
 
 #define FLB_OUTPUT_FLUSH_COMPAT_OLD_18()                 \
     const void *data   = event_chunk->data;              \
@@ -731,12 +700,9 @@ struct flb_output_flush *flb_output_flush_create(struct flb_task *task,
     struct flb_event_chunk *tmp;
     char *resized_serialization_buffer;
     size_t serialization_buffer_offset;
-    cfl_sds_t serialized_profiles_context_buffer;
     char *serialized_context_buffer;
     size_t serialized_context_size;
     struct cmt *metrics_context;
-    struct ctrace *trace_context;
-    struct cprof *profile_context;
     size_t chunk_offset;
     struct cmt *encode_context = NULL;
     struct cmt *cmt_out_context = NULL;
@@ -936,207 +902,6 @@ struct flb_output_flush *flb_output_flush_create(struct flb_task *task,
                 if (p_buf != NULL) {
                     flb_free(p_buf);
                 }
-                return NULL;
-            }
-        }
-        else if (evc->type == FLB_EVENT_TYPE_TRACES) {
-            p_buf = flb_calloc(evc->size * 2, sizeof(char));
-
-            if (p_buf == NULL) {
-                flb_errno();
-
-                flb_coro_destroy(coro);
-                flb_free(out_flush);
-
-                return NULL;
-            }
-
-            p_size = evc->size;
-
-            chunk_offset = 0;
-            serialization_buffer_offset = 0;
-
-            while ((ret = ctr_decode_msgpack_create(
-                            &trace_context,
-                            (char *) evc->data,
-                            evc->size,
-                            &chunk_offset)) == CTR_DECODE_MSGPACK_SUCCESS) {
-                ret = flb_processor_run(o_ins->processor,
-                                        0,
-                                        FLB_PROCESSOR_TRACES,
-                                        evc->tag,
-                                        flb_sds_len(evc->tag),
-                                        (char *) trace_context,
-                                        0,
-                                        NULL,
-                                        NULL);
-
-                if (ret == 0) {
-                    ret = ctr_encode_msgpack_create(trace_context,
-                                                    &serialized_context_buffer,
-                                                    &serialized_context_size);
-
-                    ctr_destroy(trace_context);
-
-                    if (ret != 0) {
-                        flb_coro_destroy(coro);
-                        flb_free(out_flush);
-                        flb_free(p_buf);
-
-                        return NULL;
-                    }
-
-                    if ((serialization_buffer_offset +
-                         serialized_context_size) > p_size) {
-                        resized_serialization_buffer = \
-                            flb_realloc(p_buf, p_size + serialized_context_size);
-
-                        if (resized_serialization_buffer == NULL) {
-                            flb_errno();
-
-                            ctr_encode_msgpack_destroy(serialized_context_buffer);
-                            flb_coro_destroy(coro);
-                            flb_free(out_flush);
-                            flb_free(p_buf);
-
-                            return NULL;
-                        }
-
-                        p_size += serialized_context_size;
-                        p_buf = resized_serialization_buffer;
-                    }
-
-                    memcpy(&(((char *) p_buf)[serialization_buffer_offset]),
-                           serialized_context_buffer,
-                           serialized_context_size);
-
-                    serialization_buffer_offset += serialized_context_size;
-
-                    ctr_encode_msgpack_destroy(serialized_context_buffer);
-                }
-            }
-
-            if (serialization_buffer_offset == 0) {
-                flb_coro_destroy(coro);
-                flb_free(out_flush);
-                flb_free(p_buf);
-
-                return NULL;
-            }
-
-            out_flush->processed_event_chunk = flb_event_chunk_create(
-                                                evc->type,
-                                                0,
-                                                evc->tag,
-                                                flb_sds_len(evc->tag),
-                                                p_buf,
-                                                p_size);
-
-            if (out_flush->processed_event_chunk == NULL) {
-                flb_coro_destroy(coro);
-                flb_free(out_flush);
-                flb_free(p_buf);
-
-                return NULL;
-            }
-        }
-        else if (evc->type == FLB_EVENT_TYPE_PROFILES) {
-            p_buf = flb_calloc(evc->size * 2, sizeof(char));
-
-            if (p_buf == NULL) {
-                flb_errno();
-
-                flb_coro_destroy(coro);
-                flb_free(out_flush);
-
-                return NULL;
-            }
-
-            p_size = evc->size;
-
-            chunk_offset = 0;
-            serialization_buffer_offset = 0;
-
-            while ((ret = cprof_decode_msgpack_create(
-                            &profile_context,
-                            (unsigned char *) evc->data,
-                            evc->size,
-                            &chunk_offset)) == CPROF_DECODE_MSGPACK_SUCCESS) {
-                ret = flb_processor_run(o_ins->processor,
-                                        0,
-                                        FLB_PROCESSOR_PROFILES,
-                                        evc->tag,
-                                        flb_sds_len(evc->tag),
-                                        (char *) profile_context,
-                                        0,
-                                        NULL,
-                                        NULL);
-
-                if (ret == 0) {
-                    ret = cprof_encode_msgpack_create(&serialized_profiles_context_buffer,
-                                                      profile_context);
-
-                    cprof_destroy(profile_context);
-
-                    if (ret != 0) {
-                        flb_coro_destroy(coro);
-                        flb_free(out_flush);
-                        flb_free(p_buf);
-
-                        return NULL;
-                    }
-
-                    if ((serialization_buffer_offset +
-                         cfl_sds_len(serialized_profiles_context_buffer)) > p_size) {
-                        resized_serialization_buffer = \
-                            flb_realloc(p_buf, p_size + cfl_sds_len(serialized_profiles_context_buffer));
-
-                        if (resized_serialization_buffer == NULL) {
-                            flb_errno();
-
-                            cprof_encode_msgpack_destroy(serialized_profiles_context_buffer);
-                            flb_coro_destroy(coro);
-                            flb_free(out_flush);
-                            flb_free(p_buf);
-
-                            return NULL;
-                        }
-
-                        p_size += cfl_sds_len(serialized_profiles_context_buffer);
-                        p_buf = resized_serialization_buffer;
-                    }
-
-                    memcpy(&(((char *) p_buf)[serialization_buffer_offset]),
-                           serialized_profiles_context_buffer,
-                           cfl_sds_len(serialized_profiles_context_buffer));
-
-                    serialization_buffer_offset += cfl_sds_len(serialized_profiles_context_buffer);
-
-                    cprof_encode_msgpack_destroy(serialized_profiles_context_buffer);
-                }
-            }
-
-            if (serialization_buffer_offset == 0) {
-                flb_coro_destroy(coro);
-                flb_free(out_flush);
-                flb_free(p_buf);
-
-                return NULL;
-            }
-
-            out_flush->processed_event_chunk = flb_event_chunk_create(
-                                                evc->type,
-                                                0,
-                                                evc->tag,
-                                                flb_sds_len(evc->tag),
-                                                p_buf,
-                                                p_size);
-
-            if (out_flush->processed_event_chunk == NULL) {
-                flb_coro_destroy(coro);
-                flb_free(out_flush);
-                flb_free(p_buf);
-
                 return NULL;
             }
         }

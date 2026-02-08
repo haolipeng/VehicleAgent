@@ -181,14 +181,7 @@ option(FLB_ZIG                 "Enable zig integration"       Yes)
 # Native Metrics Support (cmetrics)
 option(FLB_METRICS             "Enable metrics support"       Yes)
 
-# Native Profiules Support (cprofiles)
-option(FLB_PROFILES            "Enable profiles support"      Yes)
-
-# Proxy Plugins
-option(FLB_PROXY_GO            "Enable Go plugins support"    Yes)
-
-# Built-in Custom Plugins
-option(FLB_CUSTOM_CALYPTIA     "Enable Calyptia Support"      Yes)
+# Built-in Proxy Plugins (removed: FLB_PROXY_GO, FLB_PROFILES)
 
 # Config formats
 option(FLB_CONFIG_YAML         "Enable YAML config format"    Yes)
@@ -292,7 +285,7 @@ if(FLB_DEV)
   set(FLB_OUT_ZIG_DEMO      On)
   set(FLB_CHUNK_TRACE       On)
   set(FLB_METRICS           On)
-  set(FLB_PROFILES          On)
+
   set(FLB_IN_EVENT_TEST     On)
   set(FLB_HTTP_SERVER       On)
   set(FLB_HTTP_CLIENT_DEBUG On)
@@ -504,7 +497,6 @@ add_subdirectory(${FLB_PATH_LIB_CFL} EXCLUDE_FROM_ALL)
 
 # fluent-otel-proto
 FLB_OPTION(FLUENT_PROTO_METRICS ON)
-FLB_OPTION(FLUENT_PROTO_PROFILES ON)
 add_subdirectory(${FLB_PATH_LIB_FLUENT_OTEL} EXCLUDE_FROM_ALL)
 
 # MsgPack options
@@ -615,17 +607,8 @@ if(FLB_UNICODE_ENCODER AND FLB_USE_SIMDUTF)
   FLB_DEFINITION(FLB_HAVE_UNICODE_ENCODER)
 endif()
 
-# snappy
-add_subdirectory(${FLB_PATH_LIB_SNAPPY} EXCLUDE_FROM_ALL)
-
 # CMetrics
 add_subdirectory(${FLB_PATH_LIB_CMETRICS} EXCLUDE_FROM_ALL)
-
-# CTraces
-add_subdirectory(${FLB_PATH_LIB_CTRACES} EXCLUDE_FROM_ALL)
-
-# CProfiles
-add_subdirectory(${FLB_PATH_LIB_CPROFILES} EXCLUDE_FROM_ALL)
 
 # Nghttp2 options
 if(FLB_PREFER_SYSTEM_LIB_NGHTTP2)
@@ -734,11 +717,6 @@ endif()
 # Metrics
 if(FLB_METRICS)
   FLB_DEFINITION(FLB_HAVE_METRICS)
-endif()
-
-# Profiles
-if(FLB_PROFILES)
-  FLB_DEFINITION(FLB_HAVE_PROFILES)
 endif()
 
 if(FLB_SQLDB)
@@ -1004,12 +982,8 @@ else()
 
 endif()
 
-set(FLB_PROG_NAME "Fluent Bit")
-set(FLB_OUT_NAME "fluent-bit")
-
-if(FLB_PROXY_GO)
-  FLB_DEFINITION(FLB_HAVE_PROXY_GO)
-endif()
+set(FLB_PROG_NAME "VehProbe")
+set(FLB_OUT_NAME "VehProbe")
 
 if("${GNU_HOST}" STREQUAL "")
     set(AUTOCONF_HOST_OPT "")

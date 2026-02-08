@@ -1,22 +1,3 @@
-/* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
-
-/*  Fluent Bit
- *  ==========
- *  Copyright (C) 2015-2024 The Fluent Bit Authors
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <fluent-bit/flb_output_plugin.h>
 #include <fluent-bit/flb_utils.h>
 #include <fluent-bit/flb_slist.h>
@@ -25,13 +6,6 @@
 #include <fluent-bit/flb_config_map.h>
 #include <fluent-bit/flb_metrics.h>
 #include <fluent-bit/flb_log_event_decoder.h>
-
-#include <ctraces/ctraces.h>
-#include <ctraces/ctr_decode_msgpack.h>
-
-#include <cprofiles/cprofiles.h>
-#include <cprofiles/cprof_encode_text.h>
-#include <cprofiles/cprof_decode_msgpack.h>
 
 #include <msgpack.h>
 #include "stdout.h"
@@ -140,74 +114,6 @@ static void print_metrics_text(struct flb_output_instance *ins,
 }
 #endif
 
-static void print_traces_text(struct flb_output_instance *ins,
-                              const void *data, size_t bytes)
-{
-    int ret;
-    size_t off = 0;
-    cfl_sds_t text;
-    struct ctrace *ctr = NULL;
-    int ok = CTR_DECODE_MSGPACK_SUCCESS;
-
-    /* Decode each ctrace context */
-    while ((ret = ctr_decode_msgpack_create(&ctr,
-                                            (char *) data,
-                                            bytes, &off)) == ok) {
-        /* convert to text representation */
-        text = ctr_encode_text_create(ctr);
-
-        /* destroy ctr context */
-        ctr_destroy(ctr);
-
-        printf("%s", text);
-        fflush(stdout);
-
-        ctr_encode_text_destroy(text);
-    }
-    if (ret != ok) {
-        flb_plg_debug(ins, "ctr decode msgpack returned : %d", ret);
-    }
-}
-
-static void print_profiles_text(struct flb_output_instance *ins,
-                                const void *data, size_t bytes)
-{
-    int ret;
-    size_t off;
-    cfl_sds_t text;
-    struct cprof *profiles_context;
-
-    profiles_context = NULL;
-    off = 0;
-
-    /* Decode each profiles context */
-    while ((ret = cprof_decode_msgpack_create(&profiles_context,
-                                              (unsigned char *) data,
-                                              bytes, &off)) ==
-                                                CPROF_DECODE_MSGPACK_SUCCESS) {
-        /* convert to text representation */
-        ret = cprof_encode_text_create(&text, profiles_context);
-
-        if (ret != CPROF_ENCODE_TEXT_SUCCESS) {
-            flb_plg_debug(ins, "cprofiles text encoder returned : %d", ret);
-
-            continue;
-        }
-
-        /* destroy ctr context */
-        cprof_decode_msgpack_destroy(profiles_context);
-
-        printf("%s", text);
-        fflush(stdout);
-
-        cprof_encode_text_destroy(text);
-    }
-
-    if (ret != CPROF_DECODE_MSGPACK_SUCCESS) {
-        flb_plg_debug(ins, "cprofiles msgpack decoder returned : %d", ret);
-    }
-}
-
 static void cb_stdout_flush(struct flb_event_chunk *event_chunk,
                             struct flb_output_flush *out_flush,
                             struct flb_input_instance *i_ins,
@@ -236,20 +142,6 @@ static void cb_stdout_flush(struct flb_event_chunk *event_chunk,
         FLB_OUTPUT_RETURN(FLB_OK);
     }
 #endif
-
-    if (event_chunk->type == FLB_EVENT_TYPE_TRACES) {
-        print_traces_text(ctx->ins, (char *)
-                          event_chunk->data,
-                          event_chunk->size);
-        FLB_OUTPUT_RETURN(FLB_OK);
-    }
-
-    if (event_chunk->type == FLB_EVENT_TYPE_PROFILES) {
-        print_profiles_text(ctx->ins, (char *)
-                            event_chunk->data,
-                            event_chunk->size);
-        FLB_OUTPUT_RETURN(FLB_OK);
-    }
 
     /* Assuming data is a log entry...*/
     if (ctx->out_format != FLB_PACK_JSON_FORMAT_NONE) {
@@ -367,7 +259,7 @@ struct flb_output_plugin out_stdout_plugin = {
     .cb_exit      = cb_stdout_exit,
     .flags        = 0,
     .workers      = 1,
-    .event_type   = FLB_OUTPUT_LOGS | FLB_OUTPUT_METRICS | FLB_OUTPUT_TRACES |
-                    FLB_OUTPUT_PROFILES | FLB_OUTPUT_BLOBS,
+    .event_type   = FLB_OUTPUT_LOGS | FLB_OUTPUT_METRICS |
+                    FLB_OUTPUT_BLOBS,
     .config_map   = config_map
 };
